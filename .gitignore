@@ -1,0 +1,8 @@
+# Node
+node_modules/
+
+# Personal Files
+/index.html
+main.js
+style.css
+images/
