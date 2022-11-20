@@ -5,26 +5,20 @@
     margin: 0;
 }
 
-canvas {
-    top: 0;
-    left: 0;
-}
-
-body {
-    position: relative;
-    overflow-x: hidden;
-}
-
 /*Navigation Bar*/
 .navbar {
     display: flex;
-    position: sticky;
-    top: 0;
     width: 100%;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     background-color: #151515;
-    padding: 25px 10%;
+    padding: 6px 8%;
+}
+
+.nav-logo {
+    width: 300px;
+    height: 80px;
+    object-fit: contain;
 }
 
 li {
@@ -37,7 +31,7 @@ a {
     text-decoration: none;
     font-family: 'Source Code Pro', monospace;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 1.4rem;
     font-style: italic;
     color: white;
 
@@ -47,14 +41,8 @@ a:hover {
     background-color: #1E1E1E;
 }
 
-/*Content*/
-h1 {
-    position: absolute;
-    top: 50%;
-    transform: translate(60%, -50%);
-    color: white;
-    font-family: 'Source Code Pro', monospace;
-    font-size: 5rem;
-    font-style: bold;
-    text-align: center;
+p, br {
+    font-size: 1.9rem;
+    overflow-wrap: break-word;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
