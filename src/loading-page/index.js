@@ -73,5 +73,5 @@ function type(targetElement, textToType, speed, index, cursorMode) {
 
 // Skip Animation
 document.getElementById("x").addEventListener('click', function() {
-    window.location = "/src/main-page/main.html";
+    window.location.assign('https://kingpr0o7.github.io/src/main-page/index.html');
 });
