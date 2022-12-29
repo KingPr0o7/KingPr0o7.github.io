@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="author" content="Nathan Parker" />
-  <title>Nathan Parker</title>
+  <title>Nathan Parker - Home</title>
   <!-- Social Media / Embedding (Thanks to https://www.opengraph.xyz)-->
   <meta name="description" content="A dedicated website to take an exhaustive look at Nathan Parker, a high school software developer. Showcasing himself, his projects, and his learned and currently learning software languages." />
 
@@ -22,8 +22,8 @@
   <meta name="twitter:title" content="Nathan Parker">
   <meta name="twitter:description" content="A dedicated website to take an exhaustive look at Nathan Parker, a high school software developer. Showcasing himself, his projects, and his learned and currently learning software languages.">
   <meta name="twitter:image" content="https://ncp.dev/poster.png">
-   
-  <!-- Favicons (Thanks to http://faviconit.com/) -->
+
+  <!-- Favicons (Thanks to: Favicon "http://faviconit.com/") -->
   <link rel="shortcut icon" href="/assets/favicon.e950459c.ico">
   <link rel="icon" sizes="16x16 32x32 64x64" href="/assets/favicon.e950459c.ico">
   <link rel="icon" type="image/png" sizes="196x196" href="/assets/favicon-192.8fb78bb9.png">
@@ -42,59 +42,70 @@
   <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicon-76.888f00de.png">
   <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicon-152.806fad5b.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon-180.70eb2b09.png">
-  
+
   <!-- Other -->
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes">
   
   
-  <script type="module" crossorigin src="/assets/loading.c25c9fc4.js"></script>
+  <script type="module" crossorigin src="/assets/nested.f96d2c09.js"></script>
   <link rel="modulepreload" crossorigin href="/assets/modulepreload-polyfill.c7c6310f.js">
-  <link rel="stylesheet" href="/assets/loading.74c61ecb.css">
+  <link rel="stylesheet" href="/assets/index.848b70b8.css">
 </head>
-<body>
-  <!-- File Directory -->
-  <div id="file-directory">
-    <img id="logo" src="/assets/ncp-icon.0d6d2ff9.png" alt="My Logo">
-    <div id="title">
-      <p>start.html - KingPr0o7.github.io</p>
-    </div>
-    <div id="window-controls">
-      <span id="minimize">
-        <span id="minimize-line"></span>
+<body enabled>
+  <!-- Desktop Navigation -->
+  <div class="desktop-navbar">
+      <img id="navbar-icon" src="/assets/ncp-icon.0d6d2ff9.png" alt="Nathan Parker's logo (icon)">
+      <img id="navbar-logo" src="/assets/ncp-long-forum.f1944a85.png" alt="Nathan Parker's logo (name and icon)">
+      <div class="navbar-links">
+        <a class="navbar-link" href="#about">ABOUT</a>
+        <a class="navbar-link" href="#languages">LANGUAGES</a>
+        <a class="navbar-link" href="#projects">PROJECTS</a>
+        <a class="navbar-link" href="#contact">CONTACT</a>
+      </div>
+      <span class="mobile-hamburger" closed>
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
       </span>
-      <span id="full-screen">
-        <span id="full-screen-box"></span>
-      </span>
-      <span id="x">
-        <span class="x-line"></span>
-        <span class="x-line"></span>
-      </span>
+  </div>
+
+  <!-- Mobile Navigation -->
+  <div id="mobile-navlist" closed>
+    <h1 id="navlist-title">NAVIGATION MENU</h1>
+    <div id="navlist-links">
+      <a href="#about">
+        <div class="navlist-link" tabindex="0">
+          <img class="navlist-icon" src="/assets/about-me-icon.bf0e7937.svg" alt="About Me icon">
+          <p class="navlist-link-text">ABOUT</p>
+        </div>
+      </a>
+      <a href="#languages">
+        <div class="navlist-link" tabindex="0">
+          <img class="navlist-icon" src="/assets/languages-icon.9317dc2e.svg" alt="Languages icon">
+          <p class="navlist-link-text">LANGUAGES</p>
+        </div>
+      </a>
+      <a href="#projects">
+        <div class="navlist-link" tabindex="0">
+          <img class="navlist-icon" src="/assets/projects-icon.91c32bea.svg" alt="Projects icon">
+          <p class="navlist-link-text">PROJECTS</p>
+        </div>
+      </a>
+      <a href="#contact">
+        <div class="navlist-link" tabindex="0">
+          <img class="navlist-icon" src="/assets/contact-me-icon.1df2c1c1.svg" alt="Contact icon">
+          <p class="navlist-link-text">CONTACT</p>
+        </div>
+      </a>
     </div>
   </div>
-  
-  <!-- Page Content -->
-  <p id="start-line">PS E:\All\Websites\KingPr0o7.github.io> <span id="cursor"></span></p>
-  <span id="double-br" class="br"></span>
-  <p id="running-line" class="output-line"><span id="npm">&lt;npm&gt;</span> Running script <span id="predeploy">“predeploy”</span> and <span id="green">“build”</span></p>
-  <span id="double-br" class="br"></span>
-  <p id="gathering-line" class="output-line"><span id="vite">&lt;Vite&gt;</span> <span id="green">Gathering for viewing pleasure</span></p><br>
-  
-  <!-- Files List -->
-  <p style="color: grey;" class="output-line file-output-line">dist/<span id="image">about-me-icon.svg</span></p><br>
-  <p style="color: grey;" class="output-line file-output-line">dist/<span id="image">languages-icon.svg</span></p><br>
-  <p style="color: grey;" class="output-line file-output-line">dist/<span id="image">projects-icon.svg</span></p><br>
-  <p style="color: grey;" class="output-line file-output-line">dist/<span id="image">favicon.ico</span></p><br>
-  <p style="color: grey;" class="output-line file-output-line">dist/<span id="image">favicon.png (19x)</span></p><br>
-  <p style="color: grey;" class="output-line file-output-line">dist/<span id="image">ncp-icon.png</span></p><br>
-  <p style="color: grey;" class="output-line file-output-line">dist/<span id="image">ncp-long-forum.png</span></p><br>
-  <p style="color: grey;" class="output-line file-output-line">dist/<span id="image">poster.png</span></p><br>
-  <p style="color: grey;" class="output-line file-output-line">dist/<span id="html">loading.html</span></p><br>
-  <p style="color: grey;" class="output-line file-output-line">dist/<span id="html">main.html</span></p><br>
-  <p style="color: grey;" class="output-line file-output-line">dist/<span id="html">browserconfig.xml</span></p><br>
-  <p style="color: grey;" class="output-line file-output-line">dist/<span id="css">loading.css</span></p><br>
-  <p style="color: grey;" class="output-line file-output-line">dist/<span id="css">main.css</span></p><br>
-  <p style="color: grey;" class="output-line file-output-line">dist/<span id="js">loading.js</span></p><br>
-  <p style="color: grey;" class="output-line file-output-line">dist/<span id="js">main.js</span></p><br>
+
+  <!-- Content -->
+  <div class="test-pages" id="about" style="background-color: cornflowerblue;"><h1 class="test-page-text">ABOUT</h1></div>
+  <div class="test-pages" id="languages" style="background-color: darkolivegreen;"><h1 class="test-page-text">LANGUAGES</h1></div>
+  <div class="test-pages" id="projects" style="background-color: darksalmon;"><h1 class="test-page-text">PROJECTS</h1></div>
+  <div class="test-pages" id="contact" style="background-color: mediumpurple;"><h1 class="test-page-text">CONTACT</h1></div>
+  <div id="snackbar">💻 Site Not Completed!</div>
 </body>
 </html>
