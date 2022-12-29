@@ -29,7 +29,7 @@ async function fileLoop() {
         await timer(100);
     }   
     await timer(1000);
-    window.location = "/src/main-page/index.html"
+    window.location.assign('https://kingpr0o7.github.io/src/main-page/index.html');
 }
 
 // Displaying Lines/Dots
