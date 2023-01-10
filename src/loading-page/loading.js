@@ -1,22 +1,10 @@
 // Variables
 const cursor = document.getElementById("cursor");
 var build = false;
-var completedItems = 0;
-
 // Onload Event
 window.onload = function () {
     type("start-line", "npm run view", 100, 0, true);
 }
-
-// "Loading" Title
-setInterval(function(){
-    document.title = `Nathan Parker (${completedItems}/15)`;
-    if (completedItems == 15) {
-        setTimeout(function(){
-            document.title = "Nathan Parker";
-        }, 300);
-    }
-}, 300);
 
 // File Load Listing
 const timer = ms => new Promise(res => setTimeout(res, ms))
@@ -24,12 +12,11 @@ async function fileLoop() {
     const files = document.getElementsByClassName("file-output-line");
     for (let i = 0; i < files.length; i++) {
         files[i].classList.toggle("is-active");
-        completedItems++;
         window.scrollBy(0, 100);
         await timer(100);
     }   
     await timer(1000);
-    window.location.assign('https://kingpr0o7.github.io/src/main-page/index.html');
+    window.location.assign('https://kingpr0o7.github.io/src/main-page/main.html');
 }
 
 // Displaying Lines/Dots
@@ -73,5 +60,5 @@ function type(targetElement, textToType, speed, index, cursorMode) {
 
 // Skip Animation
 document.getElementById("x").addEventListener('click', function() {
-    window.location.assign('https://kingpr0o7.github.io/src/main-page/index.html');
+    window.location.assign('https://kingpr0o7.github.io/src/main-page/main.html');
 });

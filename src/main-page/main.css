@@ -10,9 +10,9 @@
 }
 
 /* Body */
+html,
 body {
     background-color: #181a1a;
-    height: 100%;
 }
 
 /* Body Toggle */ 
@@ -218,12 +218,97 @@ a {
 
 /* Content */
 
-p {
-    color: white;
+/* About Section */
+#about-header #about-comment-indicator-start, #about-comment-indicator-end {
+    display: none;
 }
 
+#about-header::before {
+    content: "//";
+    animation: about-comments-start 8s, about-comments-fadeInOut 1.56s linear -1s 6;
+}
+
+#about-header::after {
+    content: "";
+    animation: about-comments-end 8s, about-comments-fadeInOut 1.56s linear -1s 6;  
+}
+
+@keyframes about-comments-start {
+    0% {content: "//"; }
+    20% {content: "#"; }
+    40% {content: "<!--";}
+    60% {content: "/*";}
+    80% {content: "'"}
+    100% {content: "--";}
+}
+
+@keyframes about-comments-end {
+    0% {content: "";}
+    20% {content: ""; }
+    40% {content: "-->"; }
+    60% {content: "*/";}
+    80% {content: "";}
+    100% {content: "";}
+}
+
+@keyframes about-comments-fadeInOut {
+    0% {opacity: 0;} 
+    50% {opacity: 1;} 
+    100% {opacity: 0;}
+}
+
+#about-container {
+    display: flex;
+    margin: 0 auto;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#about-text {
+    color: white;
+    font-family: 'Rubik', sans-serif;
+}
+
+#about-paragraph-header {
+    font-weight: 900;
+    font-size: clamp(2rem, 3vw, 2.5rem);
+}
+
+#about-header {
+    font-size: clamp(2rem, 3vw, 5rem);
+    text-align: center;
+    padding: 25px;
+    color: #47DA44;
+    font-family: 'Rubik', sans-serif;
+}
+
+#about-text {
+    font-size: clamp(0.9rem, 2vw, 1.2rem);
+    margin: 0 25px 0 25px;
+    color: white;
+    text-align: justify;
+    width: 60%;
+}
+
+#about-image {
+    width: 50%;
+    height: auto;
+    min-width: 128px;
+    max-width: 400px;
+    border-radius: 50%;
+    margin: 25px;
+    animation: about-image-fadeIn 3s forwards;
+}
+
+@keyframes about-image-fadeIn {
+    0% {box-shadow: 0px 0px 11px 0px rgba(254, 153, 0, 0);}
+    50% {box-shadow: 0px 0px 24px 0px rgba(254, 153, 0, 0.5);}
+    100% {box-shadow: 0px 0px 35px 0px rgba(254, 153, 0, 1);}
+}
+
+/* Test Pages */
 .test-pages {
-    overflow-x: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -295,5 +380,15 @@ p {
 @media screen and (max-height: 554px) {
     .navlist-link {
         padding-top: 0px;
+    }
+}
+
+/* Content */
+@media screen and (max-width: 1224px) {
+    #about-container {
+        flex-direction: column;
+    }
+    #about-text {
+        width: 90%;
     }
 }

@@ -8,12 +8,12 @@ export default defineConfig({
     emptyOutDir: false,
     rollupOptions: {
       input: {
-        index: resolve(__dirname, 'src/loading-page/index.html'),
-        nested: resolve(__dirname, 'src/main-page/index.html')
+        index: resolve(__dirname, 'src/loading-page/loading.html'),
+        nested: resolve(__dirname, 'src/main-page/main.html')
       },
     },
   },
   server: {
-    open: '/src/main-page/index.html'
+    open: '/src/main-page/main.html'
   }
 })
