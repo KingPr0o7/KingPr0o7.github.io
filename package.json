@@ -8,13 +8,16 @@
     "deploy": "echo ncp.dev > ./dist/CNAME && gh-pages -d dist",
     "dev": "vite",
     "build": "vite build",
+    "postbuild": "ncp src/loading-page dist && ncp src/main-page dist && del-cli --force dist/src",
     "preview": "vite preview"
   },
   "devDependencies": {
+    "del-cli": "^5.0.0",
     "gh-pages": "^4.0.0",
     "vite": "^3.2.5"
   },
   "dependencies": {
+    "ncp": "^2.0.0",
     "node": "^19.0.0"
   }
 }

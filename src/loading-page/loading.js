@@ -16,7 +16,7 @@ async function fileLoop() {
         await timer(100);
     }   
     await timer(1000);
-    window.location.assign('https://kingpr0o7.github.io/src/main-page/main.html');
+    document.location.href = '/src/main-page/main.html';
 }
 
 // Displaying Lines/Dots
@@ -60,5 +60,5 @@ function type(targetElement, textToType, speed, index, cursorMode) {
 
 // Skip Animation
 document.getElementById("x").addEventListener('click', function() {
-    window.location.assign('https://kingpr0o7.github.io/src/main-page/main.html');
+    document.location.href = '/src/main-page/main.html';
 });

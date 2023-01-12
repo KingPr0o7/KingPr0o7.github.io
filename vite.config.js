@@ -14,6 +14,6 @@ export default defineConfig({
     },
   },
   server: {
-    open: '/src/main-page/main.html'
+    open: '/src/loading-page/loading.html'
   }
 })
