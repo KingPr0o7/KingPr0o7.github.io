@@ -1,3 +1,7 @@
+<p align="center"><a href="https://ncp.dev" target="_blank"><img src="images/logo/ncp-long-forum.png?raw=true alt="Nathan Parker's logo"></a></p>
+
+<br>
+
 # KingPr0o7's / Nathan Parker's Portfolio
 
 ## Background
@@ -12,11 +16,11 @@ You can view my website on many domains. I currently have four ways to view my p
 
 ### Contributing
 If you want to contribute to my project, help me grow, and solve issues, then please follow these steps:
-1. Fork my project
-2. Create your branch
-3. Commit the changes to the branch
-4. Push to your branch
-5. Open a pull request, and I'll review it!
+1. 🍴 Fork my project
+2. 🌿Create your branch
+3. 📌 Commit the changes to the branch
+4. 💪 Push to your branch
+5. 📬 Open a pull request, and I'll review it!
 
 __You're free to contribute, and I deeply appearance any help, advice, or guidance you give me!__
 
