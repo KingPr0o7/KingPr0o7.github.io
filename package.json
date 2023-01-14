@@ -7,8 +7,9 @@
     "predeploy": "npm run build",
     "deploy": "echo ncp.dev > ./dist/CNAME && gh-pages -d dist",
     "dev": "vite",
+    "prebuild": "replace-in-files --string='/src/main-page/main.html' --replacement='main.html' src/loading-page/index.js",
     "build": "vite build",
-    "postbuild": "ncp src/loading-page dist && ncp src/main-page dist && del-cli --force dist/src && replace-in-files --string='/src/main-page/main.html' --replacement='main.html' dist/index.js",
+    "postbuild": "ncp dist/src/loading-page dist && ncp dist/src/main-page dist && del-cli --force dist/src && replace-in-files --string='main.html' --replacement='/src/main-page/main.html' src/loading-page/index.js",
     "preview": "vite preview"
   },
   "devDependencies": {
