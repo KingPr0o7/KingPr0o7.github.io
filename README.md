@@ -2,7 +2,7 @@
 
 <br>
 
-# KingPr0o7's / Nathan Parker's Portfolio
+<h1 align="center">KingPr0o7's / Nathan Parker's Portfolio</h1>
 
 ## Background
 For a long time, I've wanted to start a website to show my skills to others. This repository represents the many hours of watching YouTube videos, looking at other websites, my found analyses of what to do and not do, and the overall progress of my knowledge of languages such as HTML, CSS, and JS. 
