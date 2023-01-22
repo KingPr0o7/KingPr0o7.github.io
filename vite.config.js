@@ -8,11 +8,11 @@ export default defineConfig({
     rollupOptions: {
       input: {
         index: resolve(__dirname, 'src/loading-page/index.html'),
-        nested: resolve(__dirname, 'src/main-page/main.html')
+        nested: resolve(__dirname, 'src/main-page/index.html')
       },
     },
   },
   server: {
-    open: '/src/main-page/main.html'
+    open: '/src/main-page/index.html'
   }
 })

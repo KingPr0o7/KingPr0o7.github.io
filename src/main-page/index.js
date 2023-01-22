@@ -1,4 +1,5 @@
 // Elements
+const navbar = document.querySelector('.desktop-navbar');
 const hamburger = document.querySelector('.mobile-hamburger');
 const mobile_navlist = document.getElementById('mobile-navlist');
 const body = document.body;
@@ -45,15 +46,18 @@ function changeNav(state) {
     }
 }
 
-// Smooth Anchor Scrolling (Thanks to: Web Dev Tutorials "shorturl.at/fENRZ")
+// Smooth Anchor Scrolling
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(event) {
         event.preventDefault();
-        document.querySelector(this.getAttribute("href")).scrollIntoView({
-            behavior : "smooth",
-            block : "end"
-        });
+        var scrollTo = document.querySelector(this.getAttribute("href")).offsetTop;
+        if (anchor.toString().includes("about")) {
+            scrollTo = document.body.offsetTop;
+            window.scrollTo({top: scrollTo, behavior: 'smooth'});
+        } else {
+            window.scrollTo({top: scrollTo-100, behavior: 'smooth'});
+        }
     });
 });
 
