@@ -224,7 +224,7 @@ body[disabled] {
 }
 
 #about-container {
-    padding: 0 40px 0 40px;
+    padding: 0px 40px 100px 40px;
     height: calc(100vh - 100px);
     display: flex;
     justify-content: space-between;
@@ -238,13 +238,13 @@ body[disabled] {
 #about-intro {
     color: white;
     font-family: 'Rubik', sans-serif;
-    font-size: clamp(1rem, 5vw, 5.625rem);
+    font-size: clamp(1.5rem, 4vw, 5.625rem);
 }
 
 #about-detail {
     color: #B9B9B9;
     font-family: 'Rubik', sans-serif;
-    font-size: clamp(0.8rem, 3vw, 2.5rem);
+    font-size: clamp(1.3rem, 2vw, 2.5rem);
 }
 
 .header {
@@ -258,8 +258,11 @@ body[disabled] {
 #about-image {
     height: auto;
     width: auto;
-    max-height: 50%;
-    max-width: 50%;
+    min-height: 20vh;
+    min-width: 20vw;
+    max-height: 50vh;
+    max-width: 50vw;
+    aspect-ratio: 1/1;
     border-radius: 50%;
     margin: 25px;
     animation: about-image-fadeIn 3s forwards;
@@ -385,6 +388,7 @@ body[disabled] {
         justify-content: center;
     }
     #intro {
-        width: 90%;
+        text-align: center;
+        width: 100%;
     }
 }
