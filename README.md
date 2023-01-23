@@ -17,7 +17,7 @@ You can view my website on many domains. I currently have four ways to view my p
 ### Contributing
 If you want to contribute to my project, help me grow, and solve issues, then please follow these steps:
 1. 🍴 Fork my project
-2. 🌿Create your branch
+2. 🌿 Create your branch
 3. 📌 Commit the changes to the branch
 4. 💪 Push to your branch
 5. 📬 Open a pull request, and I'll review it!

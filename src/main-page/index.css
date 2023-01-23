@@ -238,13 +238,13 @@ body[disabled] {
 #about-intro {
     color: white;
     font-family: 'Rubik', sans-serif;
-    font-size: clamp(1.3rem, 5vw, 5.625rem);
+    font-size: clamp(1rem, 5vw, 5.625rem);
 }
 
 #about-detail {
     color: #B9B9B9;
     font-family: 'Rubik', sans-serif;
-    font-size: clamp(1rem, 3vw, 2.5rem);
+    font-size: clamp(0.8rem, 3vw, 2.5rem);
 }
 
 .header {
@@ -256,7 +256,10 @@ body[disabled] {
 }
 
 #about-image {
-    width: clamp(200px, 50%, 400px);
+    height: auto;
+    width: auto;
+    max-height: 50%;
+    max-width: 50%;
     border-radius: 50%;
     margin: 25px;
     animation: about-image-fadeIn 3s forwards;
