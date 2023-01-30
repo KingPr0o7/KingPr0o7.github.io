@@ -29,7 +29,7 @@ function changeNav(state) {
         body.removeAttribute('enabled', "");
         body.setAttribute('disabled', "");  
         // Snackbar   
-        //snackbar.style.visibility = "hidden";
+        snackbar.style.visibility = "hidden";
     } 
     if (state == "Disabled") {
         // Hamburger
