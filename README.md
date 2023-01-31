@@ -1,4 +1,4 @@
-<p align="center"><a href="https://ncp.dev" target="_blank"><img src="images/logo/ncp-long-forum.png?raw=true alt="Nathan Parker's logo"></a></p>
+<p align="center"><a href="https://ncp.dev" target="_blank"><img src="images/branding/ncp-long-forum.png?raw=true alt="Nathan Parker's logo"></a></p>
 
 <br>
 
@@ -12,7 +12,7 @@ The overarching goal of this portfolio is to showcase a bit about myself, my flu
 
 ## Instructions
 ### Viewing the website
-You can view my website on many domains. I currently have four ways to view my portfolio, and those include [KingPr0o7.github.io](https://KingPr0o7.github.io), [ncp.dev](https://ncp.dev), [nathan-parker.dev](https://nathan-parker.dev), and [nathanparker.org](https://nathanparker.org). These are subject to change, and I'll notify you of any updates.
+You can view my website on two domains. Those consist of: [KingPr0o7.github.io](https://KingPr0o7.github.io) and [ncp.dev](https://ncp.dev).
 
 ### Contributing
 If you want to contribute to my project, help me grow, and solve issues, then please follow these steps:

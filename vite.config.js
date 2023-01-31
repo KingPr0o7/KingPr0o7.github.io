@@ -7,7 +7,7 @@ export default defineConfig({
     publicDir: 'public',
     rollupOptions: {
       input: {
-        index: resolve(__dirname, 'src/loading-page/index.html'),
+        index: resolve(__dirname, 'src/loading-page/loading.html'),
         nested: resolve(__dirname, 'src/main-page/index.html')
       },
     },
