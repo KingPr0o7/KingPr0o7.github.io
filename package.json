@@ -1,25 +1,24 @@
 {
-  "name": "personalwebsite",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "echo ncp.dev > ./dist/CNAME && gh-pages -d dist",
-    "dev": "vite",
-    "prebuild": "replace-in-files --string='/src/main-page/index.html' --replacement='index.html' src/loading-page/loading.js",
-    "build": "vite build",
-    "postbuild": "ncp dist/src/loading-page dist && ncp dist/src/main-page dist && del-cli --force dist/src && replace-in-files --string='index.html' --replacement='/src/main-page/index.html' src/loading-page/loading.js",
-    "preview": "vite preview"
-  },
-  "devDependencies": {
-    "del-cli": "^5.0.0",
-    "gh-pages": "^4.0.0",
-    "vite": "^3.2.5"
-  },
-  "dependencies": {
-    "ncp": "^2.0.0",
-    "node": "^19.0.0",
-    "replace-in-file": "^6.3.5"
-  }
+	"name": "personalwebsite",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"scripts": {
+		"predeploy": "npm run build",
+		"deploy": "echo ncp.dev > ./dist/CNAME && gh-pages -d dist",
+		"dev": "vite",
+		"build": "vite build",
+		"postbuild": "ncp dist/src/main-page dist && del-cli --force dist/src",
+		"preview": "vite preview"
+	},
+	"devDependencies": {
+		"del-cli": "^5.0.0",
+		"gh-pages": "^4.0.0",
+		"vite": "^3.2.5"
+	},
+	"dependencies": {
+		"ncp": "^2.0.0",
+		"node": "^19.0.0",
+		"replace-in-file": "^6.3.5"
+	}
 }
