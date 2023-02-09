@@ -52,7 +52,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 	anchor.addEventListener('click', function(event) {
 		event.preventDefault();
 		var scrollTo = document.querySelector(this.getAttribute("href")).offsetTop;
-		if (anchor.toString().includes("about")) {
+		if (anchor.toString().includes("intro")) {
 			scrollTo = document.body.offsetTop;
 			window.scrollTo({top: scrollTo, behavior: 'smooth'});
 		} else {
@@ -73,3 +73,8 @@ hamburger.addEventListener('click', function () {
 for (var i = 0; i < links.length; i++) {
 	links[i].addEventListener('click',(evt) => changeNav("Disabled"), false);
 }
+
+// Project Card Link
+document.getElementById("let-go").addEventListener("click", function() {
+	location.href = 'https://github.com/KingPr0o7/Its-time-to-let-go'
+});
