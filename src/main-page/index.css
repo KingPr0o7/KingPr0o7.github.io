@@ -15,14 +15,14 @@ a {
 }
 
 body::-webkit-scrollbar {
-	width: 8px;
+	width: 16px;
 	background-color: transparent;
 } 
   
 body::-webkit-scrollbar-thumb {
 	background-color: rgba(200, 200, 200, 0.5);
 	border-radius: 10px;
-	width: 8px;
+	width: 16px;
 }
 
 body::-webkit-scrollbar-thumb:hover {
@@ -58,7 +58,7 @@ body[disabled] {
 .desktop-navbar[filled],
 .desktop-navbar[unfilled] {
 	padding: 0.5rem 0 0.5rem 0.5rem;
-	z-index: 1000;
+	z-index: 2;
 	top: 0;
 	position: fixed;
 	width: 100%;
@@ -155,31 +155,29 @@ body[disabled] {
 	z-index: 1;
 	display: flex;
 	top: 0;
-	width: 100vw;
+	width: 100%;
 	height: 100%;
-	height: 100vh;
 	height: calc(var(--vh, 1vh) * 100);
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-evenly;
 	background: rgba(21, 21, 21, 0.8);
 	backdrop-filter: blur(3px);
+	-webkit-backdrop-filter: blur(3px);
 	overflow-y: auto;
 }
 
 #mobile-navlist {
 	overflow: hidden;
 	padding-top: 0;
-	height: 0;
+	height: 1px;
 	transition: all 1.5s;
 }
 
 #mobile-navlist[open] {
+	z-index: 1;
 	height: 100%;
-	height: 100vh;
 	height: calc(var(--vh, 1vh) * 100);
-	backdrop-filter: blur(3px);
-	-webkit-backdrop-filter: blur(3px);
 }
 
 #navlist-title {
@@ -375,54 +373,106 @@ body[disabled] {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	padding: 0 25px 0 25px;
+	width: 100%;
+	gap: 20px;
+	flex-wrap: wrap;
 }
 
 .card {
+	position: relative;
 	display: flex;
 	flex-direction: column;
-	background-color: #323232;
+	justify-content: flex-end;
 	border-radius: 8px;
-	width: 400px;	
-	height: 350px;
-	transition: transform 0.2s ease-in-out;
-	transition: box-shadow 0.5s ease-in-out;
-}
-
-.card:hover {
-	box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.8);
+	min-width: 400px;	
+	min-height: 450px;
+	transition: box-shadow 1s ease-in-out;
+	overflow: hidden;
 }
 
 .card-image {
-    width: 100%;
-	border-radius: 6px;
-    object-fit: contain;
+    height: 100%;
+	width: 100%;
+	border-radius: 8px;
+}
+
+.card-preview-title {
+	position: absolute;
+	text-align: center;
+	background: rgba(0, 0, 0, 0.3 );
+	border-radius: 8px;
+	backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(5px);
+	width: 100%;
+	left: 50%;
+	padding: 5px;
+	transform: translate(-50%);
+	font-size: clamp(1.5rem, 7vw, 2rem);
+	color: white;
+	font-family: 'Rubik', sans-serif;
+	transition: opacity 400ms 850ms ease-in-out;
+}
+
+.card:hover > .card-preview-title {
+	opacity: 0;
+	transition: opacity 200ms ease-in-out;
 }
 
 .card-content {
-	display: flex;
-	flex-direction: column;
-	color: white;
-	height: 100%;
-	padding: 12px;
+	position: absolute;
+	text-align: center;
 	font-family: 'Rubik', sans-serif;
+	width: 100%;
+	color: white;
+	z-index: 2;
+	border-radius: 8px;
+	opacity: 0;
+	max-height: 1%;
+	padding: 0 12px 0 12px;
+	transition: all 900ms ease-in-out;
+	background: rgba(0, 0, 0, 0.6);
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
 }
 
-.card-content > *:not(.card-desc):not(.card-link) {
-	margin: 0 0 5px 0;
+.card:hover > .card-content, .card:focus > .card-content {
+	max-height: 100%;
+	transition: all 900ms ease-in-out;
+	opacity: 1;
+}
+
+.card-content > * {
+	margin-bottom: 10px;
+}
+
+.card-title {
+	margin-top: 10px;
+	font-size: clamp(1.5rem, 7vw, 2rem);
 }
 
 .card-tags {
 	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: clamp(0.7rem, 3.8vw, 1rem);
 	gap: 10px;
-	color: #999999;
 }
 
-.card-header {
-	font-weight: 400;
+.card-tag-attr {
+	padding: 5px;
+	border-radius: 16px;
+	background-color: #0094FF;
+}
+
+.card-desc {
+	font-size: clamp(0.8rem, 1vw, 1rem);
 }
 
 .card-link {
-	margin-top: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .card-link-button {
@@ -435,10 +485,10 @@ body[disabled] {
 	border: none;
 	padding: 10px;
 	font-weight: 400;
-	width: 100%;
+	width: 70%;
 	font-family: 'Rubik', sans-serif;
+	font-size: clamp(0.7rem, 4vw, 1rem);
 	border-radius: 8px;
-	font-size: 19px;
 	cursor: pointer;
 }
 
@@ -549,3 +599,23 @@ body[disabled] {
 }
 
 /* Cards */
+@media screen and (max-width: 430px) {
+	.card {
+		min-width: 350px;
+		min-height: 400px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+	.card {
+		min-width: 300px;
+		min-height: 350px;
+    }
+}
+
+@media screen and (max-width: 325px) {
+	.card {
+		min-width: 250px;
+		min-height: 300px;
+    }
+}

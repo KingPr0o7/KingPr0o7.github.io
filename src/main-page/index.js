@@ -29,7 +29,7 @@ function changeNav(state) {
 		body.removeAttribute('enabled', "");
 		body.setAttribute('disabled', "");  
 		// Snackbar   
-		snackbar.style.visibility = "hidden";
+		//snackbar.style.visibility = "hidden";
 	} 
 	if (state == "Disabled") {
 		// Hamburger
@@ -42,7 +42,7 @@ function changeNav(state) {
 		body.removeAttribute('disabled', "");
 		body.setAttribute('enabled', "");
 		// Snackbar
-		snackbar.style.visibility = "visible";
+		//snackbar.style.visibility = "visible";
 	}
 }
 
@@ -75,6 +75,6 @@ for (var i = 0; i < links.length; i++) {
 }
 
 // Project Card Link
-document.getElementById("let-go").addEventListener("click", function() {
-	location.href = 'https://github.com/KingPr0o7/Its-time-to-let-go'
+document.getElementById("cmi").addEventListener("click", function() {
+	window.open("https://github.com/KingPr0o7/Combo-Menu", "_blank");
 });
