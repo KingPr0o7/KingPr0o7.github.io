@@ -376,7 +376,7 @@ body[disabled] {
 	padding: 0 25px 0 25px;
 	width: 100%;
 	gap: 20px;
-	flex-wrap: wrap;
+	overflow-x: auto;
 }
 
 .card {
@@ -461,7 +461,7 @@ body[disabled] {
 
 .card-tag-attr {
 	padding: 5px;
-	border-radius: 16px;
+	border-radius: 10px;
 	background-color: #0094FF;
 }
 
@@ -582,6 +582,12 @@ body[disabled] {
 @media screen and (max-height: 660px) {
 	#intro-container {
 		padding-top: 100px;
+	}
+}
+
+@media screen and (max-width: 860px) {
+	#project-cards-container {
+		justify-content: flex-start;
 	}
 }
 
