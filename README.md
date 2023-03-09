@@ -8,7 +8,7 @@
 For a long time, I've wanted to start a website to show my skills to others. This repository represents the many hours of watching YouTube videos, looking at other websites, my found analyses of what to do and not do, and the overall progress of my knowledge of languages such as HTML, CSS, and JS. 
 
 ## Intention
-The overarching goal of this portfolio is to showcase a bit about myself, my fluency in software languages, and the projects that those languages apply. Also, this website helps me bundle all that into a simple link that anyone can click, view, and share. The website exhibits my growth in learning materials such as HTML/CSS/JS or GitHub technologies. It can also show potential employers or collages of my improvements and my known highlights to help my future in software development. 
+The overarching goal of this portfolio is to showcase a bit about myself, my fluency in software languages, and the projects that those languages apply. Also, this website helps me bundle all that into a simple link that anyone can click, view, and share. The website exhibits my growth in learning materials such as HTML/CSS/JS or GitHub technologies. It can also show potential employers or colleges of my improvements and my known highlights to help my future in software development. 
 
 ## Instructions
 ### Viewing the website
