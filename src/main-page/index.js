@@ -41,8 +41,6 @@ function changeNav(state) {
 		// Body
 		body.removeAttribute('enabled', "");
 		body.setAttribute('disabled', "");  
-		// Snackbar   
-		//snackbar.style.visibility = "hidden";
 	} 
 	if (state == "Disabled") {
 		// Hamburger
@@ -54,8 +52,6 @@ function changeNav(state) {
 		// Body
 		body.removeAttribute('disabled', "");
 		body.setAttribute('enabled', "");
-		// Snackbar
-		//snackbar.style.visibility = "visible";
 	}
 }
 
@@ -87,7 +83,12 @@ for (var i = 0; i < links.length; i++) {
 	links[i].addEventListener('click',(evt) => changeNav("Disabled"), false);
 }
 
-// Project Card Link
+// Project Cards Links
 document.getElementById("cmi").addEventListener("click", function() {
 	window.open("https://github.com/KingPr0o7/Combo-Menu", "_blank");
 });
+
+document.getElementById("personal-portfolio").addEventListener("click", function() {
+	window.open("https://github.com/KingPr0o7/KingPr0o7.github.io", "_blank");
+});
+
