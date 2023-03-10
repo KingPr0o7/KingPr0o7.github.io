@@ -482,18 +482,18 @@ body[disabled] {
 }
 
 .fullstack-tag {
-	background: rgb(11,210,213);
-	background: linear-gradient(90deg, rgba(11,210,213,1) 0%, rgba(29,191,92,1) 100%);
+	background: rgb(11, 210, 213);
+	background: linear-gradient(90deg, rgba(11, 210, 213, 1) 0%, rgba(29, 191, 92, 1) 100%);
 }
 
 .personal-tag {
-	background: rgb(254,152,0);
-	background: linear-gradient(90deg, rgba(254,152,0,1) 0%, rgba(163,99,2,1) 100%);
+	background: rgb(254, 152, 0);
+	background: linear-gradient(90deg, rgba(254, 152, 0, 1) 0%, rgba(163, 99, 2, 1) 100%);
 }
 
 .frontend-tag {
-	background: rgb(11,210,213);
-	background: linear-gradient(90deg, rgba(11,210,213,1) 0%, rgba(2,131,133,1) 100%);
+	background: rgb(11, 210, 213);
+	background: linear-gradient(90deg, rgba(11, 210, 213, 1) 0%, rgba(2, 131, 133, 1) 100%);
 }
 
 .card-desc {
