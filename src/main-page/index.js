@@ -15,6 +15,19 @@ addEventListener('load', fixHeight);
 addEventListener('resize', fixHeight);
 addEventListener('orientationchange', fixHeight);
 
+const card = document.querySelector('.card');
+const button = document.querySelector('.card-link-button');
+
+card.addEventListener('focusin', () => {
+  button.tabIndex = 0;
+  console.log('your gay')
+});
+
+card.addEventListener('focusout', () => {
+  button.tabIndex = -1;
+  console.log('your not gay')
+});
+
 // Change Navigation Visibility 
 
 function changeNav(state) {

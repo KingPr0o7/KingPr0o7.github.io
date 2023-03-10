@@ -50,7 +50,7 @@
 	<link rel="stylesheet" href="index.css">
 	<meta name="theme-color" content="#181818">
 </head>
-<body enabled>
+<body tabindex="-1" enabled>
 	<!-- Desktop Navigation -->
 	<div class="desktop-navbar" unfilled>
 		<img id="navbar-icon" src="/images/branding/ncp-icon.png" alt="Nathan Parker's logo (icon)">
@@ -70,17 +70,13 @@
 	<div id="mobile-navlist" closed>
 		<h1 id="navlist-title">NAVIGATION MENU</h1>
 		<div id="navlist-links">
-			<a href="#intro-container">
-			<div class="navlist-link" tabindex="0">
+			<a href="#intro-container" class="navlist-link">
 				<img class="navlist-icon" src="/images/icons/intro-icon.svg" alt="About Me icon">
 				<p class="navlist-link-text">INTRO</p>
-			</div>
 			</a>
-			<a href="#projects">
-			<div class="navlist-link" tabindex="0">
+			<a href="#projects" class="navlist-link">
 				<img class="navlist-icon" src="/images/icons/projects-icon.svg" alt="Projects icon">
 				<p class="navlist-link-text">PROJECTS</p>
-			</div>
 			</a>
 		</div>
 	</div>
@@ -104,7 +100,7 @@
 		<h1 id="projects" class="page-header"><span class="comment-indicator-start">//</span> Projects <span class="comment-indicator-end"></span></h1>
 		<h3 id="projects-disclaimer">A handful of my favorite projects.</h3>
 		<div id="project-cards-container">
-			<div class="card">
+			<div class="card" tabindex="0">
 				<img class="card-image" src="/images/project-cards/cmi-project-card.png">
 				<h1 class="card-preview-title">Combo Menu Interface</h1>
 				<div class="card-content">
@@ -120,7 +116,7 @@
 					</div>
 				</div>
 			</div>	
-			<div class="card">
+			<div class="card" tabindex="0">
 				<img class="card-image" src="/images/project-cards/website-project.png">
 				<h1 class="card-preview-title">Personal Website</h1>
 				<div class="card-content">
@@ -132,7 +128,7 @@
 					</div>
 					<p class="card-desc">With my skill set increasing daily, I needed a place to display my projects. The website enables me to format and show people about myself efficiently and concisely.</p>
 					<div class="card-link">
-						<button class="card-link-button" id="cmi"><img class="card-link-image" src="/images/icons/github-white.svg">View on GitHub</button>
+						<button class="card-link-button" id="personal-portfolio"><img class="card-link-image" src="/images/icons/github-white.svg">View on GitHub</button>
 					</div>
 				</div>
 			</div>	

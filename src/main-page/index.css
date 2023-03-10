@@ -197,8 +197,8 @@ body[disabled] {
 	margin-bottom: auto;
 }
 
-.navlist-link:focus {
-	background-color: rgba( 0, 0, 0, 0.4 );
+.navlist-link:hover, .navlist-link:focus {
+	background-color: rgba(0, 0, 0, 0.4);
 }
 
 .navlist-icon {
@@ -373,7 +373,7 @@ body[disabled] {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	padding: 0 25px 0 25px;
+	padding: 3px 25px 25px 25px;
 	width: 100%;
 	gap: 20px;
 	overflow-x: auto;
@@ -387,7 +387,6 @@ body[disabled] {
 	border-radius: 8px;
 	min-width: 400px;	
 	min-height: 450px;
-	transition: box-shadow 1s ease-in-out;
 	overflow: hidden;
 }
 
@@ -428,12 +427,19 @@ body[disabled] {
 	z-index: 2;
 	border-radius: 8px;
 	opacity: 0;
-	max-height: 1%;
+	max-height: 1px; /*Mobile blur bug*/
 	padding: 0 12px 0 12px;
 	transition: all 900ms ease-in-out;
 	background: rgba(0, 0, 0, 0.6);
 	backdrop-filter: blur(10px);
+	overflow: hidden;
 	-webkit-backdrop-filter: blur(10px);
+}
+
+.card-link-button:focus ~ .card-content, .card-content:focus-within {
+	max-height: 100%;
+	transition: all 900ms ease-in-out;
+	opacity: 1;
 }
 
 .card:hover > .card-content, .card:focus > .card-content {
@@ -576,12 +582,6 @@ body[disabled] {
 	}
 	#intro-link {
 		justify-content: center;
-	}
-}
-
-@media screen and (max-height: 660px) {
-	#intro-container {
-		padding-top: 100px;
 	}
 }
 
