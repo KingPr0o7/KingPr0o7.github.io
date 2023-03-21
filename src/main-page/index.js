@@ -91,7 +91,6 @@ document.getElementById("personal-portfolio").addEventListener("click", function
 
 // Timestamps
 
-// SkriptLang: Jan 19, 2020 4:16:00PM (1579468560)
 const minute = 60;
 const hour = 3600;
 const day = 86400;
@@ -121,6 +120,7 @@ function calculate_timestamp(today, target_date) {
 	let timestamp = target_date.getTime();
 	let past_date = Math.floor(timestamp / 1000);
 	let time_elapsed = today - past_date;
+	// Compare those seconds to units of time and display relativity
 	if (time_elapsed < minute) {
 		if (time_elapsed == 1) return `${time_elapsed} second`;
 		return `${time_elapsed} seconds`;
