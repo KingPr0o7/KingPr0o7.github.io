@@ -56,9 +56,9 @@
 		<img id="navbar-icon" src="/images/branding/ncp-icon.png" alt="Nathan Parker's Icon" title="The Nathan Parker Icon">
 		<img id="navbar-logo" src="/images/branding/ncp-long-forum.png" alt="Nathan Parker's Logo" title="The Nathan Parker Logo">
 		<div class="navbar-links">
-		<a class="navbar-link" href="#intro-container">INTRO</a>
-		<a class="navbar-link" href="#projects">PROJECTS</a>
-		<a class="navbar-link" href="#languages">LANGUAGES</a>
+			<a class="navbar-link" href="#intro-container">INTRO</a>
+			<a class="navbar-link" href="#projects">PROJECTS</a>
+			<a class="navbar-link" href="#languages">LANGUAGES</a>
 		</div>
 		<span class="mobile-hamburger" closed>
 		<span class="bar"></span>
@@ -85,27 +85,22 @@
 			</a>
 		</div>
 	</div>
+	
 	<!-- Intro Page -->
 	<div id="intro-container">
 		<div id="intro-content">
-			<h1 id="intro-header">Hello,<br />I'm Nathan Parker</h1>
+			<h1 id="intro-header">Hello,<br>I'm Nathan Parker</h1>
 			<p id="intro-detail">A 15-year-old developer taking every chance to learn and build apps in the <span id="intro-detail-bold">software development</span> field.</p>
-			<!--Link to future blog-->
-			<!--<div id="intro-link">
-			<button class="link" onclick="console.log('hello')">
-				<img class="link-image" src="/images/icons/link.svg" />
-				<p class="link-text">Blog: intro Me</p>
-			</button>
-			</div>-->
 		</div>
-		<img id="intro-image" src="/images/branding/KingPr0o7.jpg" title="Nathan Parker's Profile Picture">
+		<img id="intro-image" src="/images/branding/KingPr0o7.jpg" alt="Image of Nathan Parker's Profile Picture" title="Nathan Parker's Profile Picture">
 	</div>
+
 	<!-- Project Page -->
 	<div id="project-container">
-		<h1 id="projects" class="page-header"><span class="comment-indicator-start">//</span> Projects <span class="comment-indicator-end"></span></h1>
-		<h3 class="disclaimer">A handful of my favorite projects.<br>Click/Tab/Hover to view more information.</h3>
+		<h1 id="projects" class="page-header hidden"><span class="comment-indicator-start">//</span> Projects <span class="comment-indicator-end"></span></h1>
+		<h3 class="disclaimer hidden">A handful of my favorite projects.</h3>
 		<div id="project-cards-container">
-			<div class="card" tabindex="0">
+			<div class="card hidden" tabindex="0">
 				<img class="card-image" src="/images/project-cards/cmi-project-card.png">
 				<h1 class="card-preview-title">Combo Menu Interface</h1>
 				<div class="card-content">
@@ -121,7 +116,8 @@
 					</div>
 				</div>
 			</div>	
-			<div class="card" tabindex="0">
+
+			<div class="card hidden" tabindex="0">
 				<img class="card-image" src="/images/project-cards/portfolio-project.png">
 				<h1 class="card-preview-title">Personal Portfolio</h1>
 				<div class="card-content">
@@ -139,12 +135,14 @@
 			</div>	
 		</div>
 	</div>
+
+	<!-- Languages Page -->
 	<div id="languages-container">
-		<h1 id="languages" class="page-header"><span class="comment-indicator-start">//</span> Languages <span class="comment-indicator-end"></span></h1>
-		<h3 class="disclaimer">The software programming languages under my belt.</h3>
+		<h1 id="languages" class="page-header hidden"><span class="comment-indicator-start">//</span> Languages <span class="comment-indicator-end"></span></h1>
+		<h3 class="disclaimer hidden">The software programming languages under my belt.</h3>
 		<div id="languages-content">
 			<div id="languages-widgets-container">
-				<div class="language-widget">
+				<div class="language-widget hidden">
 					<div class="language-information-wrapper">
 						<img class="language-widget-logo" src="/images/language-logos/skriptlang.png" alt="SkriptLang Logo" title="SkriptLang Logo">
 						<div class="language-information">
@@ -155,7 +153,8 @@
 					</div>
 					<img class="language-level" src="/images/icons/lvl-3-icon.svg" alt="Level 3" title="Proficient Level (3)">
 				</div>
-				<div class="language-widget">
+
+				<div class="language-widget hidden">
 					<div class="language-information-wrapper">
 						<img class="language-widget-logo" src="/images/language-logos/html5.svg" alt="HTML 5 Logo" title="HTML 5 Logo">
 						<div class="language-information">
@@ -166,7 +165,8 @@
 					</div>
 					<img class="language-level" src="/images/icons/lvl-2-icon.svg" alt="Level 2" title="Intermediate Level (2)">
 				</div>
-				<div class="language-widget">
+
+				<div class="language-widget hidden">
 					<div class="language-information-wrapper">
 						<img class="language-widget-logo" src="/images/language-logos/css3.svg" alt="CSS 3 Logo" title="CSS 3 Logo">
 						<div class="language-information">
@@ -177,7 +177,8 @@
 					</div>
 					<img class="language-level" src="/images/icons/lvl-2-icon.svg" alt="Level 2" title="Intermediate Level (2)">
 				</div>
-				<div class="language-widget">
+
+				<div class="language-widget hidden">
 					<div class="language-information-wrapper">
 						<img class="language-widget-logo" src="/images/language-logos/javascript.svg" alt="JavaScript ES6 Logo" title="JavaScript ES6 Logo">
 						<div class="language-information">
@@ -188,7 +189,8 @@
 					</div>
 					<img class="language-level" src="/images/icons/lvl-2-icon.svg" alt="Level 2" title="Intermediate Level (2)">
 				</div>
-				<div class="language-widget">
+
+				<div class="language-widget hidden">
 					<div class="language-information-wrapper">
 						<img class="language-widget-logo" src="/images/language-logos/python.svg" alt="Python Logo" title="Python Logo">
 						<div class="language-information">

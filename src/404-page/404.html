@@ -31,23 +31,29 @@
 	<script type="module" crossorigin src="/src/404-page/404.js" defer></script>
 </head>
 <body>
+	<!-- Navigation Bar -->
 	<div class="desktop-navbar" unfilled>
 		<img id="navbar-icon" src="/images/branding/ncp-icon.png" alt="Nathan Parker's Icon" title="The Nathan Parker Icon">
 		<img id="navbar-logo" src="/images/branding/ncp-long-forum.png" alt="Nathan Parker's Logo" title="The Nathan Parker Logo">
 		<div class="navbar-links">
-			<a class="navbar-link" href="#intro-container">HELP</a>
+			<a class="navbar-link" id="readme-link">HELP</a>
 		</div>
 	</div>
+
+	<!-- Error -->
 	<div id="error-container">
-		<span id="error-code">404</span>
-		<span id="error-name"><span id="cursor"></span></span>
+		<div id="error-content">
+			<span id="error-code">404</span>
+			<span id="error-name"><span id="cursor"></span></span>
+			<span id="error-link"></span></span>
+		</div>
 	</div>
+
+	<!-- Footer -->
 	<div id="footer">
-		<span id="return-text"><img src="/images/icons/link.svg" id="link-image" alt="Link back to home webpage" title="Link Icon"> Back Home</span>
-		<div id="logos">
-			<img src="/images/branding/ncp-icon.png" id="mylogo">
-			<h1 id="bind">X</h1>
-			<img src="/images/icons/github-white.svg" id="github-logo">
+		<div id="github-links">
+			<span class="site-embed" id="github-website"><img src="/images/icons/github-white.svg" class="site-icon">GitHub Status</span>
+			<span class="site-embed" id="github-twitter"><img src="/images/icons/twitter-logo.svg" class="site-icon">@githubstatus</span>
 		</div>
 	</div>
 </body>

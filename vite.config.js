@@ -7,8 +7,8 @@ export default defineConfig({
 		publicDir: 'public',
 		rollupOptions: {
 		  input: {
-			//index: resolve(__dirname, 'src/loading-page/loading.html'),
-			index: resolve(__dirname, 'src/main-page/index.html')
+			index: resolve(__dirname, 'src/main-page/index.html'),
+			'404': resolve(__dirname, 'src/404-page/404.html')
 		  },
 		},
 	},

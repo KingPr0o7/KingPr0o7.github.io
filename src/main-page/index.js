@@ -156,3 +156,20 @@ document.getElementById('language-html-duration').textContent = calculate_timest
 document.getElementById('language-css-duration').textContent = calculate_timestamp(seconds, css_date);
 document.getElementById('language-javascript-duration').textContent = calculate_timestamp(seconds, javascript_date);
 document.getElementById('language-python-duration').textContent = calculate_timestamp(seconds, python_date);
+
+// Animation On Scroll
+
+const observer = new IntersectionObserver((entries) => {
+	entries.forEach((entry) => {
+		if (entry.isIntersecting) {
+			entry.target.classList.add('show');
+			if (entry.target.classList.contains('page-header')) {
+				console.log('s')
+				entry.target.setAttribute('animate', '');
+			}
+		}
+	});
+});
+
+const hidden_elements = document.querySelectorAll('.hidden');
+hidden_elements.forEach((el) => observer.observe(el));

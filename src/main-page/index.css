@@ -29,6 +29,15 @@ body::-webkit-scrollbar-thumb:hover {
 	background-color: rgba(200, 200, 200, 1);
 }
 
+.hidden {
+	opacity: 0;
+	transition: opacity 2s;
+}
+
+.show {
+	opacity: 1;
+}
+
 /*      */
 /* Body */
 /*      */
@@ -168,12 +177,14 @@ body[disabled] {
 }
 
 #mobile-navlist {
+	opacity: 0;
 	padding-top: 0;
 	height: 1px;
 	transition: all 1.5s;
 }
 
 #mobile-navlist[open] {
+	opacity: 1;
 	z-index: 1;
 	height: 100%;
 	height: calc(var(--vh, 1vh) * 100);
@@ -228,17 +239,18 @@ body[disabled] {
 .page-header {
 	font-size: clamp(1.6rem, 7vw, 4rem);
 	text-align: center;
+	margin-top: 1px;
 	padding: 25px 0 25px 0;
 	color: #47DA44;
 	font-family: 'Rubik', sans-serif;
 }
 
-.page-header::before {
+.page-header[animate]::before {
 	content: "//";
 	animation: comments-start 8s, comments-fadeInOut 1.56s linear -1s 6;
 }
 
-.page-header::after {
+.page-header[animate]::after {
 	content: "";
 	animation: comments-end 8s, comments-fadeInOut 1.56s linear -1s 6;  
 }
@@ -279,7 +291,6 @@ body[disabled] {
 	font-family: 'Rubik', sans-serif;
 }
 
-
 /*            */
 /* Intro Page */
 /*            */
@@ -293,6 +304,8 @@ body[disabled] {
 }
 
 #intro-content {
+	display: flex;
+	flex-direction: column;
 	width: 45%;
 }
 
@@ -391,6 +404,11 @@ body[disabled] {
 	min-height: 450px;
 	overflow: hidden;
 }
+
+/* On Scroll Animations */
+
+.card:nth-child(1) {transition-delay: 100ms;}
+.card:nth-child(2) {transition-delay: 200ms;}
 
 .card-image {
     height: 100%;
@@ -571,6 +589,14 @@ body[disabled] {
 	justify-content: space-between;
 }
 
+/* On Scroll Animations */
+
+.language-widget:nth-child(1) {transition-delay: 100ms;}
+.language-widget:nth-child(2) {transition-delay: 200ms;}
+.language-widget:nth-child(3) {transition-delay: 300ms;}
+.language-widget:nth-child(4) {transition-delay: 400ms;}
+.language-widget:nth-child(5) {transition-delay: 500ms;}
+
 .language-widget:hover {
 	transform: scale(1.04);
 }
@@ -626,6 +652,7 @@ body[disabled] {
 	.navbar-link {
 		display: none;
 	}
+
 	.mobile-hamburger {
 		opacity: 100;
 		display: flex;
@@ -637,6 +664,7 @@ body[disabled] {
 	#mobile-navlist[open] {
 		display: none;
 	}
+
 	body[disabled] {
 		overflow: visible;
 	}
@@ -647,6 +675,7 @@ body[disabled] {
 	#navbar-logo {
 		display: none;
 	}
+
 	#navbar-icon {
 		display: inline;
 		margin-left: 0.5rem;
@@ -666,12 +695,18 @@ body[disabled] {
 		flex-direction: column-reverse;
 		justify-content: center;
 	}
+
 	#intro-content {
 		text-align: center;
 		width: 100%;
 	}
+
 	#intro-link {
 		justify-content: center;
+	}
+
+	#intro-content {
+		gap: 10px;
 	}
 }
 
@@ -730,6 +765,7 @@ body[disabled] {
 		justify-content: center;
 		flex-direction: column;
 	}
+
 	.language-widget {
 		width: 250px;
 	}

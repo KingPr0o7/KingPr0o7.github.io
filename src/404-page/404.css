@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+/*		               */
+/* All Across The Page */
+/*                     */
 
 * {
 	box-sizing: border-box;
@@ -21,6 +24,10 @@ body {
 	0% {background-size: 100vw 0vh}
 	100% {background-size: 100vw 100vh}
 }
+
+/*                */
+/* Navigation Bar */
+/*				  */
 
 .desktop-navbar[filled],
 .desktop-navbar[unfilled] {
@@ -52,6 +59,7 @@ body {
 }
 
 .navbar-links > * {
+	cursor: pointer;
 	font-size: clamp(1rem, 2vw, 1.4rem);
 	z-index: 1;
 	background-size: 1rem 1rem;
@@ -71,7 +79,14 @@ body {
 
 #error-container {
 	height: 100%;
-	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+#error-content {
+	height: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -84,10 +99,15 @@ body {
 	color: white;
 }
 
-#error-name {
+#error-name, #error-link {
 	font-family: 'Rubik', sans-serif;
 	font-size: clamp(1rem, 2vw, 2rem);
 	color: white;	
+}
+
+#error-link {
+	text-decoration: underline;
+	cursor: pointer;
 }
 
 #cursor {
@@ -111,7 +131,7 @@ body {
 	flex-direction: column;
 	gap: 10px;
 	position: absolute;
-	top: calc(100% - 134px);
+	top: calc(100% - 44px);
 	left: 50%;
 	width: 100%;
 	transform: translate(-50%);
@@ -121,7 +141,8 @@ body {
 	filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(198deg) brightness(107%) contrast(101%);
 }
 
-#return-text {
+#return-link {
+	width: 100%;
 	cursor: pointer;
 	display: flex;
 	align-items: center;
@@ -140,26 +161,30 @@ body {
 	height: 24px;
 }
 
-#logos {
+#github-links {
 	display: flex;
 	align-items: center;
-	justify-content: center;	
-	gap: 25px;
+	justify-content: center;
+	gap: 10px;
 }
 
-#mylogo {
-	height: 80px;
-	width: 73.33px;
-}
-
-#bind {
+.site-embed {
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	padding: 5px;
+	background-color: #2c2c2c;
+	border-radius: 8px;
 	color: white;
-	font-family: 'Josefin Sans', sans-serif;
+	font-family: 'Rubik', sans-serif;
+	font-size: 1rem;
 }
 
-#github-logo {
-	width: 64px;
-	height: 64px;
+.site-icon {
+	width: 24px;
+	height: 24px;
 }
 
 /*                                    */
@@ -174,5 +199,14 @@ body {
 	#navbar-icon {
 		display: inline;
 		margin-left: 0.5rem;
+	}
+}
+
+@media screen and (max-width: 320px) {
+	#github-links {
+		flex-direction: column;
+	}
+	#footer {
+		top: calc(100% - 88px);
 	}
 }
