@@ -86,7 +86,7 @@ document.getElementById("cmi").addEventListener("click", function() {
 });
 
 document.getElementById("personal-portfolio").addEventListener("click", function() {
-	window.open("https://github.com/KingPr0o7/KingPr0o7.github.io", "_blank");
+	window.open("mailto:test@example.com?subject=subject&body=body", "_blank");
 });
 
 // Timestamps
@@ -164,7 +164,6 @@ const observer = new IntersectionObserver((entries) => {
 		if (entry.isIntersecting) {
 			entry.target.classList.add('show');
 			if (entry.target.classList.contains('page-header')) {
-				console.log('s')
 				entry.target.setAttribute('animate', '');
 			}
 		}
