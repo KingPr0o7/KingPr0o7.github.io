@@ -14,6 +14,10 @@ a {
 	text-decoration: none;
 }
 
+body {
+	background-color: #181818;
+}
+
 body::-webkit-scrollbar {
 	width: 16px;
 	background-color: transparent;
@@ -41,19 +45,6 @@ body::-webkit-scrollbar-thumb:hover {
 /*      */
 /* Body */
 /*      */
-
-html,
-body {
-	background: radial-gradient(100% 100% at 50% 0%, rgb(254, 153, 0) 0%, #181818 100%);
-	background-color: #181818;
-	animation: show-radial-background 5s forwards ease-in-out;
-	background-repeat: no-repeat;
-}
-
-@keyframes show-radial-background {
-	0% {background-size: 100vw 0vh}
-	100% {background-size: 100vw 100vh}
-}
 
 /* Body Toggle */ 
 body[disabled] {
@@ -291,17 +282,30 @@ body[disabled] {
 	font-family: 'Rubik', sans-serif;
 }
 
+.page {
+	min-height: 100vh;
+}
+
 /*            */
 /* Intro Page */
 /*            */
 
 #intro-container {
 	padding: 0 40px 0 40px;
-	height: 100vh;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	background: radial-gradient(100% 100% at 50% 0%, rgb(254, 153, 0) 0%, #181818 100%);
+	background-color: #181818;
+	animation: show-radial-background 5s forwards ease-in-out;
+	background-repeat: no-repeat;
 }
+
+@keyframes show-radial-background {
+	0% {background-size: 100% 0vh}
+	100% {background-size: 100% 100%}
+}
+
 
 #intro-content {
 	display: flex;
@@ -375,6 +379,13 @@ body[disabled] {
 	filter: invert(39%) sepia(87%) saturate(2316%) hue-rotate(185deg) brightness(101%) contrast(109%);
 }
 
+#contact-information {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
 #contact-container {
 	display: flex;
 	flex-direction: row;
@@ -405,7 +416,6 @@ body[disabled] {
 
 #project-container {
 	background-color: #181818;
-	height: 100vh;
 }
 
 #project-cards-container {
@@ -578,7 +588,6 @@ body[disabled] {
 
 #languages-container {
 	background-color: #181818;
-	height: 100vh;
 	padding: 25px;
 }
 
@@ -720,6 +729,22 @@ body[disabled] {
 /* Screen Size Awareness / Animations */
 /*                                    */
 
+/* Height Preservation */
+@media screen and (max-height: 640px) {
+	.page {
+		height: 100%;
+	}
+	#intro-container {
+		padding-top: 100px;
+	}
+}
+
+@media screen and (max-height: 520px) {
+	#intro-container {
+		padding-top: 100px;
+	}
+}
+
 /* Toggle Mobile Navigation */
 @media screen and (max-width: 1139px) {
 	.navbar-link {
@@ -786,12 +811,6 @@ body[disabled] {
 @media screen and (max-width: 860px) {
 	#project-cards-container {
 		justify-content: flex-start;
-	}
-}
-
-@media screen and (max-height: 480px) {
-	#intro-container {
-		padding-top: 200px;
 	}
 }
 
