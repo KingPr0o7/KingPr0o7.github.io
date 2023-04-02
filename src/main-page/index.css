@@ -379,37 +379,6 @@ body[disabled] {
 	filter: invert(39%) sepia(87%) saturate(2316%) hue-rotate(185deg) brightness(101%) contrast(109%);
 }
 
-#contact-information {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-}
-
-#contact-container {
-	display: flex;
-	flex-direction: row;
-	gap: 10px;
-	align-items: center;
-	justify-content: center;
-}
-
-.contact-image-container {
-	display: flex;
-	align-items: center;
-	flex-direction: row;
-	justify-content: center;
-	width: fit-content;
-	padding: 10px;
-	border-radius: 50%;
-	background-color: #000000;
-}
-
-.contact-image {
-	width: 32px;
-	height: 32px;
-}
-
 /*               */
 /* Projects Page */
 /*               */
@@ -691,38 +660,95 @@ body[disabled] {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	flex-direction: column;
 	backdrop-filter: blur(15px);
 	-webkit-backdrop-filter: blur(15px);
 	background-color: #252525;
 	border-radius: 10px;
 	width: 50%;
 	padding: 10px;
-	gap: 10px;
+	gap: 15px;
 }
 
-#footer-middle, #footer-right {
-	text-align: center;
-	font-family: 'Rubik', sans-serif;
-	color: white;
-	font-size: clamp(0.8rem, 2vw, 1rem);
+#footer-content {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-direction: row;
+	border-radius: 10px;
+	width: 100%;
+	gap: 15px;
 }
 
-#footer-right {
+hr {
+	width: 100%;
+}
+
+#footer-icon {
+	width: 270.56px;
+	height: 77.68px;
+}
+
+#footer-documents {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	flex-direction: row;
-	gap: 25px;
+	gap: 20px;
 }
 
-#footer-right > p:hover {
+#footer-copyright {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-direction: column;
+	gap: 5px;
+}
+
+#footer-documents, #footer-copyright {
+	text-align: center;
+	font-family: 'Rubik', sans-serif;
+	color: white;
+	font-size: clamp(0.8rem, 5vw, 1rem);
+}
+
+#footer-documents > p:hover {
 	cursor: pointer;
 	text-decoration: underline;
 }
 
-#footer-icon {
-	width: 48px;
-	height: 52.36px;
+#footer-socials {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+	gap: 10px;
+}
+
+#footer-socials > * {
+	cursor: pointer;
+}
+
+/* Contact Links */ 
+#contact-container {
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.contact-image-container {
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	justify-content: center;
+	width: fit-content;
+}
+
+.contact-image {
+	width: 32px;
+	height: 32px;
 }
 
 /*                                    */
@@ -871,7 +897,21 @@ body[disabled] {
 }
 
 @media screen and (max-width: 595px) {
-	#footer-container {
+	#footer-content {
 		flex-direction: column;
+	}
+}
+
+@media screen and (max-width: 370px) {
+	#footer-container {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 300px) {
+	#footer-icon {
+		content: url('/images/branding/ncp-icon.png');
+		width: 90px;
+		height: 98.18px;
 	}
 }
