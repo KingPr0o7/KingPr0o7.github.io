@@ -189,3 +189,14 @@ const observer = new IntersectionObserver((entries) => {
 
 const hidden_elements = document.querySelectorAll('.hidden');
 hidden_elements.forEach((el) => observer.observe(el));
+
+const blogCard = document.querySelector('.blog-card');
+const blogCardTimestamp = document.querySelector('.blog-card-timestamp');
+
+blogCard.addEventListener('mouseover', function() {
+	blogCardTimestamp.textContent = 'Read Blog';
+  });
+  
+  blogCard.addEventListener('mouseout', function() {
+	blogCardTimestamp.textContent = 'Nathan Parker • Apr 20, 2023';
+  });
