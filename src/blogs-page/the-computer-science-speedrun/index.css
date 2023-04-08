@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap');
+
+/*                     */
+/* All Across The Page */
+/*                     */
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+body {
+	background: radial-gradient(100% 100% at 50% 0%, rgb(67, 94, 183) 0%, #181818 100%);
+	background-color: #181818;
+	animation: show-radial-background 5s forwards ease-in-out;
+	background-repeat: no-repeat;
+}
+
+@keyframes show-radial-background {
+	0% {background-size: 100% 0vh}
+	100% {background-size: 100% 100%}
+}
+
+
+body::-webkit-scrollbar {
+	width: 16px;
+	background-color: transparent;
+} 
+  
+body::-webkit-scrollbar-thumb {
+	background-color: rgba(200, 200, 200, 0.5);
+	border-radius: 10px;
+	width: 16px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+	background-color: rgba(200, 200, 200, 1);
+}
+
+.hidden {
+	opacity: 0;
+	transition: opacity 2s;
+}
+
+.show {
+	opacity: 1;
+}
+
+/*                        */
+/* Desktop Navigation Bar */
+/*                        */
+
+.desktop-navbar {
+	padding: 0.5rem 0 0.5rem 0.5rem;
+	z-index: 3;
+	top: 0;
+	position: fixed;
+	width: 100%;
+	overflow: hidden;
+	backdrop-filter: blur(15px);
+	-webkit-backdrop-filter: blur(15px);
+	height: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+}
+
+#navbar-icon {
+	height: 80px;
+	width: 73.33px;
+	object-fit: contain;
+}
+
+#navbar-logo {
+	width: 300px;
+	height: 80px;
+	object-fit: contain;
+	display: none;
+}
+
+#navbar-page-id {
+	font-size: 4rem;
+	color: white;
+	font-family: 'Rubik', sans-serif;
+	font-weight: 400;
+}
+
+.page {
+	padding: 25px;
+	min-height: 100vh;
+	padding-top: 100px;
+	color: white;
+	font-family: 'Rubik', sans-serif;
+}
+
+
+#blog-main {
+	padding: 25px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+}
+
+#blog-image {
+	width: 40%;
+	object-fit: contain;
+	border-radius: 16px;
+}
+
+#blog-publish-info {
+	font-weight: 400;
+}
+
+#blog-information {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	gap: 50px;
+	padding: 0 20% 0 20%;
+}
+
+.blog-header {
+	padding: 10px 0 10px 0;
+}
+
+.blog-text, .ordered-list {
+	font-size: clamp(1.2rem, 2vw, 1.3rem);
+}
+
+.ordered-list {
+	padding: 20px 0 20px 40px;
+}
+
+.blog-inline-image-container {
+	padding: 20px 0 20px 0;
+}
+
+.blog-inline-image {
+	width: 50%;
+	object-fit: contain;
+	border-radius: 16px;
+}
