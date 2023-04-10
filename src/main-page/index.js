@@ -1,4 +1,7 @@
+//
 // Elements
+//
+
 const navbar = document.querySelector('.desktop-navbar');
 const hamburger = document.querySelector('.mobile-hamburger');
 const mobile_navlist = document.getElementById('mobile-navlist');
@@ -17,15 +20,27 @@ addEventListener('load', fixHeight);
 addEventListener('resize', fixHeight);
 addEventListener('orientationchange', fixHeight);
 
-card.addEventListener('focusin', () => {
-  button.tabIndex = 0;
+//
+// Animation On Scroll
+//
+
+const observer = new IntersectionObserver((entries) => {
+	entries.forEach((entry) => {
+		if (entry.isIntersecting) {
+			entry.target.classList.add('show');
+			if (entry.target.classList.contains('page-header')) {
+				entry.target.setAttribute('animate', '');
+			}
+		}
+	});
 });
 
-card.addEventListener('focusout', () => {
-  button.tabIndex = -1;
-});
+const hidden_elements = document.querySelectorAll('.hidden');
+hidden_elements.forEach((el) => observer.observe(el));
 
+//
 // Change Navigation Visibility 
+//
 
 function changeNav(state) {
 	if (state == "Enabled") {
@@ -52,7 +67,9 @@ function changeNav(state) {
 	}
 }
 
+//
 // Smooth Anchor Scrolling
+//
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 	anchor.addEventListener('click', function(event) {
@@ -80,7 +97,9 @@ for (var i = 0; i < links.length; i++) {
 	links[i].addEventListener('click', (evt) => changeNav("Disabled"), false);
 }
 
+//
 // Blog Cards
+//
 
 // The Computer Science Speedrun
 document.getElementById("tcss").addEventListener("click", function(){
@@ -105,7 +124,9 @@ document.getElementById("blogs-all-redirect").addEventListener("keydown", functi
 	}
 });	
 
+//
 // Project Cards Links
+//
 
 // Combo Menu Interface
 document.getElementById("cmi").addEventListener("click", function(){
@@ -129,54 +150,9 @@ document.getElementById("personal-portfolio").addEventListener("keydown", functi
 	}
 });
 
-// Contact Links
-
-// Discord
-document.getElementById("contact-discord").addEventListener("click", function() {
-	window.open("https://discord.gg/QGDPS6wHB8", "_blank");
-});
-
-document.getElementById("contact-discord").addEventListener("keydown", function(event) {
-	if (event.key == "Enter") {
-		window.open("https://discord.gg/QGDPS6wHB8", "_blank");
-	}
-});
-
-// YouTube
-document.getElementById("contact-youtube").addEventListener("click", function() {
-	window.open("https://www.youtube.com/channel/UCmMcPTUznYtu3zo7X3sVbgA", "_blank");
-});
-
-document.getElementById("contact-youtube").addEventListener("keydown", function(event) {
-	if (event.key == "Enter") {
-		window.open("https://www.youtube.com/channel/UCmMcPTUznYtu3zo7X3sVbgA", "_blank");
-	}
-});
-
-
-// Twitter
-document.getElementById("contact-twitter").addEventListener("click", function() {
-	window.open("https://twitter.com/KingPr0o7", "_blank");
-});
-
-document.getElementById("contact-twitter").addEventListener("keydown", function(event) {
-	if (event.key == "Enter") {
-		window.open("https://twitter.com/KingPr0o7", "_blank");
-	}
-});
-
-// GitHub
-document.getElementById("contact-github").addEventListener("click", function() {
-	window.open("https://github.com/KingPr0o7", "_blank");
-});
-
-document.getElementById("contact-github").addEventListener("keydown", function(event) {
-	if (event.key == "Enter") {
-		window.open("https://github.com/KingPr0o7", "_blank");
-	}
-});
-
+//
 // Timestamps
+//
 
 const minute = 60;
 const hour = 3600;
@@ -244,18 +220,51 @@ document.getElementById('language-css-duration').textContent = calculate_timesta
 document.getElementById('language-javascript-duration').textContent = calculate_timestamp(seconds, javascript_date);
 document.getElementById('language-python-duration').textContent = calculate_timestamp(seconds, python_date);
 
-// Animation On Scroll
+//
+// Contact Links
+//
 
-const observer = new IntersectionObserver((entries) => {
-	entries.forEach((entry) => {
-		if (entry.isIntersecting) {
-			entry.target.classList.add('show');
-			if (entry.target.classList.contains('page-header')) {
-				entry.target.setAttribute('animate', '');
-			}
-		}
-	});
+// Discord
+document.getElementById("contact-discord").addEventListener("click", function() {
+	window.open("https://discord.gg/QGDPS6wHB8", "_blank");
 });
 
-const hidden_elements = document.querySelectorAll('.hidden');
-hidden_elements.forEach((el) => observer.observe(el));
+document.getElementById("contact-discord").addEventListener("keydown", function(event) {
+	if (event.key == "Enter") {
+		window.open("https://discord.gg/QGDPS6wHB8", "_blank");
+	}
+});
+
+// YouTube
+document.getElementById("contact-youtube").addEventListener("click", function() {
+	window.open("https://www.youtube.com/channel/UCmMcPTUznYtu3zo7X3sVbgA", "_blank");
+});
+
+document.getElementById("contact-youtube").addEventListener("keydown", function(event) {
+	if (event.key == "Enter") {
+		window.open("https://www.youtube.com/channel/UCmMcPTUznYtu3zo7X3sVbgA", "_blank");
+	}
+});
+
+
+// Twitter
+document.getElementById("contact-twitter").addEventListener("click", function() {
+	window.open("https://twitter.com/KingPr0o7", "_blank");
+});
+
+document.getElementById("contact-twitter").addEventListener("keydown", function(event) {
+	if (event.key == "Enter") {
+		window.open("https://twitter.com/KingPr0o7", "_blank");
+	}
+});
+
+// GitHub
+document.getElementById("contact-github").addEventListener("click", function() {
+	window.open("https://github.com/KingPr0o7", "_blank");
+});
+
+document.getElementById("contact-github").addEventListener("keydown", function(event) {
+	if (event.key == "Enter") {
+		window.open("https://github.com/KingPr0o7", "_blank");
+	}
+});

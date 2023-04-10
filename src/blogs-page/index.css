@@ -11,6 +11,7 @@
 	--font: 'Rubik', sans-serif;
 	--primary-link-color: #2957C1;
 	--secondary-link-color: #1E3F8A;
+	--footer-background-color: #252525;
 }
 
 * {
@@ -66,8 +67,7 @@ body::-webkit-scrollbar-thumb:hover {
 /* Desktop Navigation Bar */
 /*                        */
 
-.desktop-navbar[filled],
-.desktop-navbar[unfilled] {
+.desktop-navbar {
 	padding: 0.5rem 0 0.5rem 0.5rem;
 	z-index: 3;
 	top: 0;
@@ -87,20 +87,13 @@ body::-webkit-scrollbar-thumb:hover {
 	height: 80px;
 	width: 73.33px;
 	object-fit: contain;
-}
-
-#navbar-logo {
-	width: 300px;
-	height: 80px;
-	object-fit: contain;
-	display: none;
+	cursor: pointer;
 }
 
 #navbar-page-id {
-	font-size: 4rem;
-	color: white;
-	font-family: 'Rubik', sans-serif;
+	font-size: clamp(2.5rem, 16vw, 4rem);
 	font-weight: 400;
+	cursor: pointer;
 }
 
 .page {
@@ -203,26 +196,198 @@ body::-webkit-scrollbar-thumb:hover {
 	border-radius: 0 0 12px 12px;
 }
 
-.blog-card-redirect-container {
+.blog-card .blog-card-redirect-container:not(:focus) {
 	display: none;
+	cursor: pointer;
 }
 
 /* Hover to Redirect */
+
+.blog-card:focus .blog-card-footer {
+	display: none;
+}
+
+.blog-card:focus-within .blog-card-footer {
+	display: none;
+}
+
+.blog-card:focus-within .blog-card-redirect-container {
+	display: inline;
+	background-color: var(--secondary-link-color);
+	font-weight: 600;
+}
+
 .blog-card:hover .blog-card-footer {
 	display: none;
 }
 
-.blog-card:hover .blog-card-redirect-container {
+.blog-card:hover .blog-card-redirect-container, .blog-card:focus .blog-card-redirect-container {
 	display: inline;
-	width: 100%;
+	background-color: var(--primary-link-color);
 	font-weight: 600;
 }
 
-.blog-card:hover .blog-card-redirect-container {
-	cursor: pointer;
-	background-color: var(--primary-link-color);
+.blog-card:hover > .blog-card-redirect-container:hover {
+	background-color: var(--secondary-link-color);
 }
 
-.blog-card:hover > .blog-card-footer:hover {
-	background-color: var(--secondary-link-color);
+/* 		  */
+/* Footer */
+/* 		  */
+
+#footer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 10px;
+}
+
+#footer-container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-direction: column;
+	backdrop-filter: blur(15px);
+	-webkit-backdrop-filter: blur(15px);
+	background-color: var(--footer-background-color);
+	border-radius: 10px;
+	width: 50%;
+	padding: 10px;
+	margin-top: 100px;
+	gap: 15px;
+}
+
+#footer-content {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-direction: row;
+	border-radius: 10px;
+	width: 100%;
+	gap: 15px;
+}
+
+hr {
+	width: 100%;
+}
+
+#footer-icon {
+	width: 270.56px;
+	height: 77.68px;
+}
+
+#footer-documents {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+	gap: 20px;
+}
+
+#footer-copyright {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-direction: column;
+	text-align: center;
+	gap: 5px;
+}
+
+/*#footer-documents, #footer-copyright {
+	text-align: center;
+	font-size: clamp(0.8rem, 5vw, 1rem);
+}
+
+#footer-documents > p:hover {
+	cursor: pointer;
+	text-decoration: underline;
+}*/
+
+#footer-socials {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+	gap: 10px;
+}
+
+#footer-socials > * {
+	cursor: pointer;
+}
+
+.contact-image:hover, .contact-image:focus {
+	transform: scale(1.4);
+}
+
+/* Contact Links */ 
+#contact-container {
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.contact-image-container {
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	justify-content: center;
+	width: fit-content;
+}
+
+.contact-image {
+	width: 32px;
+	height: 32px;
+}
+
+
+/*                                    */
+/* Screen Size Awareness / Animations */
+/*                                    */
+
+/* Blog Cards */
+@media screen and (max-width: 540px) {
+	.blog-card {
+		width: 400px;
+	}
+}
+
+@media screen and (max-width: 420px) {
+	.blog-card {
+		width: 300px;
+	}
+}
+
+@media screen and (max-width: 310px) {
+	.blog-card {
+		width: 250px;
+	}
+}
+
+/* Footer */
+@media screen and (max-width: 1140px) {
+	#footer-container {
+		width: 80%;
+	}
+}
+
+@media screen and (max-width: 595px) {
+	#footer-content {
+		flex-direction: column;
+	}
+}
+
+@media screen and (max-width: 370px) {
+	#footer-container {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 300px) {
+	#footer-icon {
+		content: url('/images/branding/ncp-icon.png');
+		width: 90px;
+		height: 98.18px;
+	}
 }

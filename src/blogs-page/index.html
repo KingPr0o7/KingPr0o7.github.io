@@ -52,24 +52,18 @@
 </head>
 <body tabindex="-1">
 	<!-- Desktop Navigation -->
-	<div class="desktop-navbar" unfilled>
+	<div class="desktop-navbar">
 		<img id="navbar-icon" src="/images/branding/ncp-icon.png" alt="Nathan Parker's Icon" title="The Nathan Parker Icon">
-		<img id="navbar-logo" src="/images/branding/ncp-long-forum.png" alt="Nathan Parker's Logo" title="The Nathan Parker Logo">
 		<span id="navbar-page-id">/ Blogs</span>
-		<!--<div class="navbar-links">
-			<a class="navbar-link" href="#intro-container">INTRO</a>
-			<a class="navbar-link" href="#intro-container">BLOGS</a>
-			<a class="navbar-link" href="#projects">PROJECTS</a>
-			<a class="navbar-link" href="#languages">LANGUAGES</a>
-		</div>-->
 	</div>
 
 	<!-- Blogs Container-->
+
 	<!-- Blogs Page -->
 	<div class="page" id="blogs-container">
 		<h1 id="blogs" class="page-header hidden"><span class="comment-indicator-start">//</span> Projects <span class="comment-indicator-end"></span></h1>
 		<div id="blog-cards-container">
-			<div class="blog-card hidden">
+			<div class="blog-card hidden" tabindex="0">
 				<div class="blog-card-content">
 					<img class="blog-card-image" src="/images/blogs/the-computer-science-speedrun/CSS-thumb.png">
 					<div class="blog-card-text">
@@ -80,9 +74,43 @@
 				<div class="blog-card-footer">
 					<p class="blog-card-timestamp">Nathan Parker • Apr 20, 2023</p>
 				</div>
-				<div id="tcss" class="blog-card-redirect-container">
+				<div id="tcss" class="blog-card-redirect-container" tabindex="0">
 					<span class="blog-card-redirect">Read More</span>
 				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Footer -->
+	<div class="hidden" id="footer">
+		<div id="footer-container">
+			<div id="footer-content">
+				<div id="footer-logo">
+					<img id="footer-icon" src="/images/branding/ncp-long-forum.png" alt="NCP Icon" title="NCP Logo">
+				</div>			
+				<div id="footer-socials">
+					<div id="contact-container">
+						<div class="contact-image-container">
+							<img class="contact-image" id="contact-discord" src="/images/icons/discord.svg" alt="Contact Method Discord" title="Discord" tabindex="0">
+						</div>
+						<div class="contact-image-container">
+							<img class="contact-image" id="contact-youtube" src="/images/icons/youtube.svg" alt="Contact Method YouTube" title="YouTube" tabindex="0">
+						</div>
+						<div class="contact-image-container">
+							<img class="contact-image" id="contact-twitter" src="/images/icons/twitter.svg" alt="Contact Method Twitter" title="Twitter" tabindex="0">
+						</div>
+						<div class="contact-image-container">
+							<img class="contact-image" id="contact-github" src="/images/icons/github-white.svg" alt="Contact Method GitHub" title="GitHub" tabindex="0">
+						</div>	
+					</div>
+				</div>
+			</div>
+			<!--<div id="footer-documents">
+				<p id="footer-link">Privacy</p>			
+			</div>-->	
+			<hr>
+			<div id="footer-copyright">
+				<p id="footer-copyright">Copyright © 2023 Nathan Parker. All rights reserved. Licensed under the AGPLv3.</p>
 			</div>
 		</div>
 	</div>
