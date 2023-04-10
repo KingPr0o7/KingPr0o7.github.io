@@ -52,12 +52,12 @@
 </head>
 <body tabindex="-1" enabled>
 	<!-- Desktop Navigation -->
-	<div class="desktop-navbar" unfilled>
+	<div class="desktop-navbar">
 		<img id="navbar-icon" src="/images/branding/ncp-icon.png" alt="Nathan Parker's Icon" title="The Nathan Parker Icon">
 		<img id="navbar-logo" src="/images/branding/ncp-long-forum.png" alt="Nathan Parker's Logo" title="The Nathan Parker Logo">
 		<div class="navbar-links">
 			<a class="navbar-link" href="#intro-container">INTRO</a>
-			<a class="navbar-link" href="#intro-container">BLOGS</a>
+			<a class="navbar-link" href="#blogs-container">BLOGS</a>
 			<a class="navbar-link" href="#projects">PROJECTS</a>
 			<a class="navbar-link" href="#languages">LANGUAGES</a>
 		</div>
@@ -101,18 +101,24 @@
 		<h1 id="blogs" class="page-header hidden"><span class="comment-indicator-start">//</span> Blogs <span class="comment-indicator-end"></span></h1>
 		<h3 class="disclaimer hidden">Personal blogs that relate to me or my projects.</h3>
 		<div id="blog-cards-container">
-			<div class="blog-card hidden">
+			<div class="blog-card hidden" tabindex="0">
 				<div class="blog-card-content">
-					<img class="blog-card-image" src="/Screenshot 2023-04-03 003959.png">
+					<img class="blog-card-image" src="/images/blogs/the-computer-science-speedrun/CSS-thumb.png">
 					<div class="blog-card-text">
 						<h1 class="blog-card-preview-title">The Computer Science Speedrun</h1>
-						<p class="blog-card-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+						<p class="blog-card-description">Nathan Parker's Computer Science Speedrun (CSS), where he was continuously questioning himself and how far his teacher was willing to challenge him. With only 7 hours left on the clock, the speedrun kicked off into one of his most memorable projects. </p>
 					</div>
 				</div>
 				<div class="blog-card-footer">
 					<p class="blog-card-timestamp">Nathan Parker • Apr 20, 2023</p>
 				</div>
+				<div id="tcss" class="blog-card-redirect-container" tabindex="0">
+					<span class="blog-card-redirect">Read More</span>
+				</div>
 			</div>
+		</div>
+		<div id="blogs-all-container" class="hidden">
+			<div id="blogs-all-redirect" class="hidden" tabindex="0">View All Blogs</div>
 		</div>
 	</div>
 
@@ -168,7 +174,7 @@
 						<img class="language-widget-logo" src="/images/language-logos/skriptlang.png" alt="SkriptLang Logo" title="SkriptLang Logo">
 						<div class="language-information">
 							<p class="language-name">SkriptLang</p>
-							<p class="language-duration" id="language-skriptlang-duration">X unit</p>
+							<p class="language-duration" id="language-skriptlang-duration" tabindex="0">X unit</p>
 							<span class="tooltip" id="skriptlang-tooltip">XXXX, XX, XXXX</span>
 						</div>
 					</div>
@@ -180,7 +186,7 @@
 						<img class="language-widget-logo" src="/images/language-logos/html5.svg" alt="HTML 5 Logo" title="HTML 5 Logo">
 						<div class="language-information">
 							<p class="language-name">HTML</p>
-							<p class="language-duration" id="language-html-duration">X unit</p>
+							<p class="language-duration" id="language-html-duration" tabindex="0">X unit</p>
 							<span class="tooltip" id="html-tooltip">XXXX, XX, XXXX</span>
 						</div>
 					</div>
@@ -192,7 +198,7 @@
 						<img class="language-widget-logo" src="/images/language-logos/css3.svg" alt="CSS 3 Logo" title="CSS 3 Logo">
 						<div class="language-information">
 							<p class="language-name">CSS</p>
-							<p class="language-duration" id="language-css-duration">X unit</p>
+							<p class="language-duration" id="language-css-duration" tabindex="0">X unit</p>
 							<span class="tooltip" id="css-tooltip">XXXX, XX, XXXX</span>
 						</div>
 					</div>
@@ -204,7 +210,7 @@
 						<img class="language-widget-logo" src="/images/language-logos/javascript.svg" alt="JavaScript ES6 Logo" title="JavaScript ES6 Logo">
 						<div class="language-information">
 							<p class="language-name">JavaScript</p>
-							<p class="language-duration" id="language-javascript-duration">X unit</p>
+							<p class="language-duration" id="language-javascript-duration" tabindex="0">X unit</p>
 							<span class="tooltip" id="javascript-tooltip">XXXX, XX, XXXX</span>
 						</div>
 					</div>
@@ -216,7 +222,7 @@
 						<img class="language-widget-logo" src="/images/language-logos/python.svg" alt="Python Logo" title="Python Logo">
 						<div class="language-information">
 							<p class="language-name">Python</p>
-							<p class="language-duration" id="language-python-duration">X unit</p>
+							<p class="language-duration" id="language-python-duration" tabindex="0">X unit</p>
 							<span class="tooltip" id="python-tooltip">XXXX, XX, XXXX</span>
 						</div>
 					</div>
@@ -227,7 +233,7 @@
 	</div>
 
 	<!-- Footer -->
-	<div id="footer">
+	<div class="hidden" id="footer">
 		<div id="footer-container">
 			<div id="footer-content">
 				<div id="footer-logo">
@@ -236,23 +242,23 @@
 				<div id="footer-socials">
 					<div id="contact-container">
 						<div class="contact-image-container">
-							<img class="contact-image" id="contact-discord" src="/images/icons/discord.svg" alt="Contact Method Discord" title="Discord">
+							<img class="contact-image" id="contact-discord" src="/images/icons/discord.svg" alt="Contact Method Discord" title="Discord" tabindex="0">
 						</div>
 						<div class="contact-image-container">
-							<img class="contact-image" id="contact-youtube" src="/images/icons/youtube.svg" alt="Contact Method YouTube" title="YouTube">
+							<img class="contact-image" id="contact-youtube" src="/images/icons/youtube.svg" alt="Contact Method YouTube" title="YouTube" tabindex="0">
 						</div>
 						<div class="contact-image-container">
-							<img class="contact-image" id="contact-twitter" src="/images/icons/twitter.svg" alt="Contact Method Twitter" title="Twitter">
+							<img class="contact-image" id="contact-twitter" src="/images/icons/twitter.svg" alt="Contact Method Twitter" title="Twitter" tabindex="0">
 						</div>
 						<div class="contact-image-container">
-							<img class="contact-image" id="contact-github" src="/images/icons/github-white.svg" alt="Contact Method GitHub" title="GitHub">
+							<img class="contact-image" id="contact-github" src="/images/icons/github-white.svg" alt="Contact Method GitHub" title="GitHub" tabindex="0">
 						</div>	
 					</div>
 				</div>
 			</div>
-			<div id="footer-documents">
+			<!--<div id="footer-documents">
 				<p id="footer-link">Privacy</p>			
-			</div>	
+			</div>-->	
 			<hr>
 			<div id="footer-copyright">
 				<p id="footer-copyright">Copyright © 2023 Nathan Parker. All rights reserved. Licensed under the AGPLv3.</p>

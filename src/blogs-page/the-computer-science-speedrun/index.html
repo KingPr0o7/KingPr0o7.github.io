@@ -54,22 +54,27 @@
 	<!-- Desktop Navigation -->
 	<div class="desktop-navbar">
 		<img id="navbar-icon" src="/images/branding/ncp-icon.png" alt="Nathan Parker's Icon" title="The Nathan Parker Icon">
-		<img id="navbar-logo" src="/images/branding/ncp-long-forum.png" alt="Nathan Parker's Logo" title="The Nathan Parker Logo">
 		<span id="navbar-page-id">/ Blogs</span>
 	</div>
 
 	<div class="page" id="blogs-container">
-		<div id="blog-main">
+		<div id="exit-button-container">
+			<div id="exit-button">
+				<img id="exit-image" src="/images/icons/exit.svg" alt="Exit Button" title="Exit Button">
+				<p id="exit-text">All Blogs</p>
+			</div>
+		</div>
+		<div class="hidden" id="blog-main">
 			<img id="blog-image" src="/images/blogs/the-computer-science-speedrun/CSS-thumb.png">
 			<h1 id="blog-title">The Computer Science Speedrun</h1>
 			<h3 id="blog-publish-info">Nathan Parker • Apr 20, 2023</h3>
 		</div>
 		<div id="blog-information">
-			<div class="blog-section">
+			<div class="hidden blog-section">
 				<h1 class="blog-header">BACKGROUND</h1>
 				<p class="blog-text">During class one day, I was caught up and surpassed my classmates in all my computer science assignments. It wasn't the only time this happened, and usually, I helped my classmates when I had my work done. My teacher jokingly suggested I needed a good project to fulfill the empty time in the classroom. I was hesitant since I already had personal projects (such as this website), and there was no good reason to bridge away from the computer science assignments. The question still lingered: <i>"How willing is this teacher to challenge me, and what is he offering for this project?".</i></p>
 			</div>
-			<div class="blog-section">
+			<div class="hidden blog-section">
 				<h1 class="blog-header">THE MISSION</h1>
 				<p class="blog-text">The mission was pushing my limits with my starting acquaintance with Python, though I knew I had to go even further for this project to be worth it. Because this project was worth three weeks of computer science work, and this had to be good. These were the minimum requirements:</p>
 					<ul class="ordered-list">
@@ -81,27 +86,27 @@
 					<p class="blog-text">Yes, this is easily doable, but I wanted my project to go above and beyond; I just had to think of the right idea.</p>
 				</p>
 			</div>
-			<div class="blog-section">
+			<div class="hidden blog-section">
 				<h1 class="blog-header">WHAT'S THE HOLDUP?</h1>
 				<p class="blog-text">I had no clear plan for this project due to its swift notice. I wanted to do something that impressed my teacher and met my expectations. My teacher suggested a Pygame-type project, but I only had one week, and it wasn't enough time. The night of <b>day 5</b> came, and something hit my head like a ton of bricks: <b>The due date.</b> It was time to do something I hadn't done in computer science, <b><i>run for the due date.</i></b></p>
 			</div>
-			<div class="blog-section">
+			<div class="hidden blog-section">
 				<h1 class="blog-header">THE SPEEDRUN</h1>
 				<p class="blog-text">With the few hours I had until the next school morning, I needed to complete this project to turn it in. Thankfully I came up with an outline to accomplish this mission, and as follows:</p>
 					<ul class="ordered-list">
-						<li><b>Goal:</b> A website remake of a previous computer science CLI project</li>
-						<li><b>Python implantation:</b> Since I'm using a website, Flask was perfect for this.</li>
-						<li><b>Website:</b> I can use <b>HTML, CSS, and JS</b> to style the project to my <b>expectations</b> and save it from being a CLI-type project. With an interface instead of a command line, it can form into a unique and fun project.</li>
+						<li class="hidden"><b>Goal:</b> A website remake of a previous computer science CLI project</li>
+						<li class="hidden"><b>Python implantation:</b> Since I'm using a website, <span id="flask" class="link">Flask</span> was perfect for this.</li>
+						<li class="hidden"><b>Website:</b> I can use <b>HTML, CSS, and JS</b> to style the project to my <b>expectations</b> and save it from being a CLI-type project. With an interface instead of a command line, it can form into a unique and fun project.</li>
 					</ul>
 					<p class="blog-text">With that, I got to work, as you can see from this image from the repository of my commits:</p>
-					<div class="blog-inline-image-container">
+					<div class="hidden blog-inline-image-container">
 						<img class="blog-inline-image" src="/images/blogs/the-computer-science-speedrun/github-proof.png">
 					</div>
-					<p class="blog-image-desc">Image from: GitHub</p>
-					<p class="blog-text">Not only were things going according to plan every time I uploaded a stage of the project, but my confidence also soared tenfold. Each stage added or fixed something to the project, improving it that much more. As the night continued going from 10 pm to finally around 4 am, I completed Combo Menu Interface (CMI)!</p>
+					<p class="hidden blog-image-desc">Image from: <span id="github" class="link">GitHub</span>• Combo-Menu Repository Commits</p>
+					<p class="hidden blog-text">Not only were things going according to plan every time I uploaded a stage of the project, but my confidence also soared tenfold. Each stage added or fixed something to the project, improving it that much more. As the night continued going from 10 pm to finally around 4 am, I completed Combo Menu Interface (CMI)!</p>
 				</p>
 			</div>
-			<div class="blog-section">
+			<div class="hidden blog-section">
 				<h1 class="blog-header">THE AFTERMATH</h1>
 				<p class="blog-text">My teacher loved my work after I presented it to him that evening in class. Even sending my parents and me a congratulatory email later for my work. Here is a quote from his email: </p>
 				<br>
@@ -115,7 +120,7 @@
 	</div>
 
 	<!-- Footer -->
-	<div id="footer">
+	<div class="hidden" id="footer">
 		<div id="footer-container">
 			<div id="footer-content">
 				<div id="footer-logo">

@@ -26,7 +26,6 @@ body {
 	100% {background-size: 100% 190%}
 }
 
-
 body::-webkit-scrollbar {
 	width: 16px;
 	background-color: transparent;
@@ -77,13 +76,6 @@ body::-webkit-scrollbar-thumb:hover {
 	object-fit: contain;
 }
 
-#navbar-logo {
-	width: 300px;
-	height: 80px;
-	object-fit: contain;
-	display: none;
-}
-
 #navbar-page-id {
 	font-size: clamp(2.5rem, 16vw, 4rem);
 	color: white;
@@ -106,6 +98,30 @@ body::-webkit-scrollbar-thumb:hover {
 /* Blog Page */
 /* 		     */
 
+#exit-button-container {
+	padding: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#exit-button {
+	cursor: pointer;
+	padding: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #181818;
+	border-radius: 100px;
+	gap: 10px;
+	width: 200px;
+}
+
+#exit-image {
+	width: 32px;
+	height: 32px;
+}
+
 #blog-main {
 	padding: 25px;
 	display: flex;
@@ -116,7 +132,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 #blog-image {
-	width: 40vw;
+	width: 40%;
 	object-fit: contain;
 	border-radius: 16px;
 }
@@ -149,6 +165,10 @@ body::-webkit-scrollbar-thumb:hover {
 	font-size: clamp(1rem, 2vw, 1.3rem);
 }
 
+ul:nth-child(1) {transition-delay: 100ms;}
+ul:nth-child(2) {transition-delay: 200ms;}
+ul:nth-child(3) {transition-delay: 300ms;}
+
 .ordered-list {
 	padding: 20px 0 20px 40px;
 }
@@ -168,7 +188,17 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .blog-image-desc {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
 	padding: 10px 25px 25px 25px;
+}
+
+.link {
+	cursor: pointer;
+	text-decoration: underline;
+	text-decoration-color: #FFF;
 }
 
 /* 		  */
@@ -291,7 +321,7 @@ hr {
 	}
 	#blog-information {
 		padding: 0 5% 50px 5%;
-	}	
+	}
 }
 
 /* Footer */

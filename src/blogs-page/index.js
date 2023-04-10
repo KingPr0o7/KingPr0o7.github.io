@@ -1,10 +1,20 @@
-const blogCard = document.querySelector('.blog-card');
-const blogCardTimestamp = document.querySelector('.blog-card-timestamp');
+// Blog Cards
+document.getElementById("tcss").addEventListener("click", function() {
+	window.location = '/src/blogs-page/the-computer-science-speedrun/index.html';
+});	
 
-blogCard.addEventListener('mouseover', function() {
-	blogCardTimestamp.textContent = 'Read Blog';
-  });
-  
-  blogCard.addEventListener('mouseout', function() {
-	blogCardTimestamp.textContent = 'Nathan Parker • Apr 20, 2023';
-  });
+// Animation On Scroll
+
+const observer = new IntersectionObserver((entries) => {
+	entries.forEach((entry) => {
+		if (entry.isIntersecting) {
+			entry.target.classList.add('show');
+			if (entry.target.classList.contains('page-header')) {
+				entry.target.setAttribute('animate', '');
+			}
+		}
+	});
+});
+
+const hidden_elements = document.querySelectorAll('.hidden');
+hidden_elements.forEach((el) => observer.observe(el));

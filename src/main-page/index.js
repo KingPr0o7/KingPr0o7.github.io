@@ -77,33 +77,103 @@ hamburger.addEventListener('click', function () {
 
 // Add Link Clicking Events
 for (var i = 0; i < links.length; i++) {
-	links[i].addEventListener('click',(evt) => changeNav("Disabled"), false);
+	links[i].addEventListener('click', (evt) => changeNav("Disabled"), false);
 }
 
+// Blog Cards
+
+// The Computer Science Speedrun
+document.getElementById("tcss").addEventListener("click", function(){
+	window.location = '/src/blogs-page/the-computer-science-speedrun/index.html';
+});
+
+document.getElementById("tcss").addEventListener("keydown", function(event) {
+	if (event.key == "Enter") {
+		window.location = '/src/blogs-page/the-computer-science-speedrun/index.html';
+	}
+});
+
+
+// All Blogs Redirect
+document.getElementById("blogs-all-redirect").addEventListener("click", function() {
+	window.location = '/src/blogs-page/index.html';
+});	
+
+document.getElementById("blogs-all-redirect").addEventListener("keydown", function(event) {
+	if (event.key == "Enter") {
+		window.location = '/src/blogs-page/index.html';
+	}
+});	
+
 // Project Cards Links
-document.getElementById("cmi").addEventListener("click", function() {
+
+// Combo Menu Interface
+document.getElementById("cmi").addEventListener("click", function(){
 	window.open("https://github.com/KingPr0o7/Combo-Menu", "_blank");
 });
 
-document.getElementById("personal-portfolio").addEventListener("click", function() {
-	window.open("mailto:test@example.com?subject=subject&body=body", "_blank");
+document.getElementById("cmi").addEventListener("keydown", function(event) {
+	if (event.key == "Enter") {
+		window.open("https://github.com/KingPr0o7/Combo-Menu", "_blank");
+	}
+});
+
+// Personal Portfolio
+document.getElementById("personal-portfolio").addEventListener("click", function(){
+	window.open("https://github.com/KingPr0o7/KingPr0o7.github.io", "_blank");
+});
+
+document.getElementById("personal-portfolio").addEventListener("keydown", function(event) {
+	if (event.key == "Enter") {
+		window.open("https://github.com/KingPr0o7/KingPr0o7.github.io", "_blank");
+	}
 });
 
 // Contact Links
+
+// Discord
 document.getElementById("contact-discord").addEventListener("click", function() {
 	window.open("https://discord.gg/QGDPS6wHB8", "_blank");
 });
 
+document.getElementById("contact-discord").addEventListener("keydown", function(event) {
+	if (event.key == "Enter") {
+		window.open("https://discord.gg/QGDPS6wHB8", "_blank");
+	}
+});
+
+// YouTube
 document.getElementById("contact-youtube").addEventListener("click", function() {
 	window.open("https://www.youtube.com/channel/UCmMcPTUznYtu3zo7X3sVbgA", "_blank");
 });
 
+document.getElementById("contact-youtube").addEventListener("keydown", function(event) {
+	if (event.key == "Enter") {
+		window.open("https://www.youtube.com/channel/UCmMcPTUznYtu3zo7X3sVbgA", "_blank");
+	}
+});
+
+
+// Twitter
 document.getElementById("contact-twitter").addEventListener("click", function() {
 	window.open("https://twitter.com/KingPr0o7", "_blank");
 });
 
+document.getElementById("contact-twitter").addEventListener("keydown", function(event) {
+	if (event.key == "Enter") {
+		window.open("https://twitter.com/KingPr0o7", "_blank");
+	}
+});
+
+// GitHub
 document.getElementById("contact-github").addEventListener("click", function() {
 	window.open("https://github.com/KingPr0o7", "_blank");
+});
+
+document.getElementById("contact-github").addEventListener("keydown", function(event) {
+	if (event.key == "Enter") {
+		window.open("https://github.com/KingPr0o7", "_blank");
+	}
 });
 
 // Timestamps
@@ -189,14 +259,3 @@ const observer = new IntersectionObserver((entries) => {
 
 const hidden_elements = document.querySelectorAll('.hidden');
 hidden_elements.forEach((el) => observer.observe(el));
-
-const blogCard = document.querySelector('.blog-card');
-const blogCardTimestamp = document.querySelector('.blog-card-timestamp');
-
-blogCard.addEventListener('mouseover', function() {
-	blogCardTimestamp.textContent = 'Read Blog';
-  });
-  
-  blogCard.addEventListener('mouseout', function() {
-	blogCardTimestamp.textContent = 'Nathan Parker • Apr 20, 2023';
-  });

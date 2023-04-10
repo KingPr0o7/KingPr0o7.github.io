@@ -4,10 +4,21 @@
 /* All Across The Page */
 /*                     */
 
+:root {
+	--background-color: #181818;
+	--primary-text-color: #FFFFFF;
+	--secondary-text-color: #B9B9B9;
+	--font: 'Rubik', sans-serif;
+	--primary-link-color: #2957C1;
+	--secondary-link-color: #1E3F8A;
+}
+
 * {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+	font-family: var(--font);
+	color: var(--primary-text-color);
 }
 
 a {
@@ -94,6 +105,54 @@ body::-webkit-scrollbar-thumb:hover {
 
 .page {
 	min-height: 100vh;
+	padding-top: 100px;
+}
+
+.page-header .comment-indicator-start, .comment-indicator-end {
+	display: none;
+}
+
+.page-header {
+	font-size: clamp(1.6rem, 7vw, 4rem);
+	text-align: center;
+	margin-top: 1px;
+	padding: 25px 0 25px 0;
+	color: #47DA44;
+	
+}
+
+.page-header[animate]::before {
+	content: "//";
+	animation: comments-start 8s, comments-fadeInOut 1.56s linear -1s 6;
+}
+
+.page-header[animate]::after {
+	content: "";
+	animation: comments-end 8s, comments-fadeInOut 1.56s linear -1s 6;  
+}
+
+@keyframes comments-start {
+	0% {content: "//"; }
+	20% {content: "#"; }
+	40% {content: "<!--";}
+	60% {content: "/*";}
+	80% {content: "'"}
+	100% {content: "--";}
+}
+
+@keyframes comments-end {
+	0% {content: "";}
+	20% {content: ""; }
+	40% {content: "-->"; }
+	60% {content: "*/";}
+	80% {content: "";}
+	100% {content: "";}
+}
+
+@keyframes comments-fadeInOut {
+	0% {opacity: 0;} 
+	50% {opacity: 1;} 
+	100% {opacity: 0;}
 }
 
 /*           */
@@ -101,7 +160,6 @@ body::-webkit-scrollbar-thumb:hover {
 /*           */
 
 #blog-cards-container {
-	padding-top: 100px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -117,18 +175,7 @@ body::-webkit-scrollbar-thumb:hover {
 	background-color: #252525;
 	border-radius: 12px;
 	width: 500px;
-	height: 400px;
-}
-
-.blog-card > * {
-	color: white;
-	font-family: 'Rubik', sans-serif;
-}
-
-.blog-card:hover > .blog-card-footer {
-	font-weight: 600;
-	background-color: #3558be;
-
+	max-height: fit-content;
 }
 
 .blog-card-image {
@@ -149,9 +196,33 @@ body::-webkit-scrollbar-thumb:hover {
 	font-size: clamp(0.8rem, 7vw, 1.2rem);
 }
 
-.blog-card-footer {
+.blog-card-footer, .blog-card-redirect-container {
 	text-align: center;
 	width: 100%;
 	padding: 10px;
 	border-radius: 0 0 12px 12px;
+}
+
+.blog-card-redirect-container {
+	display: none;
+}
+
+/* Hover to Redirect */
+.blog-card:hover .blog-card-footer {
+	display: none;
+}
+
+.blog-card:hover .blog-card-redirect-container {
+	display: inline;
+	width: 100%;
+	font-weight: 600;
+}
+
+.blog-card:hover .blog-card-redirect-container {
+	cursor: pointer;
+	background-color: var(--primary-link-color);
+}
+
+.blog-card:hover > .blog-card-footer:hover {
+	background-color: var(--secondary-link-color);
 }
