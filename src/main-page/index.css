@@ -9,8 +9,8 @@
 	--primary-text-color: #FFFFFF;
 	--secondary-text-color: #B9B9B9;
 	--font: 'Rubik', sans-serif;
-	--primary-link-color: #2957C1;
-	--secondary-link-color: #1E3F8A;
+	--primary-link-color: #0093ff;
+	--secondary-link-color: #0073ff;
 	--footer-background-color: #252525;
 }
 
@@ -358,23 +358,35 @@ body[disabled] {
 #intro-link {
 	display: flex;
 	margin-top: 10px;
+	opacity: 0;
+	animation: fadeIn 4s 3s forwards;
 }
 
-.link {
+#link {
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
-	color: #0094FF;
-	border: none;
-	background: none;
-	font-size: clamp(0.8rem, 3vw, 1.8rem);
+	font-size: clamp(1rem, 3vw, 1.8rem);
+	cursor: pointer;
 }
 
-.link-image {
-	width: clamp(24px, 2vw, 35px);;
+#link-text {
+	color: var(--primary-link-color);
+}
+
+#link-image {
+	width: clamp(24px, 2vw, 35px);
 	height: auto;
 	margin-right: 5px;
 	filter: invert(39%) sepia(87%) saturate(2316%) hue-rotate(185deg) brightness(101%) contrast(109%);
+}
+
+#link:hover #link-text, #link:focus #link-text {
+	color: var(--secondary-link-color);
+}
+
+#link:hover #link-image, #link:focus #link-image {
+	filter: invert(28%) sepia(80%) saturate(3766%) hue-rotate(205deg) brightness(104%) contrast(104%);
 }
 
 /*           */
@@ -383,10 +395,12 @@ body[disabled] {
 
 #blog-cards-container {
 	display: flex;
-	align-items: center;
+	align-items: baseline;
 	justify-content: center;
-	flex-direction: column;
+	padding: 3px 25px 25px 25px;
 	width: 100%;
+	gap: 20px;
+	overflow-x: auto;
 }
 
 .blog-card {
@@ -396,8 +410,11 @@ body[disabled] {
 	flex-direction: column;
 	background-color: #252525;
 	border-radius: 12px;
-	width: 500px;
+	min-width: 500px;
+	max-width: 500px;
 	max-height: fit-content;
+	position: relative;
+	overflow: hidden;
 }
 
 .blog-card-image {
@@ -711,6 +728,7 @@ body[disabled] {
 	position: relative;
 	color: var(--secondary-text-color);
 	font-size: clamp(0.8rem, 5vw, 1rem);
+	width: fit-content;
 }
 
 .language-duration:hover ~ .tooltip {
@@ -933,32 +951,38 @@ hr {
 	}
 }
 
+/* Blog Cards */
+@media screen and (max-width: 1040px) {
+	#blog-cards-container {
+		justify-content: flex-start;
+	}
+}
+
+@media screen and (max-width: 540px) {
+	.blog-card {
+		min-width: 400px;
+	}
+}
+
+@media screen and (max-width: 420px) {
+	.blog-card {
+		min-width: 300px;
+	}
+}
+
+@media screen and (max-width: 310px) {
+	.blog-card {
+		min-width: 250px;
+	}
+}
+
+/* Project Cards */
 @media screen and (max-width: 860px) {
 	#project-cards-container {
 		justify-content: flex-start;
 	}
 }
 
-/* Blog Cards */
-@media screen and (max-width: 540px) {
-	.blog-card {
-		width: 400px;
-	}
-}
-
-@media screen and (max-width: 420px) {
-	.blog-card {
-		width: 300px;
-	}
-}
-
-@media screen and (max-width: 310px) {
-	.blog-card {
-		width: 250px;
-	}
-}
-
-/* Project Cards */
 @media screen and (max-width: 430px) {
 	.card {
 		min-width: 350px;

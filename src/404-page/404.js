@@ -1,14 +1,70 @@
+//
 // Elements
+//
 
 var cursor = document.getElementById("cursor");
 
+//
 // Immutables 
+//
 
 const numbers = '0123456789';
 const original_code = document.getElementById('error-code');
 type('error-name', 'PAGE NOT FOUND!', 40, 0, true);
 
+//
+// Links
+//
+
+const home_link = '../main-page/index.html';
+const readme_link = 'https://github.com/KingPr0o7/KingPr0o7.github.io#404-filepage-not-found-online-only';
+const github_link = 'https://www.githubstatus.com/';
+const twitter_link = 'https://twitter.com/githubstatus?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor';
+
+document.getElementById("readme-link").addEventListener("click", function() {
+	window.open(readme_link, "_blank");
+});
+
+document.getElementById("readme-link").addEventListener("keydown", function(event) {
+	if (event.key == "Enter") {
+		window.open(readme_link, "_blank");
+	}
+});
+
+document.getElementById("error-link").addEventListener("click", function() {
+	window.location.href = home_link;
+});
+
+document.getElementById("error-link").addEventListener("keydown", function(event) {
+	if (event.key == "Enter") {
+		window.location.href = home_link;
+	}
+});
+
+document.getElementById("github-website").addEventListener("click", function() {
+	window.open(github_link, "_blank");
+});
+
+document.getElementById("github-website").addEventListener("keydown", function(event) {
+	if (event.key == "Enter") {
+		window.open(github_link, "_blank");
+	}
+});
+
+document.getElementById("github-twitter").addEventListener("click", function() {
+	window.open(twitter_link, "_blank");
+});
+
+document.getElementById("github-twitter").addEventListener("keydown", function(event) {
+	if (event.key == "Enter") {
+		window.open(twitter_link, "_blank");
+	}
+});
+
+//
 // "Real" Typing Characters
+//
+
 function type(targetElement, textToType, speed, index, cursorMode) {
 	let element = document.getElementById(`${targetElement}`);
 	let text = `${textToType}`;
@@ -36,7 +92,9 @@ function type(targetElement, textToType, speed, index, cursorMode) {
 	}
 }
 
+//
 // Error Animation
+//
 
 var loop_count = 0
 var loop = setInterval(function() {
@@ -55,21 +113,3 @@ var loop = setInterval(function() {
 	if (loop_count >= 300) clearInterval(loop);
 	loop_count += 1;
 }, 20);
-
-// Links
-
-document.getElementById("readme-link").addEventListener("click", function() {
-	window.open("https://github.com/KingPr0o7/KingPr0o7.github.io#404-filepage-not-found-online-only", "_blank");
-});
-
-document.getElementById("error-link").addEventListener("click", function() {
-	window.location.href = '/src/main-page/index.html';
-});
-
-document.getElementById("github-website").addEventListener("click", function() {
-	window.open("https://www.githubstatus.com/", "_blank");
-});
-
-document.getElementById("github-twitter").addEventListener("click", function() {
-	window.open("https://twitter.com/githubstatus?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor", "_blank");
-});

@@ -11,6 +11,24 @@ const snackbar = document.getElementById('snackbar');
 const card = document.querySelector('.card');
 const button = document.querySelector('.card-link-button');
 
+//
+// Links
+//
+
+const all_about_me_blog = '../blogs-page/all-about-me/index.html';
+const the_computer_science_speedrun_blog = '../blogs-page/the-computer-science-speedrun/index.html';
+
+const all_blogs_page = `../blogs-page/index.html`;
+
+const combo_menu_interface_link = 'https://github.com/KingPr0o7/Combo-Menu';
+const personal_portfolio_link = 'https://github.com/KingPr0o7/KingPr0o7.github.io';
+
+const discord_link = 'https://discord.gg/QGDPS6wHB8';
+const youtube_link = 'https://www.youtube.com/channel/UCmMcPTUznYtu3zo7X3sVbgA';
+const twitter_link = 'https://twitter.com/KingPr0o7';
+const github_link = 'https://github.com/KingPr0o7';
+
+
 // iOS Viewport Height Fix (Thanks to: coreuter "shorturl.at/abGT6")
 function fixHeight() {
 	document.documentElement.style.setProperty('--vh', `${window.innerHeight / 100}px`);
@@ -98,29 +116,54 @@ for (var i = 0; i < links.length; i++) {
 }
 
 //
+// Intro
+//
+
+document.getElementById("link").addEventListener("click", function() {
+	window.location.href = all_about_me_blog;
+});
+
+document.getElementById("link").addEventListener("keydown", function(event) {
+	if (event.key == "Enter") {
+		window.location.href = all_about_me_blog;
+	}
+});
+
+//
 // Blog Cards
 //
 
-// The Computer Science Speedrun
-document.getElementById("tcss").addEventListener("click", function(){
-	window.location = '/src/blogs-page/the-computer-science-speedrun/index.html';
+// All About Me
+document.getElementById("all-about-me").addEventListener("click", function(){
+	window.location.href = all_about_me_blog;
 });
 
-document.getElementById("tcss").addEventListener("keydown", function(event) {
+document.getElementById("all-about-me").addEventListener("keydown", function(event) {
 	if (event.key == "Enter") {
-		window.location = '/src/blogs-page/the-computer-science-speedrun/index.html';
+		window.location.href = all_about_me_blog;
+	}
+});
+
+// The Computer Science Speedrun
+document.getElementById("the-computer-science-speedrun").addEventListener("click", function(){
+	window.location.href = the_computer_science_speedrun_blog;
+});
+
+document.getElementById("the-computer-science-speedrun").addEventListener("keydown", function(event) {
+	if (event.key == "Enter") {
+		window.location.href = the_computer_science_speedrun_blog;
 	}
 });
 
 
 // All Blogs Redirect
 document.getElementById("blogs-all-redirect").addEventListener("click", function() {
-	window.location = '/src/blogs-page/index.html';
+	window.location.href = all_blogs_page;
 });	
 
 document.getElementById("blogs-all-redirect").addEventListener("keydown", function(event) {
 	if (event.key == "Enter") {
-		window.location = '/src/blogs-page/index.html';
+		window.location.href = all_blogs_page;
 	}
 });	
 
@@ -130,23 +173,23 @@ document.getElementById("blogs-all-redirect").addEventListener("keydown", functi
 
 // Combo Menu Interface
 document.getElementById("cmi").addEventListener("click", function(){
-	window.open("https://github.com/KingPr0o7/Combo-Menu", "_blank");
+	window.open(combo_menu_interface_link, "_blank");
 });
 
 document.getElementById("cmi").addEventListener("keydown", function(event) {
 	if (event.key == "Enter") {
-		window.open("https://github.com/KingPr0o7/Combo-Menu", "_blank");
+		window.open(combo_menu_interface_link, "_blank");
 	}
 });
 
 // Personal Portfolio
 document.getElementById("personal-portfolio").addEventListener("click", function(){
-	window.open("https://github.com/KingPr0o7/KingPr0o7.github.io", "_blank");
+	window.open(personal_portfolio_link, "_blank");
 });
 
 document.getElementById("personal-portfolio").addEventListener("keydown", function(event) {
 	if (event.key == "Enter") {
-		window.open("https://github.com/KingPr0o7/KingPr0o7.github.io", "_blank");
+		window.open(personal_portfolio_link, "_blank");
 	}
 });
 
@@ -226,45 +269,45 @@ document.getElementById('language-python-duration').textContent = calculate_time
 
 // Discord
 document.getElementById("contact-discord").addEventListener("click", function() {
-	window.open("https://discord.gg/QGDPS6wHB8", "_blank");
+	window.open(discord_link, "_blank");
 });
 
 document.getElementById("contact-discord").addEventListener("keydown", function(event) {
 	if (event.key == "Enter") {
-		window.open("https://discord.gg/QGDPS6wHB8", "_blank");
+		window.open(discord_link, "_blank");
 	}
 });
 
 // YouTube
 document.getElementById("contact-youtube").addEventListener("click", function() {
-	window.open("https://www.youtube.com/channel/UCmMcPTUznYtu3zo7X3sVbgA", "_blank");
+	window.open(youtube_link, "_blank");
 });
 
 document.getElementById("contact-youtube").addEventListener("keydown", function(event) {
 	if (event.key == "Enter") {
-		window.open("https://www.youtube.com/channel/UCmMcPTUznYtu3zo7X3sVbgA", "_blank");
+		window.open(youtube_link, "_blank");
 	}
 });
 
 
 // Twitter
 document.getElementById("contact-twitter").addEventListener("click", function() {
-	window.open("https://twitter.com/KingPr0o7", "_blank");
+	window.open(twitter_link, "_blank");
 });
 
 document.getElementById("contact-twitter").addEventListener("keydown", function(event) {
 	if (event.key == "Enter") {
-		window.open("https://twitter.com/KingPr0o7", "_blank");
+		window.open(twitter_link, "_blank");
 	}
 });
 
 // GitHub
 document.getElementById("contact-github").addEventListener("click", function() {
-	window.open("https://github.com/KingPr0o7", "_blank");
+	window.open(github_link, "_blank");
 });
 
 document.getElementById("contact-github").addEventListener("keydown", function(event) {
 	if (event.key == "Enter") {
-		window.open("https://github.com/KingPr0o7", "_blank");
+		window.open(github_link, "_blank");
 	}
 });

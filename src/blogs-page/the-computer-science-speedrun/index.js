@@ -1,14 +1,17 @@
 //
-// Top Redirects
+// Links
 //
 
-document.getElementById("navbar-icon").addEventListener("click", function(){
-	window.location = '/src/main-page/index.html';
-});
+const home_link = '../../main-page/index.html';
+const blogs_link = '../index.html';
 
-document.getElementById("navbar-page-id").addEventListener("click", function(){
-	window.location = '/src/blogs-page/index.html';
-});
+const flask_inline_link = 'https://palletsprojects.com/p/flask/';
+const github_inline_link = 'https://github.com/KingPr0o7/Combo-Menu/commits/main'
+
+const discord_link = 'https://discord.gg/QGDPS6wHB8';
+const youtube_link = 'https://www.youtube.com/channel/UCmMcPTUznYtu3zo7X3sVbgA';
+const twitter_link = 'https://twitter.com/KingPr0o7';
+const github_link = 'https://github.com/KingPr0o7';
 
 //
 // Animation On Scroll
@@ -26,16 +29,28 @@ const hidden_elements = document.querySelectorAll('.hidden');
 hidden_elements.forEach((el) => observer.observe(el));
 
 //
+// Top Redirects
+//
+
+document.getElementById("navbar-icon").addEventListener("click", function(){
+	window.location.href = home_link;
+});
+
+document.getElementById("navbar-page-id").addEventListener("click", function(){
+	window.location.href = blogs_link;
+});
+
+//
 // Exit Button
 //
 
 document.getElementById("exit-button").addEventListener("click", function() {
-	window.location.href = "/src/blogs-page/index.html";
+	window.location.href = blogs_link;
 });
 
 document.getElementById("exit-button").addEventListener("keydown", function(event) {
 	if (event.key == "Enter") {
-		window.location.href = "/src/blogs-page/index.html";
+		window.location.href = blogs_link;
 	}
 });
 
@@ -44,24 +59,24 @@ document.getElementById("exit-button").addEventListener("keydown", function(even
 //
 
 // Flask
-document.getElementById("flask").addEventListener("click", function() {
-	window.open("https://palletsprojects.com/p/flask/", "_blank");
+document.getElementById("flask_inline_link").addEventListener("click", function() {
+	window.open(flask_inline_link, "_blank");
 });
 
-document.getElementById("flask").addEventListener("keydown", function(event) {
+document.getElementById("flask_inline_link").addEventListener("keydown", function(event) {
 	if (event.key == "Enter") {
-		window.open("https://palletsprojects.com/p/flask/", "_blank");
+		window.open(flask_inline_link, "_blank");
 	}
 });
 
 // GitHub
-document.getElementById("github").addEventListener("click", function() {
-	window.open("https://github.com/KingPr0o7/Combo-Menu/commits/main", "_blank");
+document.getElementById("github_inline_link").addEventListener("click", function() {
+	window.open(github_inline_link, "_blank");
 });
 
-document.getElementById("github").addEventListener("keydown", function(event) {
+document.getElementById("github_inline_link").addEventListener("keydown", function(event) {
 	if (event.key == "Enter") {
-		window.open("https://github.com/KingPr0o7/Combo-Menu/commits/main", "_blank");
+		window.open(github_inline_link, "_blank");
 	}
 });
 
@@ -71,45 +86,45 @@ document.getElementById("github").addEventListener("keydown", function(event) {
 
 // Discord
 document.getElementById("contact-discord").addEventListener("click", function() {
-	window.open("https://discord.gg/QGDPS6wHB8", "_blank");
+	window.open(discord_link, "_blank");
 });
 
 document.getElementById("contact-discord").addEventListener("keydown", function(event) {
 	if (event.key == "Enter") {
-		window.open("https://discord.gg/QGDPS6wHB8", "_blank");
+		window.open(discord_link, "_blank");
 	}
 });
 
 // YouTube
 document.getElementById("contact-youtube").addEventListener("click", function() {
-	window.open("https://www.youtube.com/channel/UCmMcPTUznYtu3zo7X3sVbgA", "_blank");
+	window.open(youtube_link, "_blank");
 });
 
 document.getElementById("contact-youtube").addEventListener("keydown", function(event) {
 	if (event.key == "Enter") {
-		window.open("https://www.youtube.com/channel/UCmMcPTUznYtu3zo7X3sVbgA", "_blank");
+		window.open(youtube_link, "_blank");
 	}
 });
 
 
 // Twitter
 document.getElementById("contact-twitter").addEventListener("click", function() {
-	window.open("https://twitter.com/KingPr0o7", "_blank");
+	window.open(twitter_link, "_blank");
 });
 
 document.getElementById("contact-twitter").addEventListener("keydown", function(event) {
 	if (event.key == "Enter") {
-		window.open("https://twitter.com/KingPr0o7", "_blank");
+		window.open(twitter_link, "_blank");
 	}
 });
 
 // GitHub
 document.getElementById("contact-github").addEventListener("click", function() {
-	window.open("https://github.com/KingPr0o7", "_blank");
+	window.open(github_link, "_blank");
 });
 
 document.getElementById("contact-github").addEventListener("keydown", function(event) {
 	if (event.key == "Enter") {
-		window.open("https://github.com/KingPr0o7", "_blank");
+		window.open(github_link, "_blank");
 	}
 });

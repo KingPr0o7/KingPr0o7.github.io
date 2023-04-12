@@ -2,11 +2,10 @@
 // Links
 //
 
-const home_link = '../main-page/index.html';
-const blogs_link = '../blogs-page/index.html';
+const home_link = '../../main-page/index.html';
+const blogs_link = '../index.html';
 
-const all_about_me_blog = '../blogs-page/all-about-me/index.html';
-const the_computer_science_speedrun_blog = '../blogs-page/the-computer-science-speedrun/index.html';
+const code_org_inline_link = 'https://code.org/';
 
 const discord_link = 'https://discord.gg/QGDPS6wHB8';
 const youtube_link = 'https://www.youtube.com/channel/UCmMcPTUznYtu3zo7X3sVbgA';
@@ -21,9 +20,6 @@ const observer = new IntersectionObserver((entries) => {
 	entries.forEach((entry) => {
 		if (entry.isIntersecting) {
 			entry.target.classList.add('show');
-			if (entry.target.classList.contains('page-header')) {
-				entry.target.setAttribute('animate', '');
-			}
 		}
 	});
 });
@@ -48,38 +44,27 @@ document.getElementById("navbar-page-id").addEventListener("click", function(){
 //
 
 document.getElementById("exit-button").addEventListener("click", function() {
-	window.location.href = home_link;
+	window.location.href = blogs_link;
 });
 
 document.getElementById("exit-button").addEventListener("keydown", function(event) {
 	if (event.key == "Enter") {
-		window.location.href = home_link;
+		window.location.href = blogs_link;
 	}
 });
 
 //
-// Blog Cards
+// Inline Links
 //
 
-// All About Me
-document.getElementById("all-about-me").addEventListener("click", function(){
-	window.location.href = all_about_me_blog;
+// Flask
+document.getElementById("code_org_inline_link").addEventListener("click", function() {
+	window.open(code_org_inline_link, "_blank");
 });
 
-document.getElementById("all-about-me").addEventListener("keydown", function(event) {
+document.getElementById("code_org_inline_link").addEventListener("keydown", function(event) {
 	if (event.key == "Enter") {
-		window.location.href = all_about_me_blog;
-	}
-});
-
-// The Computer Science Speedrun
-document.getElementById("the-computer-science-speedrun").addEventListener("click", function(){
-	window.location.href = the_computer_science_speedrun_blog;
-});
-
-document.getElementById("the-computer-science-speedrun").addEventListener("keydown", function(event) {
-	if (event.key == "Enter") {
-		window.location.href = the_computer_science_speedrun_blog;
+		window.open(code_org_inline_link, "_blank");
 	}
 });
 

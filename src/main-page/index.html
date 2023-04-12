@@ -54,7 +54,7 @@
 	<!-- Desktop Navigation -->
 	<div class="desktop-navbar">
 		<img id="navbar-icon" src="/images/branding/ncp-icon.png" alt="Nathan Parker's Icon" title="The Nathan Parker Icon">
-		<img id="navbar-logo" src="/images/branding/ncp-long-forum.png" alt="Nathan Parker's Logo" title="The Nathan Parker Logo">
+		<img id="navbar-logo" src="/images/branding/ncp-logo.png" alt="Nathan Parker's Logo" title="The Nathan Parker Logo">
 		<div class="navbar-links">
 			<a class="navbar-link" href="#intro-container">INTRO</a>
 			<a class="navbar-link" href="#blogs-container">BLOGS</a>
@@ -76,6 +76,10 @@
 				<img class="navlist-icon" src="/images/icons/intro-icon.svg" alt="Intro icon">
 				<p class="navlist-link-text">INTRO</p>
 			</a>
+			<a href="#blogs-container" class="navlist-link">
+				<img class="navlist-icon" src="/images/icons/blog.svg" alt="Blogs icon">
+				<p class="navlist-link-text">BLOGS</p>
+			</a>
 			<a href="#projects" class="navlist-link">
 				<img class="navlist-icon" src="/images/icons/projects-icon.svg" alt="Projects icon">
 				<p class="navlist-link-text">PROJECTS</p>
@@ -92,6 +96,12 @@
 		<div id="intro-content">
 			<h1 id="intro-header">Hello,<br>I'm Nathan Parker</h1>
 			<p id="intro-detail">A 15-year-old developer taking every chance to learn and build apps in the <span id="intro-detail-bold">software development</span> field.</p>
+			<div id="intro-link">
+				<div id="link" tabindex="0">
+					<img id="link-image" src="/images/icons/link.svg" />
+					<p id="link-text">Read More</p>
+				</div>
+			</div>
 		</div>
 		<img id="intro-image" src="/images/branding/KingPr0o7.jpg" alt="Image of Nathan Parker's Profile Picture" title="Nathan Parker's Profile Picture">
 	</div>
@@ -103,6 +113,22 @@
 		<div id="blog-cards-container">
 			<div class="blog-card hidden" tabindex="0">
 				<div class="blog-card-content">
+					<img class="blog-card-image" src="/images/blogs/all-about-me/about-me-thumb.png">
+					<div class="blog-card-text">
+						<h1 class="blog-card-preview-title">All About Me</h1>
+						<p class="blog-card-description">An in-depth analysis focused on Nathan Parker, targeting his love for computer science, devotion to the best experience for end users and the community, and his future plans to achieve his goals and complete his mission on this blue marble. </p>
+					</div>
+				</div>
+				<div class="blog-card-footer">
+					<p class="blog-card-timestamp">Nathan Parker • Apr 11, 2023</p>
+				</div>
+				<div id="all-about-me" class="blog-card-redirect-container" tabindex="0">
+					<span class="blog-card-redirect">Read More</span>
+				</div>
+			</div>			
+			
+			<div class="blog-card hidden" tabindex="0">
+				<div class="blog-card-content">
 					<img class="blog-card-image" src="/images/blogs/the-computer-science-speedrun/CSS-thumb.png">
 					<div class="blog-card-text">
 						<h1 class="blog-card-preview-title">The Computer Science Speedrun</h1>
@@ -110,9 +136,9 @@
 					</div>
 				</div>
 				<div class="blog-card-footer">
-					<p class="blog-card-timestamp">Nathan Parker • Apr 20, 2023</p>
+					<p class="blog-card-timestamp">Nathan Parker • Apr 11, 2023</p>
 				</div>
-				<div id="tcss" class="blog-card-redirect-container" tabindex="0">
+				<div id="the-computer-science-speedrun" class="blog-card-redirect-container" tabindex="0">
 					<span class="blog-card-redirect">Read More</span>
 				</div>
 			</div>
@@ -237,7 +263,7 @@
 		<div id="footer-container">
 			<div id="footer-content">
 				<div id="footer-logo">
-					<img id="footer-icon" src="/images/branding/ncp-long-forum.png" alt="NCP Icon" title="NCP Logo">
+					<img id="footer-icon" src="/images/branding/ncp-logo.png" alt="NCP Icon" title="NCP Logo">
 				</div>			
 				<div id="footer-socials">
 					<div id="contact-container">
