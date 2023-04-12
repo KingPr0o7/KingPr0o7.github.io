@@ -9,7 +9,7 @@
 		"dev": "vite",
 		"prebuild": "",
 		"build": "vite build",
-		"postbuild": "ncp dist/src/main-page dist && ncp dist/src/404-page dist && ncp dist/src dist/ && del-cli --force dist/src && del-cli --force dist/404-page && del-cli --force dist/main-page",
+		"postbuild": "ncp dist/src/404-page dist && ncp dist/src dist/ && del-cli --force dist/src && del-cli --force dist/404-page",
 		"preview": "vite preview"
 	},
 	"devDependencies": {
