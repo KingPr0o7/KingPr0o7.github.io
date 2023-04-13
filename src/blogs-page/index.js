@@ -7,7 +7,7 @@ const mode = 'dev'; // dev or prod
 if (mode == 'dev') {
 	var home_link = '../main-page/index.html';
 } else {
-	var home_link = '../index.html';
+	var home_link = 'index.html';
 }
 
 const blogs_link = '../blogs-page/index.html';

@@ -21,7 +21,7 @@ const mode = 'dev'; // dev or prod
 if (mode == 'dev') {
 	var home_link = '../../main-page/index.html';
 } else {
-	var home_link = '../index.html';
+	var home_link = 'index.html';
 }
 
 const readme_link = 'https://github.com/KingPr0o7/KingPr0o7.github.io#404-filepage-not-found-online-only';
