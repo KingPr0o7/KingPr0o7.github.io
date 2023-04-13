@@ -48,8 +48,20 @@ document.getElementById("navbar-icon").addEventListener("click", function(){
 	window.location.href = get_home_link();
 });
 
+document.getElementById("navbar-icon").addEventListener("keydown", function(event) {
+	if (event.key == "Enter") {
+		window.location.href = get_home_link();
+	}
+});
+
 document.getElementById("navbar-page-id").addEventListener("click", function(){
 	window.location.href = blogs_link;
+});
+
+document.getElementById("navbar-page-id").addEventListener("keydown", function(event) {
+	if (event.key == "Enter") {
+		window.location.href = blogs_link;
+	}
 });
 
 //
