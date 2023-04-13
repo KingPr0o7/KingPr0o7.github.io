@@ -2,7 +2,7 @@
 // Links
 //
 
-const mode = 'prod'; // 'dev' or 'prod'
+const mode = 'dev'; // 'dev' or 'prod'
 
 if (mode == 'dev') {
 	var home_link = '../../main-page/index.html';
