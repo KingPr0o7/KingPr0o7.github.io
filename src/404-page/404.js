@@ -18,10 +18,12 @@ type('error-name', 'PAGE NOT FOUND!', 40, 0, true);
 
 const mode = 'dev'; // 'dev' or 'prod'
 
-if (mode == 'dev') {
-	var home_link = '../../main-page/index.html';
-} else {
-	var home_link = 'index.html';
+function get_get_home_link() {
+	if (mode == 'dev') {
+		return '../../main-page/index.html';
+	} else {
+		return 'index.html';
+	}
 }
 
 const readme_link = 'https://github.com/KingPr0o7/KingPr0o7.github.io#404-filepage-not-found-online-only';
@@ -39,12 +41,12 @@ document.getElementById("readme-link").addEventListener("keydown", function(even
 });
 
 document.getElementById("error-link").addEventListener("click", function() {
-	window.location.href = home_link;
+	window.location.href = get_home_link();
 });
 
 document.getElementById("error-link").addEventListener("keydown", function(event) {
 	if (event.key == "Enter") {
-		window.location.href = home_link;
+		window.location.href = get_home_link();
 	}
 });
 
