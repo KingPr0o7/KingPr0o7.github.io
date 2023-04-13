@@ -18,7 +18,7 @@ type('error-name', 'PAGE NOT FOUND!', 40, 0, true);
 
 const mode = 'dev'; // 'dev' or 'prod'
 
-function get_get_home_link() {
+function get_home_link() {
 	if (mode == 'dev') {
 		return '../../main-page/index.html';
 	} else {

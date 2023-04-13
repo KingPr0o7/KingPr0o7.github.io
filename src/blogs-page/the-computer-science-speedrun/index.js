@@ -8,7 +8,7 @@ function get_home_link() {
 	if (mode == 'dev') {
 		return '../../main-page/index.html';
 	} else {
-		return 'index.html';
+		return '../../index.html';
 	}
 }
 
