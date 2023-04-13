@@ -10,7 +10,6 @@ if (mode == 'dev') {
 	var home_link = '../../index.html';
 }
 
-const home_link = '../../main-page/index.html';
 const blogs_link = '../index.html';
 
 const code_org_inline_link = 'https://code.org/';

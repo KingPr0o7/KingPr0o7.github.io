@@ -1,24 +1,25 @@
 {
-	"name": "personalwebsite",
-	"private": true,
-	"version": "0.0.0",
-	"type": "module",
-	"scripts": {
-		"predeploy": "npm run build",
-		"deploy": "echo ncp.dev > ./dist/CNAME && gh-pages -d dist",
-		"dev": "vite",
-		"prebuild": "",
-		"build": "vite build",
-		"postbuild": "ncp dist/src/main-page dist && ncp dist/src/404-page dist && ncp dist/src dist/ && del-cli --force dist/src && del-cli --force dist/404-page && del-cli --force dist/main-page",
-		"preview": "vite preview"
-	},
-	"devDependencies": {
-		"del-cli": "^5.0.0",
-		"gh-pages": "^4.0.0",
-		"vite": "^3.2.5"
-	},
-	"dependencies": {
-		"ncp": "^2.0.0",
-		"node": "^19.0.0"
-	}
+  "name": "personalwebsite",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "echo ncp.dev > ./dist/CNAME && gh-pages -d dist",
+    "dev": "vite",
+    "prebuild": "replace-in-files --string=\"const mode = 'dev'\" --replacement=\"const mode = 'prod'\" src/404-page/404.js src/blogs-page/index.js src/blogs-page/all-about-me/index.js src/blogs-page/the-computer-science-speedrun/index.js",
+    "build": "vite build",
+    "postbuild": "ncp dist/src/main-page dist && ncp dist/src/404-page dist && ncp dist/src dist/ && del-cli --force dist/src && del-cli --force dist/404-page && del-cli --force dist/main-page && replace-in-files --string=\"const mode = 'prod'\" --replacement=\"const mode = 'dev'\" src/404-page/404.js src/blogs-page/index.js src/blogs-page/all-about-me/index.js src/blogs-page/the-computer-science-speedrun/index.js",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^4.2.0"
+  },
+  "dependencies": {
+    "del-cli": "^5.0.0",
+    "gh-pages": "^5.0.0",
+    "ncp": "^2.0.0",
+    "node": "^19.8.1",
+    "replace-in-file": "^6.3.5"
+  }
 }

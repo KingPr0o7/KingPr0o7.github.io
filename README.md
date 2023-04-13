@@ -1,4 +1,4 @@
-<p align="center"><a href="https://ncp.dev" target="_blank"><img src="images/branding/ncp-long-forum.png?raw=true alt="Nathan Parker's logo"></a></p>
+<p align="center"><a href="https://ncp.dev" target="_blank"><img src="images/branding/ncp-logo.png?raw=true alt="Nathan Parker's logo"></a></p>
 
 <br>
 
