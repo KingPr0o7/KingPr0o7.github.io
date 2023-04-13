@@ -1,4 +1,4 @@
-//
+// Hi
 // Elements
 //
 
@@ -16,7 +16,14 @@ type('error-name', 'PAGE NOT FOUND!', 40, 0, true);
 // Links
 //
 
-const home_link = '../main-page/index.html';
+const mode = 'dev'; // dev or prod
+
+if (mode == 'dev') {
+	var home_link = '../../main-page/index.html';
+} else {
+	var home_link = '../index.html';
+}
+
 const readme_link = 'https://github.com/KingPr0o7/KingPr0o7.github.io#404-filepage-not-found-online-only';
 const github_link = 'https://www.githubstatus.com/';
 const twitter_link = 'https://twitter.com/githubstatus?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor';

@@ -2,7 +2,14 @@
 // Links
 //
 
-const home_link = '../../main-page/index.html';
+const mode = 'dev'; // dev or prod
+
+if (mode == 'dev') {
+	var home_link = '../../main-page/index.html';
+} else {
+	var home_link = '../../index.html';
+}
+
 const blogs_link = '../index.html';
 
 const flask_inline_link = 'https://palletsprojects.com/p/flask/';
