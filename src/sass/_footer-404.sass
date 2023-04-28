@@ -1,0 +1,63 @@
+#footer 
+	display: flex
+	align-items: center
+	justify-content: center
+	flex-direction: column
+	gap: 10px
+	position: absolute
+	top: calc(100% - 44px)
+	left: 50%
+	width: 100%
+	transform: translate(-50%)
+
+#link-image 
+	filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(198deg) brightness(107%) contrast(101%)
+
+#return-link 
+	width: 100%
+	cursor: pointer
+	display: flex
+	align-items: center
+	justify-content: center
+	gap: 10px
+	padding: 5px
+	background-color: #181818
+	border-radius: 8px
+	color: white
+	font-family: 'Rubik', sans-serif
+	font-size: 1rem
+
+#twitter-logo, #github-logo-small 
+	width: 24px
+	height: 24px
+
+#github-links 
+	display: flex
+	align-items: center
+	justify-content: center
+	gap: 10px
+
+.site-embed 
+	cursor: pointer
+	display: flex
+	align-items: center
+	justify-content: center
+	gap: 10px
+	padding: 5px
+	background-color: #2c2c2c
+	border-radius: 8px
+	color: white
+	font-family: 'Rubik', sans-serif
+	font-size: 1rem
+
+.site-icon 
+	width: 24px
+	height: 24px
+
+@media screen and (max-width: 320px) 
+	#github-links 
+		flex-direction: column
+	
+	#footer 
+		top: calc(100% - 88px)
+	

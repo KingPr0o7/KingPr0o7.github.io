@@ -1,5 +1,4 @@
-# Node
 node_modules/
 dist/
 planar.md
-src/loading-page/
+src/404-page/404.css

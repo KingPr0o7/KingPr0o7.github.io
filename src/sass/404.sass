@@ -1,0 +1,40 @@
+@import 'config'
+@import 'background'
+@import 'navbar'
+@import 'footer-404'
+
+@mixin flex-column	
+	height: 100%
+	display: flex
+	align-items: center
+	justify-content: center
+	flex-direction: column
+
+html body
+	@include background(red)
+
+#error-container, #error-content
+	@include flex-column
+
+#error-code 
+	font-size: clamp(5rem, 10vw, 10rem)
+	font-family: 'Rubik', sans-serif
+	color: white
+
+#error-name, #error-link 
+	font-family: 'Rubik', sans-serif
+	font-size: clamp(1rem, 2vw, 2rem)
+	color: white	
+
+#error-link 
+	text-decoration: underline
+	cursor: pointer
+
+#cursor 
+	display: inline-block
+	position: relative
+	z-index: 1
+	top: 5px
+	background-color: #FFF
+	height: clamp(1rem, 2vw, 2rem)
+	width: 3px

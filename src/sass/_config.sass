@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap')
+
+$background-color: #181818
+$primary-text-color: #FFFFFF
+$secondary-text-color: #B9B9B9
+$font: 'Rubik', sans-serif
+$primary-link-color: #0093ff
+$secondary-link-color: #0073ff
+$footer-background-color: #252525
+$scroll-bar-background-color: rgba(200, 200, 200, 0.5)
+
+*
+	box-sizing: border-box
+	margin: 0
+	padding: 0
+	font-family: $font
+	color: $primary-text-color
+
+html, body 
+	height: 100%
+	width: 100%
+
+a
+	text-decoration: none
+
+.hidden 
+	opacity: 0
+	transition: opacity 2s
+
+.show 
+	opacity: 1
+
+@keyframes fadeIn
+	0% 
+		opacity: 0
+	100% 
+		opacity: 1
