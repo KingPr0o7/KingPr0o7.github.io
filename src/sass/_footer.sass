@@ -1,0 +1,42 @@
+#footer 
+	@include flex(row, center, center)
+	padding: 10px
+
+	& > #footer-container
+		@include flex(column, space-between, center)
+		backdrop-filter: blur(15px)
+		-webkit-backdrop-filter: blur(15px)
+		background-color: $secondary-background-color
+		border-radius: 10px
+		width: 50%
+		padding: 10px
+		gap: 15px
+
+		& > #footer-content
+			@include flex(row, space-between, center)
+			border-radius: 10px
+			width: 100%
+			gap: 15px
+
+			& > #footer-logo
+				& > #footer-icon
+					width: 270.56px
+					height: 77.68px				
+
+			& > #footer-socials
+
+				& > #contact-container
+					@include flex(row, flex-start, center)
+					gap: 10px
+
+					& > .contact-image-container
+						@include flex(row, center, center)
+						width: fit-content
+						cursor: pointer
+
+						& > .contact-image
+							width: 32px
+							height: 32px
+
+							&:hover, &:focus
+								transform: scale(1.4)
