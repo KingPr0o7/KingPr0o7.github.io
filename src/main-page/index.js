@@ -213,13 +213,15 @@ const skriptlang_date = new Date('January 19, 2020 16:16:00');
 const html_date = new Date('August 11, 2021 14:36:08'); // 
 const css_date = new Date('August 11, 2021 14:36:08');  // - Code.org (Q1 S1 Freshman Year)
 const javascript_date = new Date('August 11, 2021 14:36:08');   // 
-const python_date = new Date('October 17, 2022 13:10:00') // PLTW (Q2 S1 Sophomore Year) [PLTW CS is the highest CS in my school, we don't have actual CS courses from the school]
+const python_date = new Date('October 17, 2022 13:10:00'); // PLTW (Q2 S1 Sophomore Year) [PLTW CS is the highest CS in my school, we don't have actual CS courses from the school]
+const sass_date = new Date('April 27, 2023 17:05:11');
 
 document.getElementById('skriptlang-tooltip').textContent = `January 19, 2020`;
 document.getElementById('html-tooltip').textContent = `August 11, 2021`;
 document.getElementById('css-tooltip').textContent = `August 11, 2021`;
 document.getElementById('javascript-tooltip').textContent = `August 11, 2021`;
 document.getElementById('python-tooltip').textContent = `October 17, 2022`;
+document.getElementById('sass-tooltip').textContent = `April 27, 2023`;
 
 function calculate_timestamp(today, target_date) {
 	// Change date -> seconds
@@ -262,6 +264,7 @@ document.getElementById('language-html-duration').textContent = calculate_timest
 document.getElementById('language-css-duration').textContent = calculate_timestamp(seconds, css_date);
 document.getElementById('language-javascript-duration').textContent = calculate_timestamp(seconds, javascript_date);
 document.getElementById('language-python-duration').textContent = calculate_timestamp(seconds, python_date);
+document.getElementById('language-sass-duration').textContent = calculate_timestamp(seconds, sass_date);
 
 //
 // Contact Links
