@@ -1,0 +1,129 @@
+@import 'config'
+
+#project-container
+	background-color: $primary-background-color
+
+#project-cards-container
+	@include flex(row, center, center)
+	padding: 3px 25px 25px 25px
+	width: 100%
+	gap: 20px
+	overflow-x: auto
+
+	& > .card
+		position: relative
+		@include flex(column, flex-end, center)
+		border-radius: 8px
+		min-width: 400px
+		min-height: 450px
+		overflow: hidden
+
+		&:hover, &:focus
+			& > .card-preview-title
+				opacity: 0
+				transition: opacity 200ms ease-in-out
+
+			& > .card-content
+				max-height: 100%
+				transition: all 900ms ease-in-out
+				opacity: 1	
+
+		& > .card-image
+			height: 100%
+			width: 100%
+			border-radius: 8px
+
+		& > .card-preview-title
+			position: absolute
+			text-align: center
+			background: $project-card-title-background-color
+			border-radius: 8px
+			backdrop-filter: blur(5px)
+			-webkit-backdrop-filter: blur(5px)
+			width: 100%
+			left: 50%
+			padding: 5px
+			transform: translate(-50%)
+			font-size: clamp(1.5rem, 7vw, 2rem)
+			transition: opacity 400ms 850ms ease-in-out		
+
+		& > .card-content
+			position: absolute
+			text-align: center
+			width: 100%
+			z-index: 2
+			border-radius: 8px
+			opacity: 0
+			max-height: 1px // Mobile blur bug
+			padding: 0 12px 0 12px
+			transition: all 900ms ease-in-out
+			background: $project-card-content-background-color
+			backdrop-filter: blur(10px)
+			overflow: hidden
+			-webkit-backdrop-filter: blur(10px)		
+
+			&:focus-within
+				max-height: 100%
+				transition: all 900ms ease-in-out
+				opacity: 1
+
+			& > *
+				margin-bottom: 10px	
+
+			& > .card-title 
+				margin-top: 10px
+				font-size: clamp(1.5rem, 7vw, 2rem)
+
+			& > .card-tags
+				@include flex(row, center, center)
+				font-size: clamp(0.7rem, 3.8vw, 1rem)
+				gap: 10px
+
+				& > .card-tag
+					padding: 5px
+					border-radius: 10px
+
+				& > .personal-tag
+					background: $tag-personal-background-color
+					background: $tag-personal-background-gradient					
+
+				& > .school-tag
+					background: $tag-school-background-color
+					background: $tag-school-background-gradient
+
+				& > .website-tag
+					background: $tag-website-background-color
+					background: $tag-website-background-gradient												
+
+				& > .fullstack-tag
+					background: $tag-fullstack-background-color
+					background: $tag-fullstack-background-gradient
+
+				& > .frontend-tag						
+					background: $tag-frontend-background-color
+					background: $tag-frontend-background-gradient
+			
+			& > .card-desc
+				font-size: clamp(0.8rem, 1vw, 1rem)	
+
+			& > .card-link
+				@include flex(row, center, center)
+
+				& > .card-link-button
+					@include flex(row, center, center)
+					gap: 10px
+					background-color: $primary-link-color
+					border: none
+					padding: 10px
+					font-weight: 400
+					width: 70%
+					font-size: clamp(0.7rem, 4vw, 1rem)
+					border-radius: 8px
+					cursor: pointer			
+
+					&:hover, &:focus
+						background-color: $secondary-link-color
+
+					& > .card-link-image
+						width: 32px
+						height: 32px
