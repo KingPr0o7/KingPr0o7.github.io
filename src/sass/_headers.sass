@@ -8,14 +8,14 @@
 	.comment-indicator-start, .comment-indicator-end 
 		display: none
 
-	.page-header[animate]
+	&[animate]
 		&::before 
 			content: "//"
 			animation: comments-start 8s, comments-fadeInOut 1.56s linear -1s 6
+	
 		&::after 
 			content: ""
-			animation: comments-end 8s, comments-fadeInOut 1.56s linear -1s 6  
-
+			animation: comments-end 8s, comments-fadeInOut 1.56s linear -1s 6
 
 @keyframes comments-start 
 	0% 
@@ -31,7 +31,6 @@
 	100% 
 		content: "--"
 
-
 @keyframes comments-end 
 	0% 
 		content: ""
@@ -46,7 +45,6 @@
 	100%
 		content: ""
 
-
 @keyframes comments-fadeInOut 
 	0% 
 		opacity: 0 
@@ -54,7 +52,6 @@
 		opacity: 1 
 	100% 
 		opacity: 0
-
 
 .disclaimer 
 	text-align: center

@@ -1,0 +1,68 @@
+#blog-cards-container
+	display: flex
+	align-items: baseline
+	justify-content: center
+	padding: 3px 25px 25px 25px
+	width: 100%
+	gap: 20px
+	overflow-x: auto	
+
+	& > .blog-card
+		display: flex
+		align-items: center
+		justify-content: space-between
+		flex-direction: column
+		background-color: $secondary-background-color
+		border-radius: 12px
+		min-width: 500px
+		max-width: 500px
+		max-height: fit-content
+		position: relative
+		overflow: hidden		
+
+
+		& > .blog-card-content 
+			& > .blog-card-image
+				width: 100%
+				border-radius: 12px 12px 0 0
+
+			& > .blog-card-text
+				padding: 5px 10px 10px 10px
+
+				& > .blog-card-preview-title
+					font-weight: 600
+					font-size: clamp(1rem, 7vw, 1.8rem)
+
+				& > .blog-card-description
+					font-size: clamp(0.8rem, 7vw, 1.2rem)
+		
+		& > .blog-card-footer, .blog-card-redirect-container
+			text-align: center
+			width: 100%
+			padding: 10px
+			border-radius: 0 0 12px 12px			
+		
+		& > .blog-card-redirect-container:not(:focus)
+			display: none
+			cursor: pointer
+
+		&:focus, &:hover
+			& > .blog-card-footer
+				display: none
+
+			& > .blog-card-redirect-container:not(:focus)
+				display: inline
+				background-color: $primary-link-color
+				font-weight: 600
+
+				&:hover
+					background-color: $secondary-link-color
+
+		&:focus-within
+			& > .blog-card-footer
+				display: none
+
+			& > .blog-card-redirect-container
+				display: inline
+				background-color: $secondary-link-color
+				font-weight: 600
