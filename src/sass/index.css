@@ -440,11 +440,11 @@ a {
   min-height: 450px;
   overflow: hidden;
 }
-#project-cards-container > .card:hover > .card-preview-title, #project-cards-container > .card:focus > .card-preview-title {
+#project-cards-container > .card:hover > .card-preview-title, #project-cards-container > .card:focus > .card-preview-title, #project-cards-container > .card:focus-within > .card-preview-title {
   opacity: 0;
   transition: opacity 200ms ease-in-out;
 }
-#project-cards-container > .card:hover > .card-content, #project-cards-container > .card:focus > .card-content {
+#project-cards-container > .card:hover > .card-content, #project-cards-container > .card:focus > .card-content, #project-cards-container > .card:focus-within > .card-content {
   max-height: 100%;
   transition: all 900ms ease-in-out;
   opacity: 1;
@@ -467,6 +467,7 @@ a {
   transform: translate(-50%);
   font-size: clamp(1.5rem, 7vw, 2rem);
   transition: opacity 400ms 850ms ease-in-out;
+  opacity: 1;
 }
 #project-cards-container > .card > .card-content {
   position: absolute;
@@ -482,11 +483,6 @@ a {
   backdrop-filter: blur(10px);
   overflow: hidden;
   -webkit-backdrop-filter: blur(10px);
-}
-#project-cards-container > .card > .card-content:focus-within {
-  max-height: 100%;
-  transition: all 900ms ease-in-out;
-  opacity: 1;
 }
 #project-cards-container > .card > .card-content > * {
   margin-bottom: 10px;
