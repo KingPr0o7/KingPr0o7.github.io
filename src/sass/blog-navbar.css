@@ -1,0 +1,15 @@
+.desktop-navbar {
+  padding: 0.5rem 0 0.5rem 0.5rem;
+  z-index: 3;
+  top: 0;
+  position: fixed;
+  width: 100%;
+  overflow: hidden;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}/*# sourceMappingURL=blog-navbar.css.map */

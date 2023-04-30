@@ -16,6 +16,6 @@ export default defineConfig({
 		},
 	},
 	server: {
-		open: '/src/main-page/index.html'
+		open: '/src/blogs-page/index.html'
 	}
 })
