@@ -16,6 +16,6 @@ export default defineConfig({
 		},
 	},
 	server: {
-		open: '/src/blogs-page/index.html'
+		open: '/src/blogs-page/the-computer-science-speedrun/index.html'
 	}
 })

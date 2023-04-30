@@ -9,7 +9,8 @@
 }
 
 html, body {
-  height: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
   width: 100%;
 }
 
@@ -41,14 +42,6 @@ hr {
   }
   100% {
     opacity: 1;
-  }
-}
-@keyframes show-radial-background {
-  0% {
-    background-size: 100vw 0vh;
-  }
-  100% {
-    background-size: 100vw 100vh;
   }
 }
 .desktop-navbar {
@@ -412,7 +405,8 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 html, body {
-  height: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
   width: 100%;
 }
 
@@ -727,6 +721,14 @@ body[disabled] {
   background-color: #181818;
   animation: show-radial-background 5s forwards ease-in-out;
   background-repeat: no-repeat;
+}
+@keyframes show-radial-background {
+  0% {
+    background-size: 100vw 0vh;
+  }
+  100% {
+    background-size: 100vw 100vh;
+  }
 }
 @media screen and (max-width: 1224px) {
   #intro-container {
