@@ -30,7 +30,7 @@ hr {
   opacity: 1;
 }
 
-*:focus {
+*:focus-visible {
   outline: 2px solid #FFFFFF;
   border-radius: 8px;
 }
@@ -433,7 +433,7 @@ hr {
   opacity: 1;
 }
 
-*:focus {
+*:focus-visible {
   outline: 2px solid #FFFFFF;
   border-radius: 8px;
 }
