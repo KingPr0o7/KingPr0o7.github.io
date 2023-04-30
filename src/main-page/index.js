@@ -15,10 +15,10 @@ const button = document.querySelector('.card-link-button');
 // Links
 //
 
-const all_about_me_blog = '../blogs-page/all-about-me/index.html';
-const the_computer_science_speedrun_blog = '../blogs-page/the-computer-science-speedrun/index.html';
+const all_about_me_blog = '../blogs/all-about-me/index.html';
+const the_computer_science_speedrun_blog = '../blogs/the-computer-science-speedrun/index.html';
 
-const all_blogs_page = `../blogs-page/index.html`;
+const all_blogs_page = `../blogs/index.html`;
 
 const combo_menu_interface_link = 'https://github.com/KingPr0o7/Combo-Menu';
 const personal_portfolio_link = 'https://github.com/KingPr0o7/KingPr0o7.github.io';

@@ -2,87 +2,86 @@
 @import 'background'
 @import 'navbar'
 
-html body
+html, body
 	@include background(red, normal)
 
-#error-container, #error-content
-	@include flex(column, center, center)
+#readme-link
+	font-size: 1.4rem
+	@media screen and (max-width: 1137px) 
+		display: inline
+
+.page
 	height: 100%
 
-#error-code 
-	font-size: clamp(5rem, 10vw, 10rem)
-	font-family: 'Rubik', sans-serif
-	color: white
+	@media screen and (max-height: 300px)
+		padding-top: 50px
 
-#error-name, #error-link 
-	font-family: 'Rubik', sans-serif
-	font-size: clamp(1rem, 2vw, 2rem)
-	color: white	
+	@media screen and (max-height: 280px)
+		padding-top: 25px		
 
-#error-link 
-	text-decoration: underline
-	cursor: pointer
+	& > #error-container
+		@include flex(column, center, center)
+		height: 100%
+		gap: 20px
 
-#cursor 
-	display: inline-block
-	position: relative
-	z-index: 1
-	top: 5px
-	background-color: #FFF
-	height: clamp(1rem, 2vw, 2rem)
-	width: 3px
+		& > #error-content
+			@include flex(column, center, center)
+
+			& > #error-code 
+				font-size: clamp(5rem, 10vw, 10rem)
+				font-family: 'Rubik', sans-serif
+				color: white
+
+			& > #error-link 
+				text-decoration: underline
+				cursor: pointer
+
+			& > #error-name, #error-link 
+				font-family: 'Rubik', sans-serif
+				font-size: clamp(1rem, 2vw, 2rem)
+				color: white	
+
+			& > #error-name
+				& > #cursor 
+					display: inline-block
+					position: relative
+					z-index: 1
+					top: 5px
+					background-color: $primary-text-color
+					height: clamp(1rem, 2vw, 2rem)
+					width: 3px
 
 #footer 
 	@include flex(column, center, center)
-	gap: 10px
-	position: absolute
+	position: fixed
 	top: calc(100% - 44px)
 	left: 50%
-	width: 100%
 	transform: translate(-50%)
-
-#link-image 
-	filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(198deg) brightness(107%) contrast(101%)
-
-#return-link 
+	gap: 10px
 	width: 100%
-	cursor: pointer
-	@include flex(row, center, center)
-	gap: 10px
-	padding: 5px
-	background-color: #181818
-	border-radius: 8px
-	color: white
-	font-family: 'Rubik', sans-serif
-	font-size: 1rem
 
-#twitter-logo, #github-logo-small 
-	width: 24px
-	height: 24px
-
-#github-links 
-	@include flex(row, center, center)
-	gap: 10px
-
-.site-embed 
-	cursor: pointer
-	@include flex(row, center, center)
-	gap: 10px
-	padding: 5px
-	background-color: #2c2c2c
-	border-radius: 8px
-	color: white
-	font-family: 'Rubik', sans-serif
-	font-size: 1rem
-
-.site-icon 
-	width: 24px
-	height: 24px
-
-@media screen and (max-width: 320px) 
-	#github-links 
-		flex-direction: column
-	
-	#footer 
+	@media screen and (max-width: 320px) 
 		top: calc(100% - 88px)
+
+	& > #github-links 
+		@include flex(row, center, center)
+		gap: 10px
+
+		@media screen and (max-width: 320px) 
+			flex-direction: column
+
+		& > .site-embed 
+			cursor: pointer
+			@include flex(row, center, center)
+			gap: 10px
+			padding: 5px
+			background-color: #2c2c2c
+			border-radius: 8px
+			color: white
+			font-family: 'Rubik', sans-serif
+			font-size: 1rem
+
+			& > .site-icon 
+				width: 24px
+				height: 24px
 	

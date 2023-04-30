@@ -12,10 +12,10 @@ function get_home_link() {
 	}
 }
 
-const blogs_link = '../blogs-page/index.html';
+const blogs_link = '../blogs/index.html';
 
-const all_about_me_blog = '../blogs-page/all-about-me/index.html';
-const the_computer_science_speedrun_blog = '../blogs-page/the-computer-science-speedrun/index.html';
+const all_about_me_blog = '../blogs/all-about-me/index.html';
+const the_computer_science_speedrun_blog = '../blogs/the-computer-science-speedrun/index.html';
 
 const discord_link = 'https://discord.gg/QGDPS6wHB8';
 const youtube_link = 'https://www.youtube.com/channel/UCmMcPTUznYtu3zo7X3sVbgA';

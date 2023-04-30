@@ -8,8 +8,7 @@
 }
 
 html, body {
-  height: -moz-fit-content;
-  height: fit-content;
+  height: 100%;
   width: 100%;
 }
 
@@ -218,7 +217,7 @@ hr {
   font-size: 1rem;
 }
 
-html body {
+html, body {
   background: radial-gradient(100% 100% at 50% 0%, rgb(173, 20, 9) 0%, #181818 100%);
   background-color: #181818;
   animation: show-radial-background 5s forwards ease-in-out;
@@ -233,37 +232,62 @@ html body {
   }
 }
 
-#error-container, #error-content {
+#readme-link {
+  font-size: 1.4rem;
+}
+@media screen and (max-width: 1137px) {
+  #readme-link {
+    display: inline;
+  }
+}
+
+.page {
+  height: 100%;
+}
+@media screen and (max-height: 300px) {
+  .page {
+    padding-top: 50px;
+  }
+}
+@media screen and (max-height: 280px) {
+  .page {
+    padding-top: 25px;
+  }
+}
+.page > #error-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100%;
+  gap: 20px;
 }
-
-#error-code {
+.page > #error-container > #error-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.page > #error-container > #error-content > #error-code {
   font-size: clamp(5rem, 10vw, 10rem);
   font-family: "Rubik", sans-serif;
   color: white;
 }
-
-#error-name, #error-link {
+.page > #error-container > #error-content > #error-link {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.page > #error-container > #error-content > #error-name, .page > #error-container > #error-content #error-link {
   font-family: "Rubik", sans-serif;
   font-size: clamp(1rem, 2vw, 2rem);
   color: white;
 }
-
-#error-link {
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-#cursor {
+.page > #error-container > #error-content > #error-name > #cursor {
   display: inline-block;
   position: relative;
   z-index: 1;
   top: 5px;
-  background-color: #FFF;
+  background-color: #FFFFFF;
   height: clamp(1rem, 2vw, 2rem);
   width: 3px;
 }
@@ -273,48 +297,31 @@ html body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 10px;
-  position: absolute;
+  position: fixed;
   top: calc(100% - 44px);
   left: 50%;
-  width: 100%;
   transform: translate(-50%);
-}
-
-#link-image {
-  filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(198deg) brightness(107%) contrast(101%);
-}
-
-#return-link {
+  gap: 10px;
   width: 100%;
-  cursor: pointer;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  padding: 5px;
-  background-color: #181818;
-  border-radius: 8px;
-  color: white;
-  font-family: "Rubik", sans-serif;
-  font-size: 1rem;
 }
-
-#twitter-logo, #github-logo-small {
-  width: 24px;
-  height: 24px;
+@media screen and (max-width: 320px) {
+  #footer {
+    top: calc(100% - 88px);
+  }
 }
-
-#github-links {
+#footer > #github-links {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 10px;
 }
-
-.site-embed {
+@media screen and (max-width: 320px) {
+  #footer > #github-links {
+    flex-direction: column;
+  }
+}
+#footer > #github-links > .site-embed {
   cursor: pointer;
   display: flex;
   flex-direction: row;
@@ -328,17 +335,7 @@ html body {
   font-family: "Rubik", sans-serif;
   font-size: 1rem;
 }
-
-.site-icon {
+#footer > #github-links > .site-embed > .site-icon {
   width: 24px;
   height: 24px;
-}
-
-@media screen and (max-width: 320px) {
-  #github-links {
-    flex-direction: column;
-  }
-  #footer {
-    top: calc(100% - 88px);
-  }
 }/*# sourceMappingURL=404.css.map */

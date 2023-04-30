@@ -9,8 +9,7 @@
 }
 
 html, body {
-  height: -moz-fit-content;
-  height: fit-content;
+  height: 100%;
   width: 100%;
 }
 
@@ -303,9 +302,11 @@ body::-webkit-scrollbar-thumb:hover {
   }
 }
 .disclaimer {
+  width: 100%;
   text-align: center;
   font-weight: 200;
   padding: 20px;
+  font-size: 1.17rem;
 }
 
 #blog-cards-container {
@@ -405,8 +406,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 html, body {
-  height: -moz-fit-content;
-  height: fit-content;
+  height: 100%;
   width: 100%;
 }
 
@@ -487,6 +487,12 @@ hr {
     min-width: 250px;
     min-height: 300px;
   }
+}
+#project-cards-container > .card:nth-child(1) {
+  transition-delay: 100ms;
+}
+#project-cards-container > .card:nth-child(2) {
+  transition-delay: 200ms;
 }
 #project-cards-container > .card:hover > .card-preview-title, #project-cards-container > .card:focus > .card-preview-title, #project-cards-container > .card:focus-within > .card-preview-title {
   opacity: 0;
@@ -882,6 +888,24 @@ body[disabled] {
   #languages-container > #languages-content > #languages-widgets-container > .language-widget {
     width: 250px;
   }
+}
+#languages-container > #languages-content > #languages-widgets-container > .language-widget:nth-child(1) {
+  transition-delay: 100ms;
+}
+#languages-container > #languages-content > #languages-widgets-container > .language-widget:nth-child(2) {
+  transition-delay: 200ms;
+}
+#languages-container > #languages-content > #languages-widgets-container > .language-widget:nth-child(3) {
+  transition-delay: 300ms;
+}
+#languages-container > #languages-content > #languages-widgets-container > .language-widget:nth-child(4) {
+  transition-delay: 400ms;
+}
+#languages-container > #languages-content > #languages-widgets-container > .language-widget:nth-child(5) {
+  transition-delay: 500ms;
+}
+#languages-container > #languages-content > #languages-widgets-container > .language-widget:nth-child(6) {
+  transition-delay: 600ms;
 }
 #languages-container > #languages-content > #languages-widgets-container > .language-widget:hover {
   transform: scale(1.04);
