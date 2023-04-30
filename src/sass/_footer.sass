@@ -12,16 +12,31 @@
 		padding: 10px
 		gap: 15px
 
+		@media screen and (max-width: 1140px) 
+			width: 80%
+
+		@media screen and (max-width: 370px) 
+			width: 100%
+
 		& > #footer-content
 			@include flex(row, space-between, center)
 			border-radius: 10px
 			width: 100%
 			gap: 15px
 
+			@media screen and (max-width: 595px) 
+				flex-direction: column
+
+
 			& > #footer-logo
 				& > #footer-icon
 					width: 270.56px
-					height: 77.68px				
+					height: 77.68px		
+
+					@media screen and (max-width: 300px) 
+						content: url('/images/branding/ncp-icon.png')
+						width: 90px
+						height: 98.18px		
 
 			& > #footer-socials
 
@@ -40,3 +55,7 @@
 
 							&:hover, &:focus
 								transform: scale(1.4)
+		& > #footer-copyright
+			@include flex(column, space-between, center)
+			text-align: center
+			gap: 5px

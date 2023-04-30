@@ -1,8 +1,5 @@
 #footer 
-	display: flex
-	align-items: center
-	justify-content: center
-	flex-direction: column
+	@include flex(column, center, center)
 	gap: 10px
 	position: absolute
 	top: calc(100% - 44px)
@@ -16,9 +13,7 @@
 #return-link 
 	width: 100%
 	cursor: pointer
-	display: flex
-	align-items: center
-	justify-content: center
+	@include flex(row, center, center)
 	gap: 10px
 	padding: 5px
 	background-color: #181818
@@ -32,16 +27,12 @@
 	height: 24px
 
 #github-links 
-	display: flex
-	align-items: center
-	justify-content: center
+	@include flex(row, center, center)
 	gap: 10px
 
 .site-embed 
 	cursor: pointer
-	display: flex
-	align-items: center
-	justify-content: center
+	@include flex(row, center, center)
 	gap: 10px
 	padding: 5px
 	background-color: #2c2c2c

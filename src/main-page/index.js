@@ -85,6 +85,14 @@ function changeNav(state) {
 	}
 }
 
+mobile_navlist.addEventListener('focusin', function() {
+	changeNav("Enabled");
+});
+
+mobile_navlist.addEventListener('focusout', function() {
+	changeNav("Disabled");
+});
+
 //
 // Smooth Anchor Scrolling
 //

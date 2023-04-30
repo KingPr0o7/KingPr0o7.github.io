@@ -10,6 +10,9 @@
 	gap: 20px
 	overflow-x: auto
 
+	@media screen and (max-width: 860px) 
+		justify-content: flex-start	
+
 	& > .card
 		position: relative
 		@include flex(column, flex-end, center)
@@ -17,6 +20,18 @@
 		min-width: 400px
 		min-height: 450px
 		overflow: hidden
+
+		@media screen and (max-width: 430px) 
+			min-width: 350px
+			min-height: 400px
+
+		@media screen and (max-width: 375px) 
+			min-width: 300px
+			min-height: 350px
+
+		@media screen and (max-width: 325px) 
+			min-width: 250px
+			min-height: 300px		
 
 		&:hover, &:focus, &:focus-within
 			& > .card-preview-title

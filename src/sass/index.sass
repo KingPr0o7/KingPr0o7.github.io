@@ -13,20 +13,39 @@ body
 	&[disabled]
 		overflow: hidden
 
+		@media screen and (min-width: 1140px) 
+			overflow: visible
+
 .page 
 	min-height: 100vh
 
+	@media screen and (max-height: 640px) 
+		min-height: 100%
+
 #intro-container
 	padding: 0 40px 0 40px
-	display: flex,
-	justify-content: space-between
-	align-items: center
+	@include flex(row, space-between, center)
 	@include background(orange)
+
+	@media screen and (max-width: 1224px) 
+		flex-direction: column-reverse
+		justify-content: center	
+
+	@media screen and (max-height: 640px) 
+		padding-top: 100px
+
+	@media screen and (max-height: 520px) 
+		padding-top: 100px
 
 	& > #intro-content
 		display: flex
 		flex-direction: column
 		width: 45%
+
+		@media screen and (max-width: 1224px) 
+			text-align: center
+			width: 100%		
+			gap: 10px	
 		
 		& > #intro-header
 			font-size: clamp(1.5rem, 4vw, 5.625rem)
@@ -49,10 +68,11 @@ body
 			opacity: 0
 			animation: fadeIn 4s 3s forwards	
 
+			@media screen and (max-width: 1224px) 
+				justify-content: center
+
 			& > #link
-				display: flex
-				align-items: center
-				justify-content: space-around
+				@include flex(row, space-around, center)
 				font-size: clamp(1rem, 3vw, 1.8rem)
 				cursor: pointer		
 
@@ -84,9 +104,7 @@ body
 
 #blogs-all-container
 	padding: 50px
-	display: flex
-	align-items: center
-	justify-content: center	
+	@include flex(row, center, center)
 
 	& > #blogs-all-redirect
 		cursor: pointer
@@ -111,12 +129,21 @@ body
 			width: fit-content
 			gap: 25px
 
+			@media screen and (max-width: 965px) 
+				grid-template-columns: 1fr 1fr	
+
+			@media screen and (max-width: 640px) 
+				@include flex(column, center, center)
+
 			& > .language-widget
 				background-color: $secondary-background-color
 				border-radius: 12px
 				padding: 12px
 				width: 300px
 				@include flex(row, space-between, center)
+
+				@media screen and (max-width: 640px) 
+					width: 250px
 
 				&:hover
 					transform: scale(1.04)
