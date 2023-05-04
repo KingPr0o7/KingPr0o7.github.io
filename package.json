@@ -7,9 +7,9 @@
     "predeploy": "npm run build",
     "deploy": "echo ncp.dev > ./dist/CNAME && gh-pages -d dist",
     "dev": "vite",
-    "prebuild": "replace-in-files --string=\"const mode = 'dev'\" --replacement=\"const mode = 'prod'\" src/404-page/404.js src/blogs/index.js src/blogs/all-about-me/index.js src/blogs/the-computer-science-speedrun/index.js",
+    "prebuild": "replace-in-files --string=\"const mode = 'dev'\" --replacement=\"const mode = 'prod'\" src/404-page/404.js src/blogs/index.js src/blogs/all-about-me/index.js src/blogs/the-computer-science-speedrun/index.js src/privacy-policy/index.js",
     "build": "vite build",
-    "postbuild": "ncp dist/src/main-page dist && ncp dist/src/404-page dist && ncp dist/src dist/ && del-cli --force dist/src && del-cli --force dist/404-page && del-cli --force dist/main-page && replace-in-files --string=\"const mode = 'prod'\" --replacement=\"const mode = 'dev'\" src/404-page/404.js src/blogs/index.js src/blogs/all-about-me/index.js src/blogs/the-computer-science-speedrun/index.js",
+    "postbuild": "ncp dist/src/main-page dist && ncp dist/src/404-page dist && ncp dist/src dist/ && del-cli --force dist/src && del-cli --force dist/404-page && del-cli --force dist/main-page && replace-in-files --string=\"const mode = 'prod'\" --replacement=\"const mode = 'dev'\" src/404-page/404.js src/blogs/index.js src/blogs/all-about-me/index.js src/blogs/the-computer-science-speedrun/index.js src/privacy-policy/index.js",
     "preview": "vite preview"
   },
   "devDependencies": {
