@@ -13,6 +13,7 @@ function get_home_link() {
 }
 
 const blogs_link = '../index.html';
+const privacy_link = '../../privacy-policy/index.html'
 
 const code_org_inline_link = 'https://code.org/';
 
@@ -86,6 +87,22 @@ document.getElementById("code_org_inline_link").addEventListener("click", functi
 document.getElementById("code_org_inline_link").addEventListener("keydown", function(event) {
 	if (event.key == "Enter") {
 		window.open(code_org_inline_link, "_blank");
+	}
+});
+
+//
+// Claim Links
+//
+
+// Privacy Policy
+
+document.getElementById("footer-privacy").addEventListener("click", function(){
+	window.location.href = privacy_link;
+});
+
+document.getElementById("footer-privacy").addEventListener("keydown", function(event) {
+	if (event.key == "Enter") {
+		window.location.href = privacy_link;
 	}
 });
 

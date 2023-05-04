@@ -23,6 +23,8 @@ const all_blogs_page = `../blogs/index.html`;
 const combo_menu_interface_link = 'https://github.com/KingPr0o7/Combo-Menu';
 const personal_portfolio_link = 'https://github.com/KingPr0o7/KingPr0o7.github.io';
 
+const privacy_link = '../privacy-policy/index.html'
+
 const discord_link = 'https://discord.gg/QGDPS6wHB8';
 const youtube_link = 'https://www.youtube.com/channel/UCmMcPTUznYtu3zo7X3sVbgA';
 const twitter_link = 'https://twitter.com/KingPr0o7';
@@ -273,6 +275,22 @@ document.getElementById('language-css-duration').textContent = calculate_timesta
 document.getElementById('language-javascript-duration').textContent = calculate_timestamp(seconds, javascript_date);
 document.getElementById('language-python-duration').textContent = calculate_timestamp(seconds, python_date);
 document.getElementById('language-sass-duration').textContent = calculate_timestamp(seconds, sass_date);
+
+//
+// Claim Links
+//
+
+// Privacy Policy
+
+document.getElementById("footer-privacy").addEventListener("click", function(){
+	window.location.href = privacy_link;
+});
+
+document.getElementById("footer-privacy").addEventListener("keydown", function(event) {
+	if (event.key == "Enter") {
+		window.location.href = privacy_link;
+	}
+});
 
 //
 // Contact Links

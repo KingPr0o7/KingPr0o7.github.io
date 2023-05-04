@@ -13,6 +13,7 @@ function get_home_link() {
 }
 
 const blogs_link = '../blogs/index.html';
+const privacy_link = '../privacy-policy/index.html'
 
 const all_about_me_blog = '../blogs/all-about-me/index.html';
 const the_computer_science_speedrun_blog = '../blogs/the-computer-science-speedrun/index.html';
@@ -103,6 +104,23 @@ document.getElementById("the-computer-science-speedrun").addEventListener("keydo
 		window.location.href = the_computer_science_speedrun_blog;
 	}
 });
+
+//
+// Claim Links
+//
+
+// Privacy Policy
+
+document.getElementById("footer-privacy").addEventListener("click", function(){
+	window.location.href = privacy_link;
+});
+
+document.getElementById("footer-privacy").addEventListener("keydown", function(event) {
+	if (event.key == "Enter") {
+		window.location.href = privacy_link;
+	}
+});
+
 
 //
 // Contact Links

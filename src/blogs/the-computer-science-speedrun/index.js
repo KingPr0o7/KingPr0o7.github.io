@@ -17,6 +17,8 @@ const blogs_link = '../index.html';
 const flask_inline_link = 'https://palletsprojects.com/p/flask/';
 const github_inline_link = 'https://github.com/KingPr0o7/Combo-Menu/commits/main'
 
+const privacy_link = '../../privacy-policy/index.html'
+
 const discord_link = 'https://discord.gg/QGDPS6wHB8';
 const youtube_link = 'https://www.youtube.com/channel/UCmMcPTUznYtu3zo7X3sVbgA';
 const twitter_link = 'https://twitter.com/KingPr0o7';
@@ -98,6 +100,22 @@ document.getElementById("github_inline_link").addEventListener("click", function
 document.getElementById("github_inline_link").addEventListener("keydown", function(event) {
 	if (event.key == "Enter") {
 		window.open(github_inline_link, "_blank");
+	}
+});
+
+//
+// Claim Links
+//
+
+// Privacy Policy
+
+document.getElementById("footer-privacy").addEventListener("click", function(){
+	window.location.href = privacy_link;
+});
+
+document.getElementById("footer-privacy").addEventListener("keydown", function(event) {
+	if (event.key == "Enter") {
+		window.location.href = privacy_link;
 	}
 });
 

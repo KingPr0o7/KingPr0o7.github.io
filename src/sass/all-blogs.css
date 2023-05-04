@@ -354,6 +354,13 @@ body::-webkit-scrollbar-thumb:hover {
 #footer > #footer-container > #footer-content > #footer-socials > #contact-container > .contact-image-container > .contact-image:hover, #footer > #footer-container > #footer-content > #footer-socials > #contact-container > .contact-image-container > .contact-image:focus {
   transform: scale(1.4);
 }
+#footer > #footer-container > #footer-documents {
+  text-align: center;
+}
+#footer > #footer-container > #footer-documents > *:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
 #footer > #footer-container > #footer-copyright {
   display: flex;
   flex-direction: column;
