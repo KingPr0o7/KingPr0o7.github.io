@@ -19,13 +19,15 @@ To build my website, you need to run a live server because all assets are refere
 - Install [Node.js](https://nodejs.org/en/)
 - Install [NPM](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) **OR** `npm install -g npm`
 - Install [Vite](https://vitejs.dev/guide/) **OR** `npm install vite` 
-
+- Install [Live Sass Compiler](https://marketplace.visualstudio.com/items?itemName=ritwickdey.live-sass)
 ## Viewing the website
 
 ### Development Environment
 - Run: `npm run dev`
 
 Also, in `vite.config.js`: you can change what page is on the live server. Change `open: '/src/main-page/index.html'` to another `.html` in one of the folders in the `src` folder. 
+
+In conjunction with a live server, you also need to run the `Live Sass Complier` plugin which is the button at the bottom; `Watch Sass`. It'll automatically convert the `.sass` to `.css` which all `.html`s point to.
 
 ### Online
 You can view my website on two domains. Those consist of: [KingPr0o7.github.io](https://KingPr0o7.github.io) and [ncp.dev](https://ncp.dev).
