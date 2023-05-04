@@ -10,6 +10,8 @@ const links = document.getElementsByClassName('navlist-link');
 const snackbar = document.getElementById('snackbar');
 const card = document.querySelector('.card');
 const button = document.querySelector('.card-link-button');
+const typing_speed = 100;
+const cursor = document.getElementById("cursor");
 
 //
 // Links
@@ -124,6 +126,45 @@ hamburger.addEventListener('click', function () {
 for (var i = 0; i < links.length; i++) {
 	links[i].addEventListener('click', (evt) => changeNav("Disabled"), false);
 }
+
+//
+// Typing Animation
+//
+
+function type(targetElement, textToType, style, speed, index) {
+	let element = document.querySelector(`${targetElement}`);
+	let text = `${textToType}`;
+	if (style == 'add') {
+		if (index < text.length) {
+			cursor.removeAttribute('blinking', '');
+			cursor.remove();
+			element.innerHTML += text.charAt(index);  
+			index++;
+			element.appendChild(cursor);		  
+			setTimeout(type, speed, targetElement, textToType, style, speed, index);
+		} else {
+			cursor.setAttribute('blinking', '');
+			if (text == 'I\'m Nathan Parker') {
+				type("#intro-header-nl", "I'm Nathan Parker", 'remove', typing_speed, 0);
+				type("#intro-header-nl", "I'm Mr. Nathan Parker", 'add', typing_speed, 0);
+			}
+		}
+	} else if (style == 'remove') {
+		console.log('h')
+		let length = text.length - 4;
+		for (var i = 0; i < length; i++) {
+			cursor.remove();
+			setTimeout(function() {
+				element.textContent = element.textContent.slice(0, -1);
+				element.appendChild(cursor);
+			}, i * speed);
+		}
+	}
+}
+
+setTimeout(function(){
+	type("#intro-header-nl", "I'm Nathan Parker", 'add', typing_speed, 0);
+}, 1000)
 
 //
 // Intro

@@ -3,6 +3,7 @@
 @import 'navbar'
 @import 'scrollbars'
 @import 'headers'
+@import 'cursor'
 @import 'blog-cards'
 @import 'project-cards'
 @import 'footer'
@@ -47,10 +48,13 @@ body
 			width: 100%		
 			gap: 10px	
 		
-		& > #intro-header
+		& > .intro-header
 			font-size: clamp(1.5rem, 4vw, 5.625rem)
 			opacity: 0
-			animation: fadeIn 3s 1s forwards			
+			animation: fadeIn 3s 1s forwards
+
+			& > #cursor
+				height: clamp(1.5rem, 4vw, 5.625rem)	
 
 		& > #intro-detail
 			color: $secondary-text-color

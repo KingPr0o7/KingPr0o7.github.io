@@ -1,0 +1,15 @@
+#cursor
+	display: inline-block
+	position: relative
+	background-color: $primary-text-color
+	top: 1px
+	width: 4px
+
+	&[blinking]
+		animation: blinking 850ms infinite
+
+@keyframes blinking
+	0% 
+		opacity: 100%
+	100% 
+		opacity: 20%

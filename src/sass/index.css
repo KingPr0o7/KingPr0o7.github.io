@@ -309,6 +309,25 @@ body::-webkit-scrollbar-thumb:hover {
   font-size: 1.17rem;
 }
 
+#cursor {
+  display: inline-block;
+  position: relative;
+  background-color: #FFFFFF;
+  top: 1px;
+  width: 4px;
+}
+#cursor[blinking] {
+  animation: blinking 850ms infinite;
+}
+
+@keyframes blinking {
+  0% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 20%;
+  }
+}
 #blog-cards-container {
   display: flex;
   flex-direction: row;
@@ -771,10 +790,13 @@ body[disabled] {
     gap: 10px;
   }
 }
-#intro-container > #intro-content > #intro-header {
+#intro-container > #intro-content > .intro-header {
   font-size: clamp(1.5rem, 4vw, 5.625rem);
   opacity: 0;
   animation: fadeIn 3s 1s forwards;
+}
+#intro-container > #intro-content > .intro-header > #cursor {
+  height: clamp(1.5rem, 4vw, 5.625rem);
 }
 #intro-container > #intro-content > #intro-detail {
   color: #B9B9B9;
