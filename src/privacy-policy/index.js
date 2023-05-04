@@ -6,7 +6,7 @@ const mode = 'dev'; // 'dev' or 'prod'
 
 function get_home_link() {
 	if (mode == 'dev') {
-		return '../../main-page/index.html';
+		return '../main-page/index.html';
 	} else {
 		return '../../index.html';
 	}
@@ -14,7 +14,9 @@ function get_home_link() {
 
 const blogs_link = '../index.html';
 
-const code_org_inline_link = 'https://code.org/';
+const github_privacy_inline_link = 'https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement';
+const github_pages_inline_link = 'https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages#data-collection'
+const github_repo_inline_link = 'https://github.com/KingPr0o7/KingPr0o7.github.io'
 
 const discord_link = 'https://discord.gg/QGDPS6wHB8';
 const youtube_link = 'https://www.youtube.com/channel/UCmMcPTUznYtu3zo7X3sVbgA';
@@ -78,14 +80,47 @@ document.getElementById("exit-button").addEventListener("keydown", function(even
 // Inline Links
 //
 
-// Flask
-document.getElementById("code_org_inline_link").addEventListener("click", function() {
-	window.open(code_org_inline_link, "_blank");
+// GitHub Privacy
+document.getElementById("github_privacy_inline_link").addEventListener("click", function() {
+	window.open(github_privacy_inline_link, "_blank");
 });
 
-document.getElementById("code_org_inline_link").addEventListener("keydown", function(event) {
+document.getElementById("github_privacy_inline_link").addEventListener("keydown", function(event) {
 	if (event.key == "Enter") {
-		window.open(code_org_inline_link, "_blank");
+		window.open(github_privacy_inline_link, "_blank");
+	}
+});
+
+// About GitHub Pages
+document.getElementById("github_pages_inline_link").addEventListener("click", function() {
+	window.open(github_pages_inline_link, "_blank");
+});
+
+document.getElementById("github_pages_inline_link").addEventListener("keydown", function(event) {
+	if (event.key == "Enter") {
+		window.open(github_pages_inline_link, "_blank");
+	}
+});
+
+// GitHub Repo
+document.getElementById("github_repo_inline_link").addEventListener("click", function() {
+	window.open(github_repo_inline_link, "_blank");
+});
+
+document.getElementById("github_repo_inline_link").addEventListener("keydown", function(event) {
+	if (event.key == "Enter") {
+		window.open(github_repo_inline_link, "_blank");
+	}
+});
+
+// My Website
+document.getElementById("website_inline_link").addEventListener("click", function(){
+	window.location.href = get_home_link();
+});
+
+document.getElementById("website_inline_link").addEventListener("keydown", function(event) {
+	if (event.key == "Enter") {
+		window.location.href = get_home_link();
 	}
 });
 

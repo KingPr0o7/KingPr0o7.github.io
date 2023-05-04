@@ -31,7 +31,8 @@ html, body
 			width: 90%
 
 	& > #blog-title
-		font-size: clamp(0.8rem, 5vw, 2rem)
+		text-align: center
+		font-size: clamp(1.8rem, 5vw, 2rem)
 		font-weight: 600
 
 	& > #blog-publish-info
@@ -50,14 +51,34 @@ html, body
 		& > .blog-header
 			font-size: clamp(1.5rem, 2vw, 2rem)
 			padding: 10px 0 10px 0			
-	
-.blog-text, .ordered-list, .blog-quote, .blog-image-desc
+
+.blog-note
+	@include flex(row, center, center)
+	gap: 10px
+	padding: 15px
+	margin: 20px 0 20px 0
+	text-align: center
+	background-color: rgb(254, 153, 0, 0.5)
+	border-radius: 16px
+
+	& > .note-type-image
+		width: 32px
+		height: 32px
+
+.blog-text
+	padding: 20px 0 20px 0		
+
+.blog-text, .unordered-list, .blog-quote, .blog-image-desc, .blog-note, .blog-quote-info
 	font-size: clamp(1rem, 2vw, 1.3rem)
 
-.blog-quote, .blog-image-desc
+.blog-quote, .blog-image-desc, .blog-quote-info
 	text-align: center
 
-.ordered-list
+.blog-quote
+	padding: 20px 0 20px 0
+	font-style: italic
+
+.unordered-list
 	padding: 20px 0 20px 40px
 
 ul
