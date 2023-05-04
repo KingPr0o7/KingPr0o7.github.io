@@ -57,12 +57,12 @@ document.getElementById("navbar-icon").addEventListener("keydown", function(even
 //
 
 document.getElementById("exit-button").addEventListener("click", function() {
-	window.location.href = blogs_link;
+	window.location.href = get_home_link();
 });
 
 document.getElementById("exit-button").addEventListener("keydown", function(event) {
 	if (event.key == "Enter") {
-		window.location.href = blogs_link;
+		window.location.href = get_home_link();
 	}
 });
 
