@@ -13,8 +13,6 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "sass": "^1.62.1",
-    "sass-loader": "^13.2.2",
     "vite": "^4.2.1"
   },
   "dependencies": {
