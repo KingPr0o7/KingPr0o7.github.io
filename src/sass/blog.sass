@@ -35,6 +35,35 @@ html, body
 		font-size: clamp(1.8rem, 5vw, 2rem)
 		font-weight: 600
 
+	& > .card-tags
+		@include flex(row, flex-start, center)
+		font-size: clamp(0.7rem, 3.8vw, 1.5rem)	
+		gap: 10px
+
+		& > .card-tag
+			padding: 5px
+			border-radius: 10px
+
+		& > .personal-tag
+			background: $tag-personal-background-color
+			background: $tag-personal-background-gradient	
+
+		& > .school-tag
+			background: $tag-school-background-color
+			background: $tag-school-background-gradient
+
+		& > .website-tag
+			background: $tag-website-background-color
+			background: $tag-website-background-gradient												
+
+		& > .fullstack-tag
+			background: $tag-fullstack-background-color
+			background: $tag-fullstack-background-gradient
+
+		& > .frontend-tag						
+			background: $tag-frontend-background-color
+			background: $tag-frontend-background-gradient
+
 	& > #blog-publish-info
 		font-size: clamp(0.4rem, 5vw, 1.4rem)
 		font-weight: 400		
