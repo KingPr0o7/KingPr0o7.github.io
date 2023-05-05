@@ -796,7 +796,7 @@ body[disabled] {
   animation: fadeIn 3s 1s forwards;
 }
 #intro-container > #intro-content > .intro-header > #cursor {
-  height: clamp(1.5rem, 4vw, 5.625rem);
+  height: clamp(1.3rem, 4vw, 4.4rem);
 }
 #intro-container > #intro-content > #intro-detail {
   color: #B9B9B9;
