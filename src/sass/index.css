@@ -588,6 +588,7 @@ hr {
   align-items: center;
   font-size: clamp(0.7rem, 3.8vw, 1rem);
   gap: 10px;
+  font-weight: 600;
 }
 #project-cards-container > .card > .card-content > .card-tags > .card-tag {
   padding: 5px;
