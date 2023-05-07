@@ -195,7 +195,7 @@ body::-webkit-scrollbar-thumb:hover {
   align-items: baseline;
   padding: 3px 25px 25px 25px;
   width: 100%;
-  gap: 20px;
+  gap: 50px;
   overflow-x: auto;
 }
 @media screen and (max-width: 1040px) {
@@ -237,6 +237,11 @@ body::-webkit-scrollbar-thumb:hover {
   border-radius: 12px 12px 0 0;
 }
 #blog-cards-container > .blog-card > .blog-card-content > .blog-card-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 5px;
   padding: 5px 10px 10px 10px;
 }
 #blog-cards-container > .blog-card > .blog-card-content > .blog-card-text > .blog-card-preview-title {
@@ -261,20 +266,16 @@ body::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(90deg, rgb(254, 152, 0) 0%, rgb(163, 99, 2) 100%);
 }
 #blog-cards-container > .blog-card > .blog-card-content > .blog-card-text > .card-tags > .school-tag {
-  background: #CF1313;
-  background: linear-gradient(90deg, rgb(207, 19, 19) 0%, rgb(11, 163, 205) 100%);
+  background: rgb(94, 40, 133);
+  background: linear-gradient(270deg, rgb(94, 40, 133) 0%, rgb(0, 129, 201) 100%);
 }
 #blog-cards-container > .blog-card > .blog-card-content > .blog-card-text > .card-tags > .website-tag {
-  background: #131212;
-  background: linear-gradient(90deg, rgb(19, 18, 18) 0%, rgb(118, 119, 118) 100%);
+  background: #2F58CD;
+  background: linear-gradient(270deg, rgb(47, 88, 205) 0%, rgb(43, 52, 103) 100%);
 }
 #blog-cards-container > .blog-card > .blog-card-content > .blog-card-text > .card-tags > .fullstack-tag {
-  background: #0BD2D5;
-  background: linear-gradient(90deg, rgb(11, 210, 213) 0%, rgb(29, 191, 92) 100%);
-}
-#blog-cards-container > .blog-card > .blog-card-content > .blog-card-text > .card-tags > .frontend-tag {
-  background: #0BD2D5;
-  background: linear-gradient(90deg, rgb(11, 210, 213) 0%, rgb(2, 131, 133) 100%);
+  background: #1947CE;
+  background: linear-gradient(270deg, rgb(25, 71, 206) 0%, rgb(35, 98, 0) 100%);
 }
 #blog-cards-container > .blog-card > .blog-card-content > .blog-card-text > .blog-card-description {
   font-size: clamp(0.8rem, 7vw, 1.2rem);
@@ -294,18 +295,18 @@ body::-webkit-scrollbar-thumb:hover {
 }
 #blog-cards-container > .blog-card:focus > .blog-card-redirect-container:not(:focus), #blog-cards-container > .blog-card:hover > .blog-card-redirect-container:not(:focus) {
   display: inline;
-  background-color: #0093FF;
+  background-color: #de7301;
   font-weight: 600;
 }
 #blog-cards-container > .blog-card:focus > .blog-card-redirect-container:not(:focus):hover, #blog-cards-container > .blog-card:hover > .blog-card-redirect-container:not(:focus):hover {
-  background-color: #0073FF;
+  background-color: #c26700;
 }
 #blog-cards-container > .blog-card:focus-within > .blog-card-footer {
   display: none;
 }
 #blog-cards-container > .blog-card:focus-within > .blog-card-redirect-container {
   display: inline;
-  background-color: #0073FF;
+  background-color: #c26700;
   font-weight: 600;
 }
 

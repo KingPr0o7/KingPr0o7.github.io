@@ -2,7 +2,7 @@
 	@include flex(row, center, baseline)
 	padding: 3px 25px 25px 25px
 	width: 100%
-	gap: 20px
+	gap: 50px
 	overflow-x: auto	
 
 	@media screen and (max-width: 1040px) 
@@ -34,6 +34,8 @@
 				border-radius: 12px 12px 0 0
 
 			& > .blog-card-text
+				@include flex(column, center, flex-start)
+				gap: 5px
 				padding: 5px 10px 10px 10px
 
 				& > .blog-card-preview-title
@@ -65,10 +67,6 @@
 					& > .fullstack-tag
 						background: $tag-fullstack-background-color
 						background: $tag-fullstack-background-gradient
-
-					& > .frontend-tag						
-						background: $tag-frontend-background-color
-						background: $tag-frontend-background-gradient
 				
 				& > .blog-card-description
 					font-size: clamp(0.8rem, 7vw, 1.2rem)
@@ -89,11 +87,11 @@
 
 			& > .blog-card-redirect-container:not(:focus)
 				display: inline
-				background-color: $primary-link-color
+				background-color: $primary-link-button-color
 				font-weight: 600
 
 				&:hover
-					background-color: $secondary-link-color
+					background-color: $secondary-link-button-color
 
 		&:focus-within
 			& > .blog-card-footer
@@ -101,5 +99,5 @@
 
 			& > .blog-card-redirect-container
 				display: inline
-				background-color: $secondary-link-color
+				background-color: $secondary-link-button-color
 				font-weight: 600

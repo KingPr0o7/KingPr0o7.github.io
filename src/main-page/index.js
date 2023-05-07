@@ -189,7 +189,7 @@ function type(targetElement, textToType, style, speed, index) {
 
 setTimeout( function() {
 	type("#intro-header-nl", "I'm Nathan Parker", 'add', typing_speed, 0);
-}, 1000)
+}, 1500)
 
 //
 // Intro
@@ -255,17 +255,6 @@ document.getElementById("cmi").addEventListener("click", function(){
 document.getElementById("cmi").addEventListener("keydown", function(event) {
 	if (event.key == "Enter") {
 		window.open(combo_menu_interface_link, "_blank");
-	}
-});
-
-// Personal Portfolio
-document.getElementById("personal-portfolio").addEventListener("click", function(){
-	window.open(personal_portfolio_link, "_blank");
-});
-
-document.getElementById("personal-portfolio").addEventListener("keydown", function(event) {
-	if (event.key == "Enter") {
-		window.open(personal_portfolio_link, "_blank");
 	}
 });
 

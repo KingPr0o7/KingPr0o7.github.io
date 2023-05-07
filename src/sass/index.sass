@@ -24,7 +24,7 @@ body
 		min-height: 100%
 
 #intro-container
-	padding: 0 40px 0 40px
+	padding: 0 60px 0 60px
 	@include flex(row, space-between, center)
 	@include background(orange, normal)
 
@@ -54,7 +54,7 @@ body
 			animation: fadeIn 3s 1s forwards
 
 			& > #cursor
-				height: clamp(1.3rem, 4vw, 4.4rem)	
+				height: clamp(1.3rem, 4vw, 4rem)	
 
 		& > #intro-detail
 			color: $secondary-text-color
@@ -107,18 +107,18 @@ body
 		animation: intro-image-fadeIn 3s forwards, fadeIn 4s forwards			
 
 #blogs-all-container
-	padding: 50px
 	@include flex(row, center, center)
+	padding: 25px
 
 	& > #blogs-all-redirect
 		cursor: pointer
 		padding: 15px
 		border-radius: 8px
-		background-color: $primary-link-color	
+		background-color: $primary-link-button-color	
 
 		&:hover, &:focus
 			transform: scale(1.1)
-			background-color: $secondary-link-color
+			background-color: $secondary-link-button-color
 
 #languages-container
 	padding: 25px

@@ -8,10 +8,10 @@
 	padding: 3px 25px 25px 25px
 	width: 100%
 	gap: 20px
-	overflow-x: auto
+	//overflow-x: auto
 
-	@media screen and (max-width: 860px) 
-		justify-content: flex-start	
+	//@media screen and (max-width: 860px) 
+	//	justify-content: flex-start
 
 	& > .card
 		position: relative
@@ -114,10 +114,6 @@
 				& > .fullstack-tag
 					background: $tag-fullstack-background-color
 					background: $tag-fullstack-background-gradient
-
-				& > .frontend-tag						
-					background: $tag-frontend-background-color
-					background: $tag-frontend-background-gradient
 			
 			& > .card-desc
 				font-size: clamp(0.8rem, 1vw, 1rem)	
@@ -128,7 +124,7 @@
 				& > .card-link-button
 					@include flex(row, center, center)
 					gap: 10px
-					background-color: $primary-link-color
+					background-color: $primary-link-button-color
 					border: none
 					padding: 10px
 					font-weight: 400
@@ -138,7 +134,7 @@
 					cursor: pointer			
 
 					&:hover, &:focus
-						background-color: $secondary-link-color
+						background-color: $secondary-link-button-color
 
 					& > .card-link-image
 						width: 32px
