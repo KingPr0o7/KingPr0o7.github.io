@@ -21,6 +21,7 @@ const privacy_link = '../privacy-policy/index.html'
 const discord_link = 'https://discord.gg/QGDPS6wHB8';
 const youtube_link = 'https://www.youtube.com/channel/UCmMcPTUznYtu3zo7X3sVbgA';
 const twitter_link = 'https://twitter.com/KingPr0o7';
+const gmail_link = 'https://mail.google.com/mail/?view=cm&fs=1&to=nathan@ncp.dev&su=&body=';
 const github_link = 'https://github.com/KingPr0o7';
 
 //
@@ -156,7 +157,6 @@ document.getElementById("contact-youtube").addEventListener("keydown", function(
 	}
 });
 
-
 // Twitter
 document.getElementById("contact-twitter").addEventListener("click", function() {
 	window.open(twitter_link, "_blank");
@@ -165,6 +165,17 @@ document.getElementById("contact-twitter").addEventListener("click", function() 
 document.getElementById("contact-twitter").addEventListener("keydown", function(event) {
 	if (event.key == "Enter") {
 		window.open(twitter_link, "_blank");
+	}
+});
+
+// Gmail
+document.getElementById("contact-gmail").addEventListener("click", function() {
+	window.open(gmail_link, "_blank");
+});
+
+document.getElementById("contact-gmail").addEventListener("keydown", function(event) {
+	if (event.key == "Enter") {
+		window.open(gmail_link, "_blank");
 	}
 });
 
