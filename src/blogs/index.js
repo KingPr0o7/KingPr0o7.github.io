@@ -2,7 +2,7 @@
 // Links
 //
 
-const mode = 'dev'; // 'dev' or 'prod'
+const mode = 'prod'; // 'dev' or 'prod'
 
 function get_home_link() {
 	if (mode == 'dev') {
