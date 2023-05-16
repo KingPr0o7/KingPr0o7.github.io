@@ -1,11 +1,11 @@
 {
   "name": "personalwebsite",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.8.0",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "echo ncp.dev > ./dist/CNAME && gh-pages -d dist",
+    "deploy": "echo ncp.dev > ./dist/CNAME && echo dist/ > ./dist/.gitignore && echo node_modules/ >> ./dist/.gitignore && gh-pages -d dist",
     "dev": "vite",
     "prebuild": "replace-in-files --string=\"const mode = 'dev'\" --replacement=\"const mode = 'prod'\" src/404-page/404.js src/blogs/index.js src/blogs/all-about-me/index.js src/blogs/the-computer-science-speedrun/index.js src/privacy-policy/index.js",
     "build": "vite build",
