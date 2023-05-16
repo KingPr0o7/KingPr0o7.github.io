@@ -16,7 +16,7 @@ type('error-name', 'PAGE NOT FOUND!', 40, 0, true);
 // Links
 //
 
-const mode = 'prod'; // 'dev' or 'prod'
+const mode = 'dev'; // 'dev' or 'prod'
 
 function get_home_link() {
 	if (mode == 'dev') {
