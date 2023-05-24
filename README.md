@@ -35,7 +35,7 @@ You can view my website on two domains. Those consist of: [KingPr0o7.github.io](
 ## Get Distribution Files (Complied Files)
 
 ### Steps
-- Install [replace-in-file](https://www.npmjs.com/package/replace-in-files-cli) **OR** `npm install replace-in-files-cli`
+- Install [replace-in-files-cli](https://www.npmjs.com/package/replace-in-files-cli) **OR** `npm install replace-in-files-cli`
 - Install [ncp](https://www.npmjs.com/package/ncp) **OR** `npm install ncp`
 - Install [del-cli](https://www.npmjs.com/package/del-cli) **OR** `npm install del-cli`
 - Run: `npm run build` in the CLI.
