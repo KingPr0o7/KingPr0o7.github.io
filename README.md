@@ -59,3 +59,5 @@ __You're free to contribute, and I deeply appearance any help, advice, or guidan
 
 # License 
 [GNU AGPLv3](https://github.com/KingPr0o7/KingPr0o7.github.io/blob/main/LICENSE) © [KingPr0o7 (Nathan Parker)](https://github.com/KingPr0o7)
+
+<p align="center"><img src="images/branding/Nathan Parker.png?raw=true alt="Nathan Parker"></p>                                                                 
