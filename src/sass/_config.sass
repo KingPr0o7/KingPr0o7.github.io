@@ -20,8 +20,8 @@ $scroll-bar-background-color: rgba(200, 200, 200, 0.5)
 $project-card-title-background-color: rgba(0, 0, 0, 0.3 )
 $project-card-content-background-color: rgba(0, 0, 0, 0.6)
 
-$tooltip-background-color: #292a2d
-$tooltip-border-color: #CfD1D4
+$tooltip-background-color: #292A2D
+$tooltip-border-color: #CFD1D4
 
 $blog-warning-background-color: rgb(254, 153, 0, 0.5)
 
@@ -36,6 +36,9 @@ $font: 'Rubik', sans-serif
 
 $primary-link-color: #0093FF
 $secondary-link-color: #0073FF
+
+$primary-link-filter: invert(39%) sepia(87%) saturate(2316%) hue-rotate(185deg) brightness(101%) contrast(109%)	
+$secondary-link-filter: invert(28%) sepia(80%) saturate(3766%) hue-rotate(205deg) brightness(104%) contrast(104%)
 
 $primary-link-button-color: #de7301  
 $secondary-link-button-color: #c26700
@@ -96,6 +99,31 @@ hr
 
 *:focus-visible
 	outline: 2px solid #FFFFFF
+	border-radius: 8px
+
+#link, #gmail-link
+	@include flex(row, space-around, center)
+	font-size: clamp(1rem, 3vw, 1.8rem)
+	cursor: pointer		
+
+	&:hover #link-text, &:focus #link-text
+		color: $secondary-link-color
+
+	&:hover #link-image, &:focus #link-image
+		filter: $secondary-link-filter
+
+	& > #link-image 
+		width: clamp(24px, 2vw, 35px)
+		height: auto
+		margin-right: 5px
+		filter: $primary-link-filter
+
+	& > #link-text
+		color: $primary-link-color	
+
+.inline
+	background-color: #141414
+	padding: 5px
 	border-radius: 8px
 
 //

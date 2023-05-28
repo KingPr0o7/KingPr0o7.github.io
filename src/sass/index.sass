@@ -73,27 +73,7 @@ body
 			animation: fadeIn 4s 3s forwards	
 
 			@media screen and (max-width: 1224px) 
-				justify-content: center
-
-			& > #link
-				@include flex(row, space-around, center)
-				font-size: clamp(1rem, 3vw, 1.8rem)
-				cursor: pointer		
-
-				&:hover #link-text, &:focus #link-text
-					color: $secondary-link-color
-
-				&:hover #link-image, &:focus #link-image
-					filter: invert(28%) sepia(80%) saturate(3766%) hue-rotate(205deg) brightness(104%) contrast(104%)
-
-				& > #link-image 
-					width: clamp(24px, 2vw, 35px)
-					height: auto
-					margin-right: 5px
-					filter: invert(39%) sepia(87%) saturate(2316%) hue-rotate(185deg) brightness(101%) contrast(109%)	
-
-				& > #link-text
-					color: $primary-link-color		
+				justify-content: center	
 
 	& > #intro-image
 		height: auto

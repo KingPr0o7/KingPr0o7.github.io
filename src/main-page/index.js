@@ -134,7 +134,6 @@ for (var i = 0; i < links.length; i++) {
 
 async function removeText(element, cursor, text, typing_speed, speed) {
 	let length = element.textContent.length - 4;
-	console.log(length)
 	for (var i = 0; i < length; i++) {
 	  cursor.remove();
 	  element.textContent = element.textContent.slice(0, -1);
@@ -348,6 +347,10 @@ document.getElementById("footer-privacy").addEventListener("keydown", function(e
 	}
 });
 
+document.querySelector('[data-close-modal]').addEventListener('click', function() {
+	document.querySelector('[data-modal]').close();
+});
+
 //
 // Contact Links
 //
@@ -387,12 +390,22 @@ document.getElementById("contact-twitter").addEventListener("keydown", function(
 
 // Gmail
 document.getElementById("contact-gmail").addEventListener("click", function() {
+	document.querySelector('[data-modal]').showModal();
+});
+
+document.getElementById("gmail-link").addEventListener("click", function() {
 	window.open(gmail_link, "_blank");
+});
+
+document.getElementById("gmail-link").addEventListener("keydown", function(event) {
+	if (event.key == "Enter") {
+		window.open(gmail_link, "_blank");
+	}
 });
 
 document.getElementById("contact-gmail").addEventListener("keydown", function(event) {
 	if (event.key == "Enter") {
-		window.open(gmail_link, "_blank");
+		document.querySelector('[data-modal]').showModal();
 	}
 });
 

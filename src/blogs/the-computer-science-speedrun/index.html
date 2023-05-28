@@ -135,6 +135,22 @@
 		</div>
 	</div>
 
+	<!-- Gmail Modal -->
+	<dialog data-modal id="footer-modal">
+		<div id='footer-modal-container'>
+			<div id="footer-modal-content">
+				<p>📧 <span class='inline'>nathan@ncp.dev</span></p>
+				<div id="gmail-link" tabindex="0">
+					<img id="link-image" src="/images/icons/link.svg" alt="Redirect Icon" />
+					<p id="link-text">Gmail</p>
+				</div>	
+			</div>
+			<div id="footer-modal-button">
+				<button data-close-modal id="footer-modal-close">Close</button>
+			</div>
+		</div>
+	</dialog>
+
 	<!-- Footer -->
 	<div class="hidden" id="footer">
 		<div id="footer-container">
@@ -153,7 +169,7 @@
 						<div class="contact-image-container">
 							<img class="contact-image" id="contact-twitter" src="/images/icons/twitter.svg" alt="Contact Method Twitter" title="Twitter" tabindex="0">
 						</div>
-						<div class="contact-image-container">
+						<div class="contact-image-container" data-open-modal>
 							<img class="contact-image" id="contact-gmail" src="/images/icons/gmail.svg" alt="Contact Method Gmail" title="Gmail" tabindex="0">
 						</div>
 						<div class="contact-image-container">

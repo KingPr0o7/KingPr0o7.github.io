@@ -34,6 +34,36 @@ hr {
   border-radius: 8px;
 }
 
+#link, #gmail-link {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  font-size: clamp(1rem, 3vw, 1.8rem);
+  cursor: pointer;
+}
+#link:hover #link-text, #link:focus #link-text, #gmail-link:hover #link-text, #gmail-link:focus #link-text {
+  color: #0073FF;
+}
+#link:hover #link-image, #link:focus #link-image, #gmail-link:hover #link-image, #gmail-link:focus #link-image {
+  filter: invert(28%) sepia(80%) saturate(3766%) hue-rotate(205deg) brightness(104%) contrast(104%);
+}
+#link > #link-image, #gmail-link > #link-image {
+  width: clamp(24px, 2vw, 35px);
+  height: auto;
+  margin-right: 5px;
+  filter: invert(39%) sepia(87%) saturate(2316%) hue-rotate(185deg) brightness(101%) contrast(109%);
+}
+#link > #link-text, #gmail-link > #link-text {
+  color: #0093FF;
+}
+
+.inline {
+  background-color: #141414;
+  padding: 5px;
+  border-radius: 8px;
+}
+
 @keyframes fadeIn {
   0% {
     opacity: 0;

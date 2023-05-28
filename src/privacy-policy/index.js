@@ -170,13 +170,27 @@ document.getElementById("contact-twitter").addEventListener("keydown", function(
 
 // Gmail
 document.getElementById("contact-gmail").addEventListener("click", function() {
+	document.querySelector('[data-modal]').showModal();
+});
+
+document.getElementById("gmail-link").addEventListener("click", function() {
 	window.open(gmail_link, "_blank");
+});
+
+document.getElementById("gmail-link").addEventListener("keydown", function(event) {
+	if (event.key == "Enter") {
+		window.open(gmail_link, "_blank");
+	}
 });
 
 document.getElementById("contact-gmail").addEventListener("keydown", function(event) {
 	if (event.key == "Enter") {
-		window.open(gmail_link, "_blank");
+		document.querySelector('[data-modal]').showModal();
 	}
+});
+
+document.querySelector('[data-close-modal]').addEventListener('click', function() {
+	document.querySelector('[data-modal]').close();
 });
 
 // GitHub
