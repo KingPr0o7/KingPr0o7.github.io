@@ -1,3 +1,13 @@
+import logo from './images/branding/ncp-logo.png';
+import redirect_icon from './images/icons/link.svg';
+import github_icon from './images/icons/logos/github.svg';
+import x_icon from './images/icons/logos/x.svg';
+import discord_icon from './images/icons/logos/discord.svg';
+import youtube_icon from './images/icons/logos/youtube.svg';
+import gmail_icon from './images/icons/logos/gmail.svg';
+
+console.log(logo, redirect_icon);
+
 //
 // iOS Viewport Height Fix (Thanks to: coreuter "shorturl.at/abGT6")
 //
@@ -101,7 +111,7 @@ footer.innerHTML = `
         <div id="footer-modal-content">
             <p>📧 <span class='inline'>nathan@ncp.dev</span></p>
             <div id="gmail-link" tabindex="0">
-                <img id="link-image" src="/images/icons/link.svg" alt="Redirect Icon" />
+                <img id="link-image" src="${redirect_icon}" alt="Redirect Icon" />
                 <p id="link-text">Gmail</p>
             </div>	
         </div>
@@ -116,24 +126,24 @@ footer.innerHTML = `
         <div id="footer-container">
             <div id="footer-content">
                 <div id="footer-logo">
-                    <img id="footer-icon" src="/images/branding/ncp-logo.png" alt="NCP Icon" title="NCP Logo">
+                    <img id="footer-icon" src="${logo}" alt="NCP Icon" title="NCP Logo">
                 </div>			
                 <div id="footer-socials">
                     <div id="contact-container">
                         <div class="contact-image-container">
-                            <img class="contact-image" id="contact-github" src="/images/icons/logos/github.svg" alt="Contact Method GitHub" title="GitHub" tabindex="0">
+                            <img class="contact-image" id="contact-github" src="${github_icon}" alt="Contact Method GitHub" title="GitHub" tabindex="0">
                         </div>	
                         <div class="contact-image-container">
-                            <img class="contact-image" id="contact-x" src="/images/icons/logos/x.svg" alt="Contact Method X" title="X" tabindex="0">
+                            <img class="contact-image" id="contact-x" src="${x_icon}" alt="Contact Method X" title="X" tabindex="0">
                         </div>
                         <div class="contact-image-container">
-                            <img class="contact-image" id="contact-discord" src="/images/icons/logos/discord.svg" alt="Contact Method Discord" title="Discord" tabindex="0">
+                            <img class="contact-image" id="contact-discord" src="${discord_icon}" alt="Contact Method Discord" title="Discord" tabindex="0">
                         </div>
                         <div class="contact-image-container">
-                            <img class="contact-image" id="contact-youtube" src="/images/icons/logos/youtube.svg" alt="Contact Method YouTube" title="YouTube" tabindex="0">
+                            <img class="contact-image" id="contact-youtube" src="${youtube_icon}" alt="Contact Method YouTube" title="YouTube" tabindex="0">
                         </div>
                         <div class="contact-image-container" data-open-modal>
-                            <img class="contact-image" id="contact-gmail" src="/images/icons/logos/gmail.svg" alt="Contact Method Gmail" title="Gmail" tabindex="0">
+                            <img class="contact-image" id="contact-gmail" src="${gmail_icon}" alt="Contact Method Gmail" title="Gmail" tabindex="0">
                         </div>
                     </div>
                 </div>
