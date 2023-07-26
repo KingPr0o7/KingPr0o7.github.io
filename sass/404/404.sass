@@ -1,0 +1,87 @@
+@import '../config'
+@import '../background'
+@import '../navbar'
+
+html, body
+	@include background(red, normal)
+
+#readme-link
+	font-size: 1.4rem
+	@media screen and (max-width: 1137px) 
+		display: inline
+
+.page
+	height: 100%
+
+	@media screen and (max-height: 300px)
+		padding-top: 50px
+
+	@media screen and (max-height: 280px)
+		padding-top: 25px		
+
+	& > #error-container
+		@include flex(column, center, center)
+		height: 100%
+		gap: 20px
+
+		& > #error-content
+			@include flex(column, center, center)
+
+			& > #error-code 
+				font-size: clamp(5rem, 10vw, 10rem)
+				font-family: 'Rubik', sans-serif
+				color: white
+
+			& > #error-link 
+				text-decoration: underline
+				cursor: pointer
+
+			& > #error-name, #error-link 
+				font-family: 'Rubik', sans-serif
+				font-size: clamp(1rem, 2vw, 2rem)
+				color: white	
+
+			& > #error-name
+				& > #cursor 
+					display: inline-block
+					position: relative
+					z-index: 1
+					top: 5px
+					background-color: $primary-text-color
+					height: clamp(1rem, 2vw, 2rem)
+					width: 3px
+
+#footer 
+	@include flex(column, center, center)
+	position: fixed
+	top: calc(100% - 44px)
+	left: 50%
+	transform: translate(-50%)
+	gap: 10px
+	width: 100%
+
+	@media screen and (max-width: 320px) 
+		top: calc(100% - 88px)
+
+	& > #github-links 
+		@include flex(row, center, center)
+		gap: 10px
+
+		@media screen and (max-width: 320px) 
+			flex-direction: column
+
+		& > .site-embed 
+			cursor: pointer
+			@include flex(row, center, center)
+			gap: 10px
+			padding: 5px
+			background-color: #2c2c2c
+			border-radius: 8px
+			color: white
+			font-family: 'Rubik', sans-serif
+			font-size: 1rem
+
+			& > .site-icon 
+				width: 24px
+				height: 24px
+	
