@@ -17,7 +17,6 @@
   "dependencies": {
     "del-cli": "^5.0.0",
     "gh-pages": "^5.0.0",
-    "ncp": "^2.0.0",
     "node": "^19.8.1"
   }
 }
