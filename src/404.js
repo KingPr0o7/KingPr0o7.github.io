@@ -8,7 +8,7 @@ import {
 	readme_link, 
 	github_status_link, 
 	x_github_status 
-} from "../config";
+} from "../src/config";
 
 var cursor = document.getElementById("cursor");
 const numbers = '0123456789';

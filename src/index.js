@@ -9,8 +9,9 @@ import {
 	the_computer_science_speedrun_blog,
 	// Links
 	combo_menu_interface_link,
-} from "./config";
+} from "../src/config";
 
+console.log(blogs_page)
 setup_page();
 
 //

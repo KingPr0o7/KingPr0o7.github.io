@@ -8,7 +8,7 @@
     "deploy": "echo ncp.dev > ./dist/CNAME && gh-pages -d dist",
     "dev": "vite",
     "build": "vite build",
-    "postbuild": "ncp dist/404 dist && del-cli --force dist/404 && echo ncp.dev > ./dist/CNAME",
+    "postbuild": "echo ncp.dev > ./dist/CNAME",
     "preview": "vite preview"
   },
   "devDependencies": {
