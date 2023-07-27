@@ -6,8 +6,6 @@ import discord_icon from './images/icons/logos/discord.svg';
 import youtube_icon from './images/icons/logos/youtube.svg';
 import gmail_icon from './images/icons/logos/gmail.svg';
 
-console.log(logo, redirect_icon);
-
 //
 // iOS Viewport Height Fix (Thanks to: coreuter "shorturl.at/abGT6")
 //
