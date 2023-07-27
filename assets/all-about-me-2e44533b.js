@@ -1,0 +1,1 @@
+import{s as t,t as n,j as i}from"./config-501c64b6.js";import{b as o}from"./blog-cbb0de2e.js";/* empty css             */o();t();document.getElementById("code_org_inline_link").addEventListener("click",e=>n(i,"click","link",e));document.getElementById("code_org_inline_link").addEventListener("keydown",e=>n(i,"tab","link",e));
