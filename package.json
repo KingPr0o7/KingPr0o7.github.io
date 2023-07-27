@@ -7,7 +7,7 @@
     "predeploy": "npm run build",
     "deploy": "echo ncp.dev > ./dist/CNAME && gh-pages -d dist",
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build --emptyOutDir",
     "postbuild": "echo ncp.dev > ./dist/CNAME",
     "preview": "vite preview"
   },
