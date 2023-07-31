@@ -1,37 +1,55 @@
 .desktop-navbar
-	@include flex(row, space-between, center)
 	position: fixed
-	padding: 0 30px 0 30px
+	margin-top: 10px	
+	width: 100%
+	@include flex(row, center, center)
 	z-index: 3
 	top: 0
-	width: 100%
-	overflow: hidden
-	backdrop-filter: blur(15px)
-	-webkit-backdrop-filter: blur(15px)
-	height: 100px
 
-	& > .navbar-links
-		@include flex(row, center, center)
-		gap: 40px
+	& > .navbar
+		padding: 0 0 0 20px
+		@include flex(row, space-between, center)
+		background-color: rgba(0, 0, 0, 0.3)
+		backdrop-filter: blur(15px)
+		-webkit-backdrop-filter: blur(15px)
+		border-radius: 20px
+		height: 75px
+		overflow: hidden
+		width: fit-content
 
-		& > .navbar-link
-			font-size: clamp(1rem, 2vw, 1.4rem)
-			z-index: 1
-			background-size: 1rem 1rem
-			background: none
-			border: none
-			text-decoration: none
-			border-radius: 4px
-			cursor: pointer
-			text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.3)
+		@media screen and (max-width: 720px) 
+			width: 80%	
 
-			@media screen and (max-width: 1138px) 
-				display: none			
+		& > .navbar-divider
+			margin: 0 20px 0 20px
+			width: 3px
+			border-radius: 20px
+			height: 50px
+			background-color: #FFF		
 
-	& > #navbar-icon 
-		height: 80px
-		width: 73.33px
-		object-fit: contain
+			@media screen and (max-width: 720px) 
+				display: none
+
+		& > .navbar-links
+			@include flex(row, flex-start, center)
+			height: 100%
+			width: 100%
+			font-size: clamp(1.2rem, 2vw, 1.4rem)
+
+			@media screen and (max-width: 720px) 
+				display: none	
+
+			& > .navbar-link
+				@include flex(column, center, center)
+				height: 100%
+				padding: 20px
+				cursor: pointer
+				text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.3)
+				border-radius: 4px
+
+				&:hover
+					background-color: rgba(0, 0, 0, 0.4)
+		
 
 /*                             */
 /* Mobile Navigation Hamburger */
@@ -39,17 +57,15 @@
 
 .mobile-hamburger 
 	display: none
+	margin: 0 20px 0 20px
 	padding: 0
-	position: absolute
-	right: 30px
-	width: 32px
 	height: 32px
+	width: 32px
 	flex-direction: column
 	justify-content: space-between
-	opacity: 0
 	animation: appear 2.2s ease
 
-	@media screen and (max-width: 1139px) 
+	@media screen and (max-width: 720px) 
 		opacity: 1
 		display: flex
 
