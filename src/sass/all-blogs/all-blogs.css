@@ -127,7 +127,7 @@ body::-webkit-scrollbar-thumb:hover {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color: #181818;
+  background-color: #000000;
   border-radius: 100px;
   gap: 10px;
   width: 200px;
@@ -238,7 +238,7 @@ body::-webkit-scrollbar-thumb:hover {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  background-color: #252525;
+  background-color: #1d1d1d;
   border-radius: 12px;
   min-width: 500px;
   max-width: 500px;
@@ -355,7 +355,7 @@ body::-webkit-scrollbar-thumb:hover {
   align-items: center;
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
-  background-color: #252525;
+  background-color: #1d1d1d;
   border-radius: 10px;
   width: 50%;
   padding: 10px;
@@ -436,7 +436,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 #footer-modal {
-  background-color: #252525;
+  background-color: #1d1d1d;
   position: fixed;
   padding: 40px;
   border: none;
@@ -482,8 +482,8 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 body {
-  background: radial-gradient(100% 100% at 50% 0%, rgb(67, 94, 183) 0%, #181818 100%);
-  background-color: #181818;
+  background: radial-gradient(100% 100% at 50% 0%, rgb(67, 94, 183) 0%, #000000 100%);
+  background-color: #000000;
   animation: show-radial-background 5s forwards ease-in-out;
   background-repeat: no-repeat;
 }
