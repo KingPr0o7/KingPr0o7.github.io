@@ -91,9 +91,9 @@
 	</div>
 	
 	<!-- Intro Page -->
-	<div class="page" id="intro-container">
+	<div id="intro-container">
 		<div id="intro-content">
-			<h1 class="intro-header">Hello,</h1><h1 class="intro-header" id="intro-header-nl"><span id="cursor"></span></h1>
+			<h1 class="intro-header">Welcome,</h1><h1 class="intro-header" id="intro-header-nl"><span id="cursor"></span></h1>
 			<p id="intro-detail">An aspiring developer expanding his ability to create a positive impact in the tech industry.</p>
 			<div id="intro-link">
 				<div id="link" tabindex="0">
@@ -102,161 +102,111 @@
 				</div>
 			</div>
 		</div>
-		<img id="intro-image" src="/images/branding/KingPr0o7.jpg" alt="Image of Nathan Parker's Profile Picture" title="Nathan Parker's Profile Picture">
 	</div>
 
-	<!-- Blogs Page -->
-	<div class="page" id="blogs-container">
-		<h1 id="blogs" class="page-header hidden"><span class="comment-indicator-start">//</span> Blogs <span class="comment-indicator-end"></span></h1>
-		<p class="disclaimer hidden">Personal blogs that relate to me or my projects.</p>
-		<div id="blog-cards-container">
-			<div class="blog-card hidden" tabindex="0">
-				<div class="blog-card-content">
-					<img class="blog-card-image" src="/images/blogs/all-about-me/about-me-thumb.png" alt="All About Me Thumbnail">
-					<div class="blog-card-text">
-						<h1 class="blog-card-preview-title">All About Me</h1>
-						<div class="card-tags">
-							<p class="card-tag personal-tag">PERSONAL</p>
-						</div>
-						<p class="blog-card-description">An in-depth analysis focused on Nathan Parker, targeting his love for computer science, devotion to the best experience for end users and the community, and his future plans to achieve his goals and complete his mission on this blue marble. </p>
-					</div>
-				</div>
-				<div class="blog-card-footer">
-					<p class="blog-card-timestamp">Apr 11, 2023</p>
-				</div>
-				<div id="all-about-me" class="blog-card-redirect-container" tabindex="0">
-					<span class="blog-card-redirect">Read More</span>
-				</div>
-			</div>			
-			
-			<div class="blog-card hidden" tabindex="0">
-				<div class="blog-card-content">
-					<img class="blog-card-image" src="/images/blogs/the-computer-science-speedrun/CSS-thumb.png" alt="The Computer Science Speedrun Thumbnail">
-					<div class="blog-card-text">
-						<h1 class="blog-card-preview-title">The Computer Science Speedrun</h1>
-						<div class="card-tags">
-							<p class="card-tag school-tag">SCHOOL</p>
-							<p class="card-tag website-tag">WEBSITE</p>
-						</div>
-						<p class="blog-card-description">Nathan Parker's Computer Science Speedrun (CSS), where he was continuously questioning himself and how far his teacher was willing to challenge him. With only 7 hours left on the clock, the speedrun kicked off into one of his most memorable projects. </p>
-					</div>
-				</div>
-				<div class="blog-card-footer">
-					<p class="blog-card-timestamp">Apr 11, 2023</p>
-				</div>
-				<div id="the-computer-science-speedrun" class="blog-card-redirect-container" tabindex="0">
-					<span class="blog-card-redirect">Read More</span>
-				</div>
-			</div>
-		</div>
-		<div id="blogs-all-container" class="hidden">
-			<div id="blogs-all-redirect" class="hidden" tabindex="0">View All Blogs</div>
-		</div>
-	</div>
-
-	<!-- Projects Page -->
-	<div class="page" id="project-container">
+	<div class="section" id="projects-container">
 		<h1 id="projects" class="page-header hidden"><span class="comment-indicator-start">//</span> Projects <span class="comment-indicator-end"></span></h1>
-		<p class="disclaimer hidden">A handful of my favorite projects.</p>
-		<div id="project-cards-container">
-			<div class="card hidden" tabindex="0">
-				<img class="card-image" src="/images/project-cards/cmi-project-card.png" alt="Combo Menu Interface Thumbnail">
-				<h1 class="card-preview-title">Combo Menu Interface</h1>
-				<div class="card-content">
-					<h1 class="card-title">Combo Menu Interface</h1>
-					<div class="card-tags">
-						<p class="card-tag school-tag">SCHOOL</p>
-						<p class="card-tag website-tag">WEBSITE</p>
-						<p class="card-tag fullstack-tag">FULL-STACK</p>
-					</div>
-					<p class="card-desc">A computer science project worth three weeks of work, done in 2 days! It's a web application where you can order menu items and get combo deals. With embed item/cart details every step of the way.</p>
-					<div class="card-link">
-						<button class="card-link-button" id="cmi"><img class="card-link-image" src="/images/logos/github.png" alt="GitHub Icon" title="GitHub Icon">View on GitHub</button>
-					</div>
+		<div id="project-cards">
+			<!--<div class="project">
+				<div class="project-header">
+					<img class="project-icon" src="images/logos/ytplus.png">
+					<span class="project-title">YouTube+</span>
 				</div>
-			</div>	
-		</div>
-	</div>
+				<span class="project-desc">An extension founded on the frustration of the inconsistencies of YouTube. YouTube+ fixes most of those with fixes and new features that improve the surfing of YouTube.</span>
+			</div>-->
 
-	<!-- Languages Page -->
-	<div class="page" id="languages-container">
-		<h1 id="languages" class="page-header hidden"><span class="comment-indicator-start">//</span> Languages <span class="comment-indicator-end"></span></h1>
-		<p class="disclaimer hidden">The software programming languages under my belt.</p>
-		<div id="languages-content">
-			<div id="languages-widgets-container">
-				<div class="language-widget hidden">
-					<div class="language-information-wrapper">
-						<img class="language-widget-logo" src="/images/logos/skriptlang.png" alt="SkriptLang Logo" title="SkriptLang Logo">
-						<div class="language-information">
-							<p class="language-name">SkriptLang</p>
-							<p class="language-duration" id="language-skriptlang-duration" tabindex="0">X unit</p>
-							<span class="tooltip" id="skriptlang-tooltip">January 19, 2020</span>
-						</div>
+			<div class="project">
+				<div class="project-header">
+					<div class="project-header-info">
+						<img class="project-icon" src="images/logos/combo-menu.png">
+						<span class="project-title">Combo Menu Interface</span>
 					</div>
-					<img class="language-level" src="/images/icons/levels/lvl3.svg" alt="Level 3" title="Proficient Level (3)">
-				</div>
-
-				<div class="language-widget hidden">
-					<div class="language-information-wrapper">
-						<img class="language-widget-logo" src="/images/logos/html5.svg" alt="HTML 5 Logo" title="HTML 5 Logo">
-						<div class="language-information">
-							<p class="language-name">HTML</p>
-							<p class="language-duration" id="language-html-duration" tabindex="0">X unit</p>
-							<span class="tooltip" id="html-tooltip">August 11, 2021</span>
-						</div>
+					<div class="project-header-redirect">
+						<img class="project-redirect-icon" src="images/icons/link.svg">
 					</div>
-					<img class="language-level" src="/images/icons/levels/lvl2.svg" alt="Level 2" title="Intermediate Level (2)">
 				</div>
-
-				<div class="language-widget hidden">
-					<div class="language-information-wrapper">
-						<img class="language-widget-logo" src="/images/logos/css3.svg" alt="CSS 3 Logo" title="CSS 3 Logo">
-						<div class="language-information">
-							<p class="language-name">CSS</p>
-							<p class="language-duration" id="language-css-duration" tabindex="0">X unit</p>
-							<span class="tooltip" id="css-tooltip">August 11, 2021</span>
-						</div>
-					</div>
-					<img class="language-level" src="/images/icons/levels/lvl2.svg" alt="Level 2" title="Intermediate Level (2)">
-				</div>
-
-				<div class="language-widget hidden">
-					<div class="language-information-wrapper">
-						<img class="language-widget-logo" src="/images/logos/javascript.svg" alt="JavaScript ES6 Logo" title="JavaScript ES6 Logo">
-						<div class="language-information">
-							<p class="language-name">JavaScript</p>
-							<p class="language-duration" id="language-javascript-duration" tabindex="0">X unit</p>
-							<span class="tooltip" id="javascript-tooltip">August 11, 2021</span>
-						</div>
-					</div>
-					<img class="language-level" src="/images/icons/levels/lvl2.svg" alt="Level 2" title="Intermediate Level (2)">
-				</div>
-
-				<div class="language-widget hidden">
-					<div class="language-information-wrapper">
-						<img class="language-widget-logo" src="/images/logos/sass.svg" alt="Sass Logo" title="Sass Logo">
-						<div class="language-information">
-							<p class="language-name">Sass</p>
-							<p class="language-duration" id="language-sass-duration" tabindex="0">X unit</p>
-							<span class="tooltip" id="sass-tooltip">April 27, 2023</span>
-						</div>
-					</div>
-					<img class="language-level" src="/images/icons/levels/lvl2.svg" alt="Level 2" title="Intermediate Level (2)">
-				</div>
-
-				<div class="language-widget hidden">
-					<div class="language-information-wrapper">
-						<img class="language-widget-logo" src="/images/logos/python.svg" alt="Python Logo" title="Python Logo">
-						<div class="language-information">
-							<p class="language-name">Python</p>
-							<p class="language-duration" id="language-python-duration" tabindex="0">X unit</p>
-							<span class="tooltip" id="python-tooltip">October 17, 2022</span>
-						</div>
-					</div>
-					<img class="language-level" src="/images/icons/levels/lvl1.svg" alt="Level 1" title="Beginner Level (1)">
-				</div>
+				<span class="project-desc">A CS project worth 3 weeks of work, done in 2 days! A web application where you can order menu items and get combo deals, with embedded item/cart details!</span>
 			</div>
 		</div>
 	</div>
+
+	<div class="section" id="languages-container">
+		<h1 id="languages" class="page-header hidden"><span class="comment-indicator-start">//</span> Technologies <span class="comment-indicator-end"></span></h1>
+		<div id="language-widgets">
+			<div class="language-widget">
+				<div class="language-information-wrapper">
+					<img class="language-widget-logo" src="images/logos/skriptlang.png" alt="SkriptLang Logo" title="SkriptLang Logo">
+					<div class="language-information">
+						<p class="language-name">SkriptLang</p>
+						<p class="language-duration" id="language-skriptlang-duration" tabindex="0"></p>
+						<span class="tooltip" id="css-tooltip">January 19, 2020</span>
+					</div>
+				</div>
+				<img class="language-level" src="/images/icons/levels/lvl3.svg" alt="Level 3" title="Proficient Level (3)">
+			</div>
+
+			<div class="language-widget">
+				<div class="language-information-wrapper">
+					<img class="language-widget-logo" src="images/logos/html5.svg" alt="HTML 5 Logo" title="HTML 5 Logo">
+					<div class="language-information">
+						<p class="language-name">HTML</p>
+						<p class="language-duration" id="language-html-duration" tabindex="0"></p>
+						<span class="tooltip" id="html-tooltip">August 11, 2021</span>
+					</div>
+				</div>
+				<img class="language-level" src="/images/icons/levels/lvl2.svg" alt="Level 2" title="Intermediate Level (2)">
+			</div>
+
+			<div class="language-widget">
+				<div class="language-information-wrapper">
+					<img class="language-widget-logo" src="images/logos/css3.svg" alt="CSS 3 Logo" title="CSS 3 Logo">
+					<div class="language-information">
+						<p class="language-name">CSS</p>
+						<p class="language-duration" id="language-css-duration" tabindex="0"></p>
+						<span class="tooltip" id="css-tooltip">August 11, 2021</span>
+					</div>
+				</div>
+				<img class="language-level" src="/images/icons/levels/lvl2.svg" alt="Level 2" title="Intermediate Level (2)">
+			</div>
+
+			<div class="language-widget">
+				<div class="language-information-wrapper">
+					<img class="language-widget-logo" src="images/logos/sass.svg" alt="SASS Logo" title="SASS Logo">
+					<div class="language-information">
+						<p class="language-name">SASS</p>
+						<p class="language-duration" id="language-sass-duration" tabindex="0"></p>
+						<span class="tooltip" id="sass-tooltip">April 27, 2023</span>
+					</div>
+				</div>
+				<img class="language-level" src="/images/icons/levels/lvl2.svg" alt="Level 2" title="Intermediate Level (2)">
+			</div>
+
+			<div class="language-widget">
+				<div class="language-information-wrapper">
+					<img class="language-widget-logo" src="images/logos/javascript.svg" alt="JavaScript Logo" title="JavaScript Logo">
+					<div class="language-information">
+						<p class="language-name">JavaScript</p>
+						<p class="language-duration" id="language-javascript-duration" tabindex="0"></p>
+						<span class="tooltip" id="javascript-tooltip">August 11, 2021</span>
+					</div>
+				</div>
+				<img class="language-level" src="/images/icons/levels/lvl2.svg" alt="Level 2" title="Intermediate Level (2)">
+			</div>
+
+			<div class="language-widget">
+				<div class="language-information-wrapper">
+					<img class="language-widget-logo" src="images/logos/python.svg" alt="Python Logo" title="Python Logo">
+					<div class="language-information">
+						<p class="language-name">Python</p>
+						<p class="language-duration" id="language-python-duration" tabindex="0"></p>
+						<span class="tooltip" id="python-tooltip">October 17, 2022</span>
+					</div>
+				</div>
+				<img class="language-level" src="/images/icons/levels/lvl1.svg" alt="Level 1" title="Beginner Level (1)">
+			</div>
+		</div>
+		
+	</div>
+	
 </body>
 </html>

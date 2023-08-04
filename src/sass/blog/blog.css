@@ -8,7 +8,8 @@
 }
 
 html, body {
-  height: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
   width: 100%;
 }
 
@@ -127,7 +128,7 @@ body::-webkit-scrollbar-thumb:hover {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color: #000000;
+  background-color: #040A10;
   border-radius: 100px;
   gap: 10px;
   width: 200px;
@@ -141,8 +142,8 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .page-header {
-  font-size: clamp(1.6rem, 7vw, 4rem);
-  text-align: center;
+  font-size: clamp(1.6rem, 7vw, 2rem);
+  text-align: left;
   margin-top: 1px;
   padding: 25px 0 25px 0;
   color: #47DA44;
@@ -238,7 +239,7 @@ body::-webkit-scrollbar-thumb:hover {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  background-color: #1d1d1d;
+  background-color: #131c24;
   border-radius: 12px;
   min-width: 500px;
   max-width: 500px;
@@ -355,7 +356,7 @@ body::-webkit-scrollbar-thumb:hover {
   align-items: center;
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
-  background-color: #1d1d1d;
+  background-color: #131c24;
   border-radius: 10px;
   width: 50%;
   padding: 10px;
@@ -436,7 +437,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 #footer-modal {
-  background-color: #1d1d1d;
+  background-color: #131c24;
   position: fixed;
   padding: 40px;
   border: none;
@@ -484,8 +485,8 @@ body::-webkit-scrollbar-thumb:hover {
 html, body {
   height: -moz-fit-content;
   height: fit-content;
-  background: radial-gradient(100% 100% at 50% 0%, rgb(67, 94, 183) 0%, #000000 100%);
-  background-color: #000000;
+  background: radial-gradient(100% 100% at 50% 0%, rgb(67, 94, 183) 0%, #040A10 100%);
+  background-color: #040A10;
   animation: show-radial-background 5s forwards ease-in-out;
   background-repeat: no-repeat;
 }

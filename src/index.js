@@ -153,21 +153,21 @@ document.getElementById("link").addEventListener("keydown", (event) => travel_to
 // Blog Cards Links
 //
 
-document.getElementById("all-about-me").addEventListener("click", (event) => travel_to(all_about_me_blog, 'click', 'page', event));
-document.getElementById("all-about-me").addEventListener("keydown", (event) => travel_to(all_about_me_blog, 'tab', 'page', event));
-
-document.getElementById("the-computer-science-speedrun").addEventListener("click", (event) => travel_to(the_computer_science_speedrun_blog, 'click', 'page', event));
-document.getElementById("the-computer-science-speedrun").addEventListener("keydown", (event) => travel_to(the_computer_science_speedrun_blog, 'tab', 'page', event));
-
-document.getElementById("blogs-all-redirect").addEventListener("click", (event) => travel_to(blogs_page, 'click', 'page', event));
-document.getElementById("blogs-all-redirect").addEventListener("keydown", (event) => travel_to(blogs_page, 'tab', 'page', event));
+//document.getElementById("all-about-me").addEventListener("click", (event) => travel_to(all_about_me_blog, 'click', 'page', event));
+//document.getElementById("all-about-me").addEventListener("keydown", (event) => travel_to(all_about_me_blog, 'tab', 'page', event));
+//
+//document.getElementById("the-computer-science-speedrun").addEventListener("click", (event) => travel_to(the_computer_science_speedrun_blog, 'click', 'page', event));
+//document.getElementById("the-computer-science-speedrun").addEventListener("keydown", (event) => travel_to(the_computer_science_speedrun_blog, 'tab', 'page', event));
+//
+//document.getElementById("blogs-all-redirect").addEventListener("click", (event) => travel_to(blogs_page, 'click', 'page', event));
+//document.getElementById("blogs-all-redirect").addEventListener("keydown", (event) => travel_to(blogs_page, 'tab', 'page', event));
 
 //
 // Project Cards Links
 //
 
-document.getElementById("cmi").addEventListener("click", (event) => travel_to(combo_menu_interface_link, 'click', 'link', event));
-document.getElementById("cmi").addEventListener("keydown", (event) => travel_to(combo_menu_interface_link, 'tab', 'link', event));
+//document.getElementById("cmi").addEventListener("click", (event) => travel_to(combo_menu_interface_link, 'click', 'link', event));
+//document.getElementById("cmi").addEventListener("keydown", (event) => travel_to(combo_menu_interface_link, 'tab', 'link', event));
 
 //
 // Timestamps
@@ -230,7 +230,7 @@ function calculate_timestamp(today, target_date) {
 }
 
 document.getElementById('language-skriptlang-duration').textContent = calculate_timestamp(seconds, skriptlang_date);
-document.getElementById('language-html-duration').textContent = calculate_timestamp(seconds, html_date);
+document.getElementById('language-html-duration').textContent = `${calculate_timestamp(seconds, html_date)}`;
 document.getElementById('language-css-duration').textContent = calculate_timestamp(seconds, css_date);
 document.getElementById('language-javascript-duration').textContent = calculate_timestamp(seconds, javascript_date);
 document.getElementById('language-python-duration').textContent = calculate_timestamp(seconds, python_date);

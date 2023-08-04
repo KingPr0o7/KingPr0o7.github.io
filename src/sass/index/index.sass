@@ -23,14 +23,22 @@ body
 	@media screen and (max-height: 640px) 
 		min-height: 100%
 
-#intro-container
-	padding: 0 60px 0 60px
-	@include flex(row, space-between, center)
-	@include background(orange, normal)
+.section
+	margin: 0 auto 0 auto
+	padding: 0 100px 0 100px
+	max-width: 1480px
 
-	@media screen and (max-width: 1224px) 
-		flex-direction: column-reverse
-		justify-content: center	
+	@media screen and (max-width: 1140px) 
+		padding: 0 50px 0 50px
+
+	@media screen and (max-width: 720px) 
+		padding: 0 25px 0 25px	
+
+#intro-container
+	min-height: 100vh
+	text-align: center
+	@include flex(row, center, center)
+	@include background(orange, normal)
 
 	@media screen and (max-height: 640px) 
 		padding-top: 100px
@@ -43,9 +51,8 @@ body
 		flex-direction: column
 		width: 45%
 
-		@media screen and (max-width: 1224px) 
-			text-align: center
-			width: 100%		
+		@media screen and (max-width: 900px)	
+			width: 80%
 			gap: 10px	
 		
 		& > .intro-header
@@ -67,123 +74,111 @@ body
 				font-weight: 800
 		
 		& > #intro-link
-			display: flex
+			@include flex(row, center, center)
 			margin-top: 10px
 			opacity: 0
-			animation: fadeIn 4s 3s forwards	
+			animation: fadeIn 4s 3s forwards
 
-			@media screen and (max-width: 1224px) 
-				justify-content: center	
+#project-cards
+	@include flex(row, flex-start, center)
+	gap: 25px
+	flex-wrap: wrap
 
-	& > #intro-image
-		height: auto
-		width: auto
-		max-height: 50vh
-		max-width: 50vw
-		border-radius: 50%
-		object-fit: contain
-		opacity: 0
-		margin: 25px
-		animation: intro-image-fadeIn 3s forwards, fadeIn 4s forwards			
+	& > .project
+		@include flex(column, center, flex-start)
+		gap: 10px
+		width: 400px
+		height: fit-content
+		border: 1px solid $secondary-background-color
+		padding: 25px
+		border-radius: 10px
 
-#blogs-all-container
-	@include flex(row, center, center)
-	padding: 25px
+		& > .project-header
+			@include flex(row, space-between, center)
+			width: 100%
 
-	& > #blogs-all-redirect
-		cursor: pointer
-		padding: 15px
-		border-radius: 8px
-		background-color: $primary-link-button-color	
+			& > .project-header-info
+				@include flex(row, flex-start, center)
+				gap: 10px
 
-		&:hover, &:focus
-			transform: scale(1.1)
-			background-color: $secondary-link-button-color
-
-#languages-container
-	padding: 25px
-
-	& > #languages-content
-		@include flex(row, center, center)
-
-		& > #languages-widgets-container
-			display: grid
-			justify-items: center
-			grid-template-columns: 1fr 1fr 1fr
-			width: fit-content
-			gap: 25px
-
-			@media screen and (max-width: 965px) 
-				grid-template-columns: 1fr 1fr	
-
-			@media screen and (max-width: 640px) 
-				@include flex(column, center, center)
-
-			& > .language-widget
-				background-color: $secondary-background-color
-				border-radius: 12px
-				padding: 12px
-				width: 300px
-				@include flex(row, space-between, center)
-
-				@media screen and (max-width: 640px) 
-					width: 250px
-
-				&:nth-child(1) 
-					transition-delay: 100ms
-				&:nth-child(2) 
-					transition-delay: 200ms
-				&:nth-child(3) 
-					transition-delay: 300ms
-				&:nth-child(4) 
-					transition-delay: 400ms
-				&:nth-child(5) 
-					transition-delay: 500ms
-				&:nth-child(6) 
-					transition-delay: 600ms					
-
-				&:hover
-					transform: scale(1.04)
-
-				& > .language-information-wrapper 
-					@include flex(row, center, center)
-					gap: 12px
-
-					& > .language-widget-logo
-						width: 48px
-						height: 48px
-
-					& > .language-information
-						& > .language-name
-							font-size: clamp(1.3rem, 6vw, 1.5rem)
-
-						& > .language-duration
-							text-decoration: underline
-							position: relative
-							color: $secondary-text-color
-							font-size: clamp(0.8rem, 5vw, 1rem)
-							width: fit-content
-
-							&:hover ~ .tooltip, &:focus ~ .tooltip
-								visibility: visible
-
-						& > .tooltip
-							visibility: hidden
-							background-color: $tooltip-background-color
-							padding: 5px
-							border: 1px solid $tooltip-border-color
-							border-radius: 8px
-							position: absolute
-							z-index: 2
-
-				& > .language-level
+				& > .project-icon
 					width: 32px
 					height: 32px
+	
+				& > .project-title
+					font-size: clamp(1.2rem, 2vw, 1.4rem)
+					color: $primary-text-color
+					font-weight: 800
 
-@keyframes intro-image-fadeIn 
-	0% 
-		box-shadow: 0px 0px 11px 0px rgba(254, 153, 0, 0)
-	50% 
-		box-shadow: 0px 0px 24px 0px rgba(254, 153, 0, 0.5)
-	100% 
-		box-shadow: 0px 0px 35px 0px rgba(254, 153, 0, 1)
+			& > .project-header-redirect
+				& > .project-redirect-icon
+					@include flex(row, center, center)
+					filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(70deg) brightness(112%) contrast(101%)
+		
+		& > .project-button
+			@include flex(row, center, center)
+			gap: 10px
+			font-size: 16px
+			padding: 10px
+			width: 100%
+			border-radius: 5px
+			border: none
+			background-color: #0750AA
+
+			& > .project-button-image
+				width: 24px
+				height: 24px
+
+#language-widgets
+	display: grid
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
+	grid-gap: 25px
+	width: 100%
+
+	@media screen and (max-width: 675px) 
+		grid-template-columns: 1fr
+
+	& > .language-widget
+		@include flex(row, space-between, center)
+		padding: 12px
+		border: 1px solid $secondary-background-color
+		border-radius: 10px
+		width: 100%
+
+		@media screen and (max-width: 675px) 
+			width: 100%
+
+		& > .language-information-wrapper
+			@include flex(row, center, center)
+			gap: 10px		
+
+			& > .language-widget-logo
+				width: 48px
+				height: 48px	
+
+			& > .language-information
+				& > .language-name
+					font-size: clamp(1.3rem, 6vw, 1.5rem)
+
+				& > .language-duration
+					text-decoration: underline
+					position: relative
+					color: $secondary-text-color
+					font-size: clamp(0.8rem, 5vw, 1rem)
+					width: fit-content
+					
+					&:hover ~ .tooltip, &:focus ~ .tooltip
+						visibility: visible
+
+				& > .tooltip
+					visibility: hidden
+					background-color: $tooltip-background-color
+					padding: 5px
+					border: 1px solid $tooltip-border-color
+					border-radius: 8px
+					position: absolute
+					z-index: 2
+
+		& > .language-level
+			width: 32px
+			height: 32px
