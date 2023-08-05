@@ -75,7 +75,6 @@ hr {
 }
 .desktop-navbar {
   position: fixed;
-  margin-top: 10px;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -93,7 +92,7 @@ hr {
   background-color: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
-  border-radius: 20px;
+  border-radius: 0 0 20px 20px;
   height: 75px;
   overflow: hidden;
   width: -moz-fit-content;
