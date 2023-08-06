@@ -24,7 +24,7 @@ body
 		min-height: 100%
 
 .section
-	margin: 0 auto 0 auto
+	margin: 0 auto 25px auto
 	padding: 0 100px 0 100px
 	max-width: 1480px
 
@@ -79,12 +79,13 @@ body
 			opacity: 0
 			animation: fadeIn 4s 3s forwards
 
-#project-cards
+#cards
 	@include flex(row, flex-start, center)
+	padding-top: 25px
 	gap: 25px
 	flex-wrap: wrap
 
-	& > .project
+	& > .card
 		@include flex(column, center, flex-start)
 		gap: 10px
 		width: 400px
@@ -93,29 +94,32 @@ body
 		padding: 25px
 		border-radius: 10px
 
-		& > .project-header
+		& > .card-header
 			@include flex(row, space-between, center)
+			gap: 20px
 			width: 100%
 
-			& > .project-header-info
+			& > .card-header-info
 				@include flex(row, flex-start, center)
 				gap: 10px
 
-				& > .project-icon
+				& > .card-icon
 					width: 32px
 					height: 32px
 	
-				& > .project-title
+				& > .card-title
 					font-size: clamp(1.2rem, 2vw, 1.4rem)
-					color: $primary-text-color
 					font-weight: 800
 
-			& > .project-header-redirect
-				& > .project-redirect-icon
+			& > .card-header-redirect
+				& > .card-redirect-icon
 					@include flex(row, center, center)
 					filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(70deg) brightness(112%) contrast(101%)
 		
-		& > .project-button
+		& > .card-desc
+			font-size: clamp(0.8rem, 2vw, 1rem)
+
+		& > .card-button
 			@include flex(row, center, center)
 			gap: 10px
 			font-size: 16px
@@ -125,7 +129,7 @@ body
 			border: none
 			background-color: #0750AA
 
-			& > .project-button-image
+			& > .card-button-image
 				width: 24px
 				height: 24px
 
@@ -133,6 +137,7 @@ body
 	display: grid
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
 	grid-gap: 25px
+	padding-top: 25px
 	width: 100%
 
 	@media screen and (max-width: 675px) 

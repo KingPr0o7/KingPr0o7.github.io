@@ -187,17 +187,19 @@ const timestamp = today.getTime();
 const seconds = Math.floor(timestamp / 1000); 
 
 const skriptlang_date = new Date('January 19, 2020 16:16:00');
+const github_date = new Date('April 20, 2020 18:20:11');
 const html_date = new Date('August 11, 2021 14:36:08'); // 
 const css_date = new Date('August 11, 2021 14:36:08');  // - Code.org (Q1 S1 Freshman Year)
 const javascript_date = new Date('August 11, 2021 14:36:08');   // 
-const python_date = new Date('October 17, 2022 13:10:00'); // PLTW (Q2 S1 Sophomore Year) [PLTW CS is the highest CS in my school, we don't have actual CS courses from the school]
+const figma_date = new Date('September 9, 2022 23:49:23');
 const sass_date = new Date('April 27, 2023 17:05:11');
+const python_date = new Date('October 17, 2022 13:10:00'); // PLTW (Q2 S1 Sophomore Year) [PLTW CS is the highest CS in my school, we don't have actual CS courses from the school]
 
-function calculate_timestamp(today, target_date) {
+function calculate_timestamp(target_date) {
 	// Change date -> seconds
 	let timestamp = target_date.getTime();
 	let past_date = Math.floor(timestamp / 1000);
-	let time_elapsed = today - past_date;
+	let time_elapsed = seconds - past_date;
 	// Compare those seconds to units of time and display relativity
 	if (time_elapsed < minute) {
 		if (time_elapsed == 1) return `${time_elapsed} second`;
@@ -229,9 +231,11 @@ function calculate_timestamp(today, target_date) {
 	}
 }
 
-document.getElementById('language-skriptlang-duration').textContent = calculate_timestamp(seconds, skriptlang_date);
-document.getElementById('language-html-duration').textContent = `${calculate_timestamp(seconds, html_date)}`;
-document.getElementById('language-css-duration').textContent = calculate_timestamp(seconds, css_date);
-document.getElementById('language-javascript-duration').textContent = calculate_timestamp(seconds, javascript_date);
-document.getElementById('language-python-duration').textContent = calculate_timestamp(seconds, python_date);
-document.getElementById('language-sass-duration').textContent = calculate_timestamp(seconds, sass_date);
+document.getElementById('language-skriptlang-duration').textContent = calculate_timestamp(skriptlang_date);
+document.getElementById('language-github-duration').textContent = calculate_timestamp(github_date);
+document.getElementById('language-html-duration').textContent = calculate_timestamp(html_date);
+document.getElementById('language-css-duration').textContent = calculate_timestamp(css_date);
+document.getElementById('language-javascript-duration').textContent = calculate_timestamp(javascript_date);
+document.getElementById('language-figma-duration').textContent = calculate_timestamp(figma_date);
+document.getElementById('language-sass-duration').textContent = calculate_timestamp(sass_date);
+document.getElementById('language-python-duration').textContent = calculate_timestamp(python_date);

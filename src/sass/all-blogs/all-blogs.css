@@ -143,9 +143,8 @@ body::-webkit-scrollbar-thumb:hover {
 
 .page-header {
   font-size: clamp(1.6rem, 7vw, 2rem);
-  text-align: left;
   margin-top: 1px;
-  padding: 25px 0 25px 0;
+  padding: 25px 0 10px 0;
   color: #47DA44;
 }
 .page-header .comment-indicator-start, .page-header .comment-indicator-end {
@@ -212,10 +211,6 @@ body::-webkit-scrollbar-thumb:hover {
   }
 }
 .disclaimer {
-  width: 100%;
-  text-align: center;
-  font-weight: 200;
-  padding: 20px;
   font-size: 1.17rem;
 }
 
@@ -347,6 +342,7 @@ body::-webkit-scrollbar-thumb:hover {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  margin-top: 50px;
   padding: 10px;
 }
 #footer > #footer-container {

@@ -104,40 +104,67 @@
 		</div>
 	</div>
 
+	<!-- Blogs Page -->
+	<div class="section" id="blogs-container">
+		<h1 id="projects" class="page-header hidden"><span class="comment-indicator-start">//</span> Blogs <span class="comment-indicator-end"></span></h1>
+		<span class="disclaimer">Notable blogs that are good reads.</span>
+		<div id="cards">
+			<div class="card">
+				<div class="card-header">
+					<div class="card-header-info">
+						<img class="card-icon" src="images/branding/KingPr0o7.jpg">
+						<span class="card-title">All About Me</span>
+					</div>
+					<div class="card-header-redirect">
+						<img class="card-redirect-icon" src="images/icons/link.svg">
+					</div>
+				</div>
+				<span class="card-desc">An in-depth analysis focused on Nathan Parker, targeting his love for computer science, devotion to the best experience for end users and the community, and his future plans to achieve his goals and complete his mission on this blue marble.</span>
+			</div>
+
+			<div class="card">
+				<div class="card-header">
+					<div class="card-header-info">
+						<img class="card-icon" src="images/logos/combo-menu.png">
+						<span class="card-title">CSS</span>
+					</div>
+					<div class="card-header-redirect">
+						<img class="card-redirect-icon" src="images/icons/link.svg">
+					</div>
+				</div>
+				<span class="card-desc">Nathan Parker's Computer Science Speedrun (CSS), where he was continuously questioning himself and how far his teacher was willing to challenge him. With only 7 hours left on the clock, the speedrun kicked off into one of his most memorable projects.</span>
+			</div>			
+		</div>	
+	</div>
+
 	<div class="section" id="projects-container">
 		<h1 id="projects" class="page-header hidden"><span class="comment-indicator-start">//</span> Projects <span class="comment-indicator-end"></span></h1>
-		<div id="project-cards">
-			<!--<div class="project">
-				<div class="project-header">
-					<img class="project-icon" src="images/logos/ytplus.png">
-					<span class="project-title">YouTube+</span>
-				</div>
-				<span class="project-desc">An extension founded on the frustration of the inconsistencies of YouTube. YouTube+ fixes most of those with fixes and new features that improve the surfing of YouTube.</span>
-			</div>-->
-
-			<div class="project">
-				<div class="project-header">
-					<div class="project-header-info">
-						<img class="project-icon" src="images/logos/combo-menu.png">
-						<span class="project-title">Combo Menu Interface</span>
+		<span class="disclaimer">Some of my recent, best, and most time consuming projects.</span>
+		<div id="cards">
+			<div class="card">
+				<div class="card-header">
+					<div class="card-header-info">
+						<img class="card-icon" src="images/logos/combo-menu.png">
+						<span class="card-title">Combo Menu Interface</span>
 					</div>
-					<div class="project-header-redirect">
-						<img class="project-redirect-icon" src="images/icons/link.svg">
+					<div class="card-header-redirect">
+						<img class="card-redirect-icon" src="images/icons/link.svg">
 					</div>
 				</div>
-				<span class="project-desc">A CS project worth 3 weeks of work, done in 2 days! A web application where you can order menu items and get combo deals, with embedded item/cart details!</span>
+				<span class="card-desc">A CS project worth 3 weeks of work, done in 2 days! A web application where you can order menu items and get combo deals, with embedded item/cart details!</span>
 			</div>
 		</div>
 	</div>
 
 	<div class="section" id="languages-container">
 		<h1 id="languages" class="page-header hidden"><span class="comment-indicator-start">//</span> Technologies <span class="comment-indicator-end"></span></h1>
+		<span class="disclaimer">Some of the tech I use to make the stuff I create.</span>
 		<div id="language-widgets">
 			<div class="language-widget">
 				<div class="language-information-wrapper">
 					<img class="language-widget-logo" src="images/logos/skriptlang.png" alt="SkriptLang Logo" title="SkriptLang Logo">
 					<div class="language-information">
-						<p class="language-name">SkriptLang</p>
+						<h1 class="language-name">SkriptLang</h1>
 						<p class="language-duration" id="language-skriptlang-duration" tabindex="0"></p>
 						<span class="tooltip" id="css-tooltip">January 19, 2020</span>
 					</div>
@@ -147,9 +174,21 @@
 
 			<div class="language-widget">
 				<div class="language-information-wrapper">
+					<img class="language-widget-logo" src="images/logos/github.png" alt="GitHub Logo" title="GitHub Logo">
+					<div class="language-information">
+						<h1 class="language-name">GitHub</h1>
+						<p class="language-duration" id="language-github-duration" tabindex="0"></p>
+						<span class="tooltip" id="css-tooltip">April 20, 2020</span>
+					</div>
+				</div>
+				<img class="language-level" src="/images/icons/levels/lvl3.svg" alt="Level 3" title="Proficient Level (3)">
+			</div>
+
+			<div class="language-widget">
+				<div class="language-information-wrapper">
 					<img class="language-widget-logo" src="images/logos/html5.svg" alt="HTML 5 Logo" title="HTML 5 Logo">
 					<div class="language-information">
-						<p class="language-name">HTML</p>
+						<h1 class="language-name">HTML</h1>
 						<p class="language-duration" id="language-html-duration" tabindex="0"></p>
 						<span class="tooltip" id="html-tooltip">August 11, 2021</span>
 					</div>
@@ -161,31 +200,19 @@
 				<div class="language-information-wrapper">
 					<img class="language-widget-logo" src="images/logos/css3.svg" alt="CSS 3 Logo" title="CSS 3 Logo">
 					<div class="language-information">
-						<p class="language-name">CSS</p>
+						<h1 class="language-name">CSS</h1>
 						<p class="language-duration" id="language-css-duration" tabindex="0"></p>
 						<span class="tooltip" id="css-tooltip">August 11, 2021</span>
 					</div>
 				</div>
 				<img class="language-level" src="/images/icons/levels/lvl2.svg" alt="Level 2" title="Intermediate Level (2)">
-			</div>
-
-			<div class="language-widget">
-				<div class="language-information-wrapper">
-					<img class="language-widget-logo" src="images/logos/sass.svg" alt="SASS Logo" title="SASS Logo">
-					<div class="language-information">
-						<p class="language-name">SASS</p>
-						<p class="language-duration" id="language-sass-duration" tabindex="0"></p>
-						<span class="tooltip" id="sass-tooltip">April 27, 2023</span>
-					</div>
-				</div>
-				<img class="language-level" src="/images/icons/levels/lvl2.svg" alt="Level 2" title="Intermediate Level (2)">
-			</div>
+			</div>		
 
 			<div class="language-widget">
 				<div class="language-information-wrapper">
 					<img class="language-widget-logo" src="images/logos/javascript.svg" alt="JavaScript Logo" title="JavaScript Logo">
 					<div class="language-information">
-						<p class="language-name">JavaScript</p>
+						<h1 class="language-name">JavaScript</h1>
 						<p class="language-duration" id="language-javascript-duration" tabindex="0"></p>
 						<span class="tooltip" id="javascript-tooltip">August 11, 2021</span>
 					</div>
@@ -195,9 +222,33 @@
 
 			<div class="language-widget">
 				<div class="language-information-wrapper">
+					<img class="language-widget-logo" src="images/logos/figma.svg" alt="Figma Logo" title="Figma Logo">
+					<div class="language-information">
+						<h1 class="language-name">Figma</h1>
+						<p class="language-duration" id="language-figma-duration" tabindex="0"></p>
+						<span class="tooltip" id="sass-tooltip">September 9, 2022</span>
+					</div>
+				</div>
+				<img class="language-level" src="/images/icons/levels/lvl2.svg" alt="Level 2" title="Intermediate Level (2)">
+			</div>	
+
+			<div class="language-widget">
+				<div class="language-information-wrapper">
+					<img class="language-widget-logo" src="images/logos/sass.svg" alt="SASS Logo" title="SASS Logo">
+					<div class="language-information">
+						<h1 class="language-name">SASS</h1>
+						<p class="language-duration" id="language-sass-duration" tabindex="0"></p>
+						<span class="tooltip" id="sass-tooltip">April 27, 2023</span>
+					</div>
+				</div>
+				<img class="language-level" src="/images/icons/levels/lvl2.svg" alt="Level 2" title="Intermediate Level (2)">
+			</div>
+
+			<div class="language-widget">
+				<div class="language-information-wrapper">
 					<img class="language-widget-logo" src="images/logos/python.svg" alt="Python Logo" title="Python Logo">
 					<div class="language-information">
-						<p class="language-name">Python</p>
+						<h1 class="language-name">Python</h1>
 						<p class="language-duration" id="language-python-duration" tabindex="0"></p>
 						<span class="tooltip" id="python-tooltip">October 17, 2022</span>
 					</div>
