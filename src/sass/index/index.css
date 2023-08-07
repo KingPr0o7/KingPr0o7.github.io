@@ -970,6 +970,27 @@ body[disabled] {
   animation: fadeIn 4s 3s forwards;
 }
 
+.view-all {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 25px 0 25px 0;
+}
+.view-all > hr {
+  border: 2px solid #131c24;
+  border-radius: 10px;
+}
+.view-all > .view-all-button {
+  margin: 0 25px 0 25px;
+  padding: 10px;
+  width: 200px;
+  background-color: #0750aa;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
 #cards {
   display: flex;
   flex-direction: row;
@@ -1023,7 +1044,7 @@ body[disabled] {
   filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(70deg) brightness(112%) contrast(101%);
 }
 #cards > .card > .card-desc {
-  font-size: clamp(0.8rem, 2vw, 1rem);
+  font-size: clamp(0.9rem, 2vw, 1rem);
 }
 #cards > .card > .card-button {
   display: flex;

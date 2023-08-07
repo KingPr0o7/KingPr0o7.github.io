@@ -79,6 +79,23 @@ body
 			opacity: 0
 			animation: fadeIn 4s 3s forwards
 
+.view-all
+	@include flex(row, center, center) 
+	padding: 25px 0 25px 0
+
+	& > hr
+		border: 2px solid $secondary-background-color
+		border-radius: 10px
+
+	& > .view-all-button
+		margin: 0 25px 0 25px
+		padding: 10px
+		width: 200px
+		background-color: $primary
+		border: none
+		border-radius: 10px
+		cursor: pointer
+
 #cards
 	@include flex(row, flex-start, center)
 	padding-top: 25px
@@ -117,7 +134,7 @@ body
 					filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(70deg) brightness(112%) contrast(101%)
 		
 		& > .card-desc
-			font-size: clamp(0.8rem, 2vw, 1rem)
+			font-size: clamp(0.9rem, 2vw, 1rem)
 
 		& > .card-button
 			@include flex(row, center, center)
