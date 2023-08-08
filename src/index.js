@@ -3,7 +3,6 @@ import {
 	setup_page,
 	travel_to,
 	// Pages
-	blogs_page, 
 	// Blogs
 	all_about_me_blog, 
 	the_computer_science_speedrun_blog,
@@ -11,7 +10,6 @@ import {
 	combo_menu_interface_link,
 } from "../src/config";
 
-console.log(blogs_page)
 setup_page();
 
 //
@@ -148,26 +146,6 @@ setTimeout(function() {
 
 document.getElementById("link").addEventListener("click", (event) => travel_to(all_about_me_blog, 'click', 'page', event));
 document.getElementById("link").addEventListener("keydown", (event) => travel_to(all_about_me_blog, 'tab', 'page', event));
-
-//
-// Blog Cards Links
-//
-
-//document.getElementById("all-about-me").addEventListener("click", (event) => travel_to(all_about_me_blog, 'click', 'page', event));
-//document.getElementById("all-about-me").addEventListener("keydown", (event) => travel_to(all_about_me_blog, 'tab', 'page', event));
-//
-//document.getElementById("the-computer-science-speedrun").addEventListener("click", (event) => travel_to(the_computer_science_speedrun_blog, 'click', 'page', event));
-//document.getElementById("the-computer-science-speedrun").addEventListener("keydown", (event) => travel_to(the_computer_science_speedrun_blog, 'tab', 'page', event));
-//
-//document.getElementById("blogs-all-redirect").addEventListener("click", (event) => travel_to(blogs_page, 'click', 'page', event));
-//document.getElementById("blogs-all-redirect").addEventListener("keydown", (event) => travel_to(blogs_page, 'tab', 'page', event));
-
-//
-// Project Cards Links
-//
-
-//document.getElementById("cmi").addEventListener("click", (event) => travel_to(combo_menu_interface_link, 'click', 'link', event));
-//document.getElementById("cmi").addEventListener("keydown", (event) => travel_to(combo_menu_interface_link, 'tab', 'link', event));
 
 //
 // Timestamps

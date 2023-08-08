@@ -59,7 +59,6 @@ function travel_to(link, mode, type, event) {
 //
 
 const home_page = '../../';
-const blogs_page = '../../blogs/';
 
 //
 // Blogs
@@ -199,8 +198,7 @@ export {
     setup_page,
     travel_to,
     // Pages 
-    home_page, 
-    blogs_page,
+    home_page,
     // Blogs 
     all_about_me_blog, 
     the_computer_science_speedrun_blog,

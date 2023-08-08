@@ -5,29 +5,46 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap')
 
 //
+// Color Palette
+//
+
+// Backgrounds
+$background: #040A10
+$background-light: #131c24
+
+// Text
+$text: #FFFFFF
+$text-light: #B9B9B9
+
+$link: #0093FF
+$link-dark: #0073FF
+$link-filter: invert(39%) sepia(87%) saturate(2316%) hue-rotate(185deg) brightness(101%) contrast(109%)	
+$link-filter-dark: invert(28%) sepia(80%) saturate(3766%) hue-rotate(205deg) brightness(104%) contrast(104%)
+
+// Buttons
+$primary: #0750aa
+$primary-dark: #003c6e
+
+$secondary: #070e18
+$secondary-dark: #040a10
+
+$accent: #3E8EE1
+$accent-dark: #2b6cc4
+
+// Scrollbar
+$scroll-bar: rgba(200, 200, 200, 0.5)
+
+// Tooltips
+$tooltip: #292A2D
+$tooltip-border: #CFD1D4
+
+//
 // Background Colors
 //
 
-$text: #ffffff
-$background: #040a10
-$primary: #0750aa
-$secondary: #070e18
-$accent: #3E8EE1
-
-$primary-background-color: #040A10
-$secondary-background-color: #131c24
-
-$orange-background-radial: radial-gradient(100% 100% at 50% 0%, #3E8EE1 0%, $primary-background-color 100%)
-$red-background-radial: radial-gradient(100% 100% at 50% 0%, rgb(173, 20, 9) 0%, $primary-background-color 100%)
-$blue-background-radial: radial-gradient(100% 100% at 50% 0%, rgb(67, 94, 183) 0%, $primary-background-color 100%)
-
-$scroll-bar-background-color: rgba(200, 200, 200, 0.5)
-
-$project-card-title-background-color: rgba(0, 0, 0, 0.3)
-$project-card-content-background-color: rgba(0, 0, 0, 0.6)
-
-$tooltip-background-color: #292A2D
-$tooltip-border-color: #CFD1D4
+$orange-background-radial: radial-gradient(100% 100% at 50% 0%, $accent 0%, $background 100%)
+$red-background-radial: radial-gradient(100% 100% at 50% 0%, rgb(173, 20, 9) 0%, $background 100%)
+$blue-background-radial: radial-gradient(100% 100% at 50% 0%, rgb(67, 94, 183) 0%, $background 100%)
 
 $blog-warning-background-color: rgb(254, 153, 0, 0.5)
 
@@ -35,35 +52,7 @@ $blog-warning-background-color: rgb(254, 153, 0, 0.5)
 // Text Colors / Fonts / Link Colors
 //
 
-$primary-text-color: #FFFFFF
-$secondary-text-color: #B9B9B9
-
 $font: 'Rubik', sans-serif
-
-$primary-link-color: #0093FF
-$secondary-link-color: #0073FF
-
-$primary-link-filter: invert(39%) sepia(87%) saturate(2316%) hue-rotate(185deg) brightness(101%) contrast(109%)	
-$secondary-link-filter: invert(28%) sepia(80%) saturate(3766%) hue-rotate(205deg) brightness(104%) contrast(104%)
-
-$primary-link-button-color: #de7301  
-$secondary-link-button-color: #c26700
-
-//
-// Tags
-//
-
-$tag-personal-background-color: #BA7000
-$tag-personal-background-gradient: linear-gradient(90deg, rgb(186, 112, 0) 0%, rgb(111, 67, 0) 100%)
-
-$tag-school-background-color: #5E2885
-$tag-school-background-gradient: linear-gradient(270deg, rgba(94,40,133,1) 0%, rgba(0,129,201,1) 100%)
-
-$tag-website-background-color: #CD2F2F
-$tag-website-background-gradient: linear-gradient(270deg, rgba(205,47,47,1) 0%, rgba(32,143,9,1) 100%)
-
-$tag-fullstack-background-color: #1947CE
-$tag-fullstack-background-gradient: linear-gradient(270deg, rgba(25,71,206,1) 0%, rgba(35,98,0,1) 100%)
 
 //
 // Mixins
@@ -84,7 +73,7 @@ $tag-fullstack-background-gradient: linear-gradient(270deg, rgba(25,71,206,1) 0%
 	margin: 0
 	padding: 0
 	font-family: $font
-	color: $primary-text-color
+	color: $text
 
 html, body 
 	height: fit-content
@@ -113,24 +102,24 @@ hr
 	cursor: pointer		
 
 	&:hover #link-text, &:focus #link-text
-		color: $secondary-link-color
+		color: $link-dark
 
 	&:hover #link-image, &:focus #link-image
-		filter: $secondary-link-filter
+		filter: $link-filter-dark
 
 	& > #link-image 
 		width: clamp(24px, 2vw, 35px)
 		height: auto
 		margin-right: 5px
-		filter: $primary-link-filter
+		filter: $link-filter
 
 	& > #link-text
-		color: $primary-link-color	
+		color: $link	
 
-.inline
+/*.inline
 	background-color: #141414
 	padding: 5px
-	border-radius: 8px
+	border-radius: 8px*/
 
 //
 // Animations

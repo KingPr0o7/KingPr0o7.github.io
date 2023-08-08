@@ -2,9 +2,7 @@
 @import '../modules/background'
 @import '../modules/blog-navbar'
 @import '../modules/scrollbars'
-@import '../modules/blog-button'
 @import '../modules/headers'
-@import '../modules/blog-cards'
 @import '../modules/footer'
 
 html, body
@@ -34,32 +32,6 @@ html, body
 		text-align: center
 		font-size: clamp(1.8rem, 5vw, 2rem)
 		font-weight: 600
-
-	& > .card-tags
-		@include flex(row, flex-start, center)
-		font-size: clamp(0.7rem, 3.8vw, 1.5rem)	
-		gap: 10px
-		font-weight: 600
-
-		& > .card-tag
-			padding: 5px
-			border-radius: 10px
-
-		& > .personal-tag
-			background: $tag-personal-background-color
-			background: $tag-personal-background-gradient	
-
-		& > .school-tag
-			background: $tag-school-background-color
-			background: $tag-school-background-gradient
-
-		& > .website-tag
-			background: $tag-website-background-color
-			background: $tag-website-background-gradient												
-
-		& > .fullstack-tag
-			background: $tag-fullstack-background-color
-			background: $tag-fullstack-background-gradient
 
 	& > #blog-publish-info
 		font-size: clamp(0.4rem, 5vw, 1.4rem)
@@ -118,7 +90,7 @@ ul
 .link
 	cursor: pointer
 	text-decoration: underline
-	text-decoration-color: $primary-text-color	
+	text-decoration-color: $text	
 
 .blog-inline-image-container
 	padding: 20px 0 0 0

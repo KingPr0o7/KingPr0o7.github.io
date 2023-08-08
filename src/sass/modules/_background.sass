@@ -1,11 +1,9 @@
 @mixin background($color, $type)
-	@if $color == orange
-		background: $orange-background-radial
-	@else if $color == red
+	@if $color == red
 		background: $red-background-radial
 	@else if $color == blue
 		background: $blue-background-radial
-	background-color: $primary-background-color
+	background-color: $background
 	animation: show-radial-background 5s forwards ease-in-out
 	background-repeat: no-repeat
 
