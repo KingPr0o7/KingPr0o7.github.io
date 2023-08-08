@@ -88,9 +88,9 @@ body
 		border-radius: 10px
 
 	& > .view-all-button
-		margin: 0 25px 0 25px
+		margin: 0 10px 0 10px
 		padding: 10px
-		width: 200px
+		width: 300px
 		background-color: $primary
 		border: none
 		border-radius: 10px
@@ -101,6 +101,9 @@ body
 	padding-top: 25px
 	gap: 25px
 	flex-wrap: wrap
+
+	@media screen and (max-width: 925px) 
+		@include flex(row, center, center)
 
 	& > .card
 		@include flex(column, center, flex-start)
@@ -125,19 +128,27 @@ body
 					height: 32px
 	
 				& > .card-title
-					font-size: clamp(1.2rem, 2vw, 1.4rem)
+					font-size: clamp(1rem, 2vw, 1.4rem)
 					font-weight: 800
 
 			& > .card-header-redirect
 				& > .card-redirect-icon
 					@include flex(row, center, center)
 					filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(70deg) brightness(112%) contrast(101%)
+			
+				@media screen and (max-width: 405px) 
+					display: none
+			
+			& > .release-date
+				@media screen and (max-width: 405px) 
+					display: none
+
 		
 		& > .card-desc
 			font-size: clamp(0.9rem, 2vw, 1rem)
 
 		& > .card-button
-			@include flex(row, center, center)
+			display: none
 			gap: 10px
 			font-size: 16px
 			padding: 10px
@@ -146,9 +157,17 @@ body
 			border: none
 			background-color: #0750AA
 
+			&[disabled]
+				background-color: $secondary-background-color
+				color: white
+
+			@media screen and (max-width: 405px) 
+				@include flex(row, center, center)
+
 			& > .card-button-image
 				width: 24px
 				height: 24px
+				filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(70deg) brightness(112%) contrast(101%)
 
 #language-widgets
 	display: grid

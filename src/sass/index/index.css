@@ -982,9 +982,9 @@ body[disabled] {
   border-radius: 10px;
 }
 .view-all > .view-all-button {
-  margin: 0 25px 0 25px;
+  margin: 0 10px 0 10px;
   padding: 10px;
-  width: 200px;
+  width: 300px;
   background-color: #0750aa;
   border: none;
   border-radius: 10px;
@@ -999,6 +999,14 @@ body[disabled] {
   padding-top: 25px;
   gap: 25px;
   flex-wrap: wrap;
+}
+@media screen and (max-width: 925px) {
+  #cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
 }
 #cards > .card {
   display: flex;
@@ -1033,7 +1041,7 @@ body[disabled] {
   height: 32px;
 }
 #cards > .card > .card-header > .card-header-info > .card-title {
-  font-size: clamp(1.2rem, 2vw, 1.4rem);
+  font-size: clamp(1rem, 2vw, 1.4rem);
   font-weight: 800;
 }
 #cards > .card > .card-header > .card-header-redirect > .card-redirect-icon {
@@ -1043,14 +1051,21 @@ body[disabled] {
   align-items: center;
   filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(70deg) brightness(112%) contrast(101%);
 }
+@media screen and (max-width: 405px) {
+  #cards > .card > .card-header > .card-header-redirect {
+    display: none;
+  }
+}
+@media screen and (max-width: 405px) {
+  #cards > .card > .card-header > .release-date {
+    display: none;
+  }
+}
 #cards > .card > .card-desc {
   font-size: clamp(0.9rem, 2vw, 1rem);
 }
 #cards > .card > .card-button {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  display: none;
   gap: 10px;
   font-size: 16px;
   padding: 10px;
@@ -1059,9 +1074,22 @@ body[disabled] {
   border: none;
   background-color: #0750AA;
 }
+#cards > .card > .card-button[disabled] {
+  background-color: #131c24;
+  color: white;
+}
+@media screen and (max-width: 405px) {
+  #cards > .card > .card-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+}
 #cards > .card > .card-button > .card-button-image {
   width: 24px;
   height: 24px;
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(70deg) brightness(112%) contrast(101%);
 }
 
 #language-widgets {
