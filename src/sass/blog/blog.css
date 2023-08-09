@@ -329,7 +329,7 @@ body::-webkit-scrollbar-thumb:hover {
 html, body {
   height: -moz-fit-content;
   height: fit-content;
-  background: radial-gradient(100% 100% at 50% 0%, rgb(67, 94, 183) 0%, #040A10 100%);
+  background: radial-gradient(100% 100% at 50% 0%, #3E8EE1 0%, #040A10 100%);
   background-color: #040A10;
   animation: show-radial-background 5s forwards ease-in-out;
   background-repeat: no-repeat;

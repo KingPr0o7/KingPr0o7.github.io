@@ -149,7 +149,7 @@ document.getElementById("link").addEventListener("keydown", (event) => travel_to
 
 //
 // Timestamps
-// - Calculates the time elapsed since the start of my journey in each language
+// - Calculates the time elapsed since the start of my journey in each technology
 //
 
 const minute = 60;
@@ -209,11 +209,11 @@ function calculate_timestamp(target_date) {
 	}
 }
 
-document.getElementById('language-skriptlang-duration').textContent = calculate_timestamp(skriptlang_date);
-document.getElementById('language-github-duration').textContent = calculate_timestamp(github_date);
-document.getElementById('language-html-duration').textContent = calculate_timestamp(html_date);
-document.getElementById('language-css-duration').textContent = calculate_timestamp(css_date);
-document.getElementById('language-javascript-duration').textContent = calculate_timestamp(javascript_date);
-document.getElementById('language-figma-duration').textContent = calculate_timestamp(figma_date);
-document.getElementById('language-sass-duration').textContent = calculate_timestamp(sass_date);
-document.getElementById('language-python-duration').textContent = calculate_timestamp(python_date);
+document.getElementById('technology-skriptlang-duration').textContent = calculate_timestamp(skriptlang_date);
+document.getElementById('technology-github-duration').textContent = calculate_timestamp(github_date);
+document.getElementById('technology-html-duration').textContent = calculate_timestamp(html_date);
+document.getElementById('technology-css-duration').textContent = calculate_timestamp(css_date);
+document.getElementById('technology-javascript-duration').textContent = calculate_timestamp(javascript_date);
+document.getElementById('technology-figma-duration').textContent = calculate_timestamp(figma_date);
+document.getElementById('technology-sass-duration').textContent = calculate_timestamp(sass_date);
+document.getElementById('technology-python-duration').textContent = calculate_timestamp(python_date);

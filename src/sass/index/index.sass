@@ -37,7 +37,7 @@ body
 	min-height: 100vh
 	text-align: center
 	@include flex(row, center, center)
-	@include background(orange, normal)
+	@include background(blue, normal)
 
 	@media screen and (max-height: 640px) 
 		padding-top: 100px
@@ -95,7 +95,7 @@ body
 		border-radius: 10px
 		cursor: pointer
 
-#language-widgets
+#technology-widgets
 	display: grid
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
 	grid-gap: 25px
@@ -105,7 +105,7 @@ body
 	@media screen and (max-width: 675px) 
 		grid-template-columns: 1fr
 
-	& > .language-widget
+	& > .technology-widget
 		@include flex(row, space-between, center)
 		padding: 12px
 		border: 1px solid $background-light
@@ -116,19 +116,19 @@ body
 		@media screen and (max-width: 675px) 
 			width: 100%
 
-		& > .language-information-wrapper
+		& > .technology-information-wrapper
 			@include flex(row, center, center)
 			gap: 10px		
 
-			& > .language-widget-logo
+			& > .technology-widget-logo
 				width: 48px
 				height: 48px	
 
-			& > .language-information
-				& > .language-name
+			& > .technology-information
+				& > .technology-name
 					font-size: clamp(1.2rem, 6vw, 1.5rem)
 
-				& > .language-duration
+				& > .technology-duration
 					text-decoration: underline
 					position: relative
 					color: $text-light
@@ -147,6 +147,6 @@ body
 					position: absolute
 					z-index: 2
 
-		& > .language-level
+		& > .technology-level
 			width: 32px
 			height: 32px

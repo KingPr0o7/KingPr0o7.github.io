@@ -727,6 +727,7 @@ body[disabled] {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  background: radial-gradient(100% 100% at 50% 0%, #3E8EE1 0%, #040A10 100%);
   background-color: #040A10;
   animation: show-radial-background 5s forwards ease-in-out;
   background-repeat: no-repeat;
@@ -809,7 +810,7 @@ body[disabled] {
   cursor: pointer;
 }
 
-#language-widgets {
+#technology-widgets {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 25px;
@@ -817,11 +818,11 @@ body[disabled] {
   width: 100%;
 }
 @media screen and (max-width: 675px) {
-  #language-widgets {
+  #technology-widgets {
     grid-template-columns: 1fr;
   }
 }
-#language-widgets > .language-widget {
+#technology-widgets > .technology-widget {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -833,25 +834,25 @@ body[disabled] {
   gap: 10px;
 }
 @media screen and (max-width: 675px) {
-  #language-widgets > .language-widget {
+  #technology-widgets > .technology-widget {
     width: 100%;
   }
 }
-#language-widgets > .language-widget > .language-information-wrapper {
+#technology-widgets > .technology-widget > .technology-information-wrapper {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 10px;
 }
-#language-widgets > .language-widget > .language-information-wrapper > .language-widget-logo {
+#technology-widgets > .technology-widget > .technology-information-wrapper > .technology-widget-logo {
   width: 48px;
   height: 48px;
 }
-#language-widgets > .language-widget > .language-information-wrapper > .language-information > .language-name {
+#technology-widgets > .technology-widget > .technology-information-wrapper > .technology-information > .technology-name {
   font-size: clamp(1.2rem, 6vw, 1.5rem);
 }
-#language-widgets > .language-widget > .language-information-wrapper > .language-information > .language-duration {
+#technology-widgets > .technology-widget > .technology-information-wrapper > .technology-information > .technology-duration {
   text-decoration: underline;
   position: relative;
   color: #B9B9B9;
@@ -859,10 +860,10 @@ body[disabled] {
   width: -moz-fit-content;
   width: fit-content;
 }
-#language-widgets > .language-widget > .language-information-wrapper > .language-information > .language-duration:hover ~ .tooltip, #language-widgets > .language-widget > .language-information-wrapper > .language-information > .language-duration:focus ~ .tooltip {
+#technology-widgets > .technology-widget > .technology-information-wrapper > .technology-information > .technology-duration:hover ~ .tooltip, #technology-widgets > .technology-widget > .technology-information-wrapper > .technology-information > .technology-duration:focus ~ .tooltip {
   visibility: visible;
 }
-#language-widgets > .language-widget > .language-information-wrapper > .language-information > .tooltip {
+#technology-widgets > .technology-widget > .technology-information-wrapper > .technology-information > .tooltip {
   visibility: hidden;
   background-color: #292A2D;
   padding: 5px;
@@ -871,7 +872,7 @@ body[disabled] {
   position: absolute;
   z-index: 2;
 }
-#language-widgets > .language-widget > .language-level {
+#technology-widgets > .technology-widget > .technology-level {
   width: 32px;
   height: 32px;
 }/*# sourceMappingURL=index.css.map */
