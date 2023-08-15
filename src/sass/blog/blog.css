@@ -59,10 +59,12 @@ hr {
   color: #0093FF;
 }
 
-/*.inline
- * background-color: #141414
- * padding: 5px
- * border-radius: 8px*/
+.inline {
+  background-color: #141414;
+  padding: 5px;
+  border-radius: 8px;
+}
+
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -316,7 +318,7 @@ body::-webkit-scrollbar-thumb:hover {
   padding: 10px;
   border: none;
   background-color: #0750aa;
-  border-radius: 100px;
+  border-radius: 10px;
   gap: 10px;
   font-size: clamp(1rem, 3vw, 1.6rem);
   width: 200px;
